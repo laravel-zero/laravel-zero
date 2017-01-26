@@ -8,9 +8,9 @@
 
 ## Intro
 
-Laravel Zero is an MIT-licensed open source project. Its a project UNDER DEVELOMENT.
+Laravel Zero provides the perfect starting point for your next Laravel Console Application. 
 
-The Laravel Zero allows you to create Laravel command-line application.
+Laravel Zero is an MIT-licensed open source project. Its a project UNDER DEVELOMENT.
 
 ## Stay In Touch
 
