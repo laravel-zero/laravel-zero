@@ -1,0 +1,22 @@
+{
+    "name": "nunomaduro/laravel-zero",
+    "description": "Laravel Zero provides the perfect starting point for your next Laravel Console Application.",
+    "keywords": ["framework", "laravel", "console", "zero"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/container": "5.4.*",
+        "illuminate/console": "5.4.*",
+        "illuminate/events": "5.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

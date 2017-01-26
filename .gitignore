@@ -1,0 +1,5 @@
+/vendor/
+.idea/*
+composer.lock
+
+.idea/codeStyleSettings.xml
