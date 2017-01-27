@@ -6,11 +6,29 @@
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/license.svg" alt="License"></a>
 </p>
 
+<p align="center">
+    <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
+</p>
+
 ## Intro
 
 Laravel Zero provides the perfect starting point for your next Laravel Console Application. 
 
-Laravel Zero is an MIT-licensed open source project. Its a project UNDER DEVELOMENT.
+Is an MIT-licensed open source project  UNDER DEVELOMENT.
+
+## Server Requirements
+
+<div class="content-list" markdown="1">
+- PHP >= 5.6.4
+</div>
+
+## Installation
+
+Laravel Zero utilizes [Composer](https://getcomposer.org) to manage its dependencies. So, before using Laravel Zero, make sure you have Composer installed on your machine.
+
+Install Laravel Zero by issuing the Composer `create-project` command in your terminal:
+
+    composer create-project --prefer-dist nunomaduro/laravel-zero application-name
 
 ## Stay In Touch
 
