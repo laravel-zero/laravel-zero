@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://travis-ci.org/nunomaduro/laravel-zero"><img src="https://travis-ci.org/nunomaduro/laravel-zero.svg?branch=stable" alt="Build Status"></a>
   <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero/?branch=stable"><img src="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero/badges/quality-score.png?b=stable" alt="Code Quality" />
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero/badges/coverage.png?b=stable"><img src="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero/badges/coverage.png?b=stable" alt="Code Quality" />
+  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero/?branch=stable"><img src="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero/badges/coverage.png?b=stable" alt="Code Coverage" />
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/license.svg" alt="License"></a>
