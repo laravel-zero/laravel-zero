@@ -86,7 +86,7 @@ Let's take a look at an example command.
          * @param  DripEmailer|null  $drip
          * @return void
          */
-        public function __construct(DripEmailer $drip)
+        public function __construct(DripEmailer $drip = null)
         {
             parent::__construct();
 
