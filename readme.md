@@ -50,59 +50,61 @@ Laravel Zero provides a main command. That is the default one of your applicatio
 
 Let's take a look at an example command.
 
-    <?php
+```php
+<?php
 
-    namespace App\Console\Commands;
+namespace App\Console\Commands;
 
-    use App\DripEmailer;
-    use Illuminate\Console\Command;
+use App\DripEmailer;
+use Illuminate\Console\Command;
 
-    class SendEmails extends Command
+class SendEmails extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'email:send {email}';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Send drip e-mails to a email';
+
+    /**
+     * The drip e-mail service.
+     *
+     * @var DripEmailer
+     */
+    protected $drip;
+
+    /**
+     * Create a new command instance.
+     *
+     * @param  DripEmailer|null  $drip
+     * @return void
+     */
+    public function __construct(DripEmailer $drip = null)
     {
-        /**
-         * The name and signature of the console command.
-         *
-         * @var string
-         */
-        protected $signature = 'email:send {email}';
+        parent::__construct();
 
-        /**
-         * The console command description.
-         *
-         * @var string
-         */
-        protected $description = 'Send drip e-mails to a email';
-
-        /**
-         * The drip e-mail service.
-         *
-         * @var DripEmailer
-         */
-        protected $drip;
-
-        /**
-         * Create a new command instance.
-         *
-         * @param  DripEmailer|null  $drip
-         * @return void
-         */
-        public function __construct(DripEmailer $drip = null)
-        {
-            parent::__construct();
-
-            $this->drip = $drip ?: new DripEmailer;
-        }
-
-        /**
-         * Execute the console command.
-         *
-         * @return mixed
-         */
-        public function handle()
-        {
-            $this->drip->send($this->argument('email'));
-        }
+        $this->drip = $drip ?: new DripEmailer;
     }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        $this->drip->send($this->argument('email'));
+    }
+}
+```
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
 
