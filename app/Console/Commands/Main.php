@@ -23,7 +23,7 @@ class Main extends Command
     /**
      * Execute the console command.
      */
-    public function fire()
+    public function handle()
     {
         $this->info('Love beautiful code? We do too.');
     }
