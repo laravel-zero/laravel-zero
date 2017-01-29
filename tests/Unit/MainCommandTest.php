@@ -4,8 +4,6 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Console\Commands\Main;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class MainCommandTest extends TestCase
 {
