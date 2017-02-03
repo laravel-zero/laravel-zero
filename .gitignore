@@ -1,7 +1,7 @@
 /vendor/
 .idea/*
 composer.lock
-
+application.phar
 .idea/codeStyleSettings.xml
 
 .twgit_features_subject
