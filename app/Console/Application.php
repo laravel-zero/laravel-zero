@@ -23,6 +23,7 @@ class Application extends BaseApplication
     {
         parent::__construct($container, $dispatcher, self::VERSION);
 
+        $this->add(new Commands\Build);
         $command = $this->add(new Commands\Main);
         $this->setDefaultCommand($command->getName());
     }
