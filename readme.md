@@ -8,10 +8,14 @@
 </p>
 
 <p align="center">
-    <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
+    <img title="Terminal icon" height="300px" src="http://elementary.io/images/docs/human-interface-guidelines/icons/128/utilities-terminal.svg" />
 </p>
 
-# Laravel Zero
+## Laravel Zero
+
+<p align="center">
+    <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
+</p>
 
 - [Introduction](#introduction)
 - [Installation](#installation)
@@ -128,6 +132,6 @@ The build will provide you can a single executable, ready to use, of your applic
 <a name="license"></a>
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+The Laravel Zero is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 Copyright (c) 2017-2017 Nuno Maduro
