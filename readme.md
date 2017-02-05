@@ -18,6 +18,7 @@
 - [Server Requirements](#server-requirements)
 - [Documentation](#documentation)
 - [Stay in touch](#stay-in-touch)
+- [Build an standalone application](#build-an-standalone)
 - [License](#license)
 
 <a name="introduction"></a>
@@ -107,6 +108,17 @@ class SendEmails extends Command
 ```
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
+
+<a name="build-an-standalone"></a>
+## Build an standalone
+
+Your Laravel Zero project, by default, allows you to build an standalone application.
+
+```sh
+$ php application build <name>
+```
+
+The build will provide you can a single executable, ready to use, of your application.
 
 <a name="stay-in-touch"></a>
 ## Stay In Touch
