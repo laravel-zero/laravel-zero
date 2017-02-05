@@ -13,10 +13,6 @@
 
 ## Laravel Zero
 
-<p align="center">
-    <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
-</p>
-
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Server Requirements](#server-requirements)
@@ -30,7 +26,9 @@
 
 Laravel Zero provides an elegant starting point for your next Laravel Console Application. 
 
-Is an MIT-licensed open source project UNDER DEVELOMENT.
+<p align="center">
+    <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
+</p>
 
 <a name="server-requirements"></a>
 ## Server Requirements
