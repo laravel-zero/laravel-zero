@@ -87,6 +87,8 @@ class Build extends Command
             ->cleanUp($name);
 
         $this->info("Standalone application compiled into: builds/$name");
+
+        return $this;
     }
 
     /**
