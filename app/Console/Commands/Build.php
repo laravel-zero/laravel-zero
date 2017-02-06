@@ -104,7 +104,7 @@ class Build extends Command
             ->getCompiler($name);
 
         $compiler->buildFromDirectory(BASE_PATH, '#' . implode('|', $this->structure) . '#');
-        $compiler->setStub($compiler->createDefaultStub('bootstrap/run.php'));
+        $compiler->setStub($compiler->createDefaultStub('bootstrap/init.php'));
 
         return $this;
     }
