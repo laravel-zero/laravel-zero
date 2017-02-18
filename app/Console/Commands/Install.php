@@ -59,6 +59,7 @@ class Install extends Command
     private function asksForApplicationName()
     {
         if (empty($name = $this->input->getArgument('name'))) {
+            $name = trim(dirname(BASE_PATH, 1));
             $name = $this->ask('What is your application name?');
         }
 
