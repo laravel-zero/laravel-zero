@@ -27,6 +27,11 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php application install"
+        ]
+    },
     "bin": [
         "application"
     ]

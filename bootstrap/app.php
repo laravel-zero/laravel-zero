@@ -11,7 +11,9 @@
 |
 */
 
-defined('BASE_PATH') or define('BASE_PATH', dirname(__DIR__));
+if (! defined('BASE_PATH')) {
+    define('BASE_PATH', dirname(__DIR__));
+}
 
 $container = new Illuminate\Container\Container;
 $dispatcher = new Illuminate\Events\Dispatcher($container);
