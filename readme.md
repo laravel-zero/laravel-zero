@@ -13,11 +13,11 @@
 ## Laravel Zero
 
 - [Introduction](#introduction)
-- [Installation](#installation)
 - [Server Requirements](#server-requirements)
+- [Installation](#installation)
+- [Build an standalone application](#build-an-standalone)
 - [Documentation](#documentation)
 - [Stay in touch](#stay-in-touch)
-- [Build an standalone application](#build-an-standalone)
 - [License](#license)
 
 <a name="introduction"></a>
@@ -43,7 +43,28 @@ Laravel Zero utilizes [Composer](https://getcomposer.org) to manage its dependen
 
 Install Laravel Zero by issuing the Composer `create-project` command in your terminal:
 
+```sh
     composer create-project --prefer-dist nunomaduro/laravel-zero application-name
+```
+
+The create-project command will automatically run your app install command. We will take your <application-name> to configure your application.
+
+You can always modify your application name running:
+
+```sh
+$ php application install application-name
+```
+
+<a name="build-an-standalone"></a>
+## Build an standalone
+
+Your Laravel Zero project, by default, allows you to build an standalone application.
+
+```sh
+$ php application build <name>
+```
+
+The build will provide you can a single executable, ready to use, of your application.
 
 <a name="documentation"></a>
 ## Documentation
@@ -109,17 +130,6 @@ class SendEmails extends Command
 ```
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
-
-<a name="build-an-standalone"></a>
-## Build an standalone
-
-Your Laravel Zero project, by default, allows you to build an standalone application.
-
-```sh
-$ php application build <name>
-```
-
-The build will provide you can a single executable, ready to use, of your application.
 
 <a name="stay-in-touch"></a>
 ## Stay In Touch
