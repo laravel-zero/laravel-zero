@@ -53,14 +53,19 @@ class Install extends Command
 
     /**
      * Asks for the application name.
+     *
+     * For the command came from a composer installer take the project folder name.
      * 
      * @return string
      */
     private function asksForApplicationName()
     {
         if (empty($name = $this->input->getArgument('name'))) {
-            $name = trim(basename(dirname(BASE_PATH)));
             $name = $this->ask('What is your application name?');
+        }
+
+        if (empty($name)) {
+            $name = trim(basename(dirname(BASE_PATH)));
         }
 
         return Str::lower($name);
