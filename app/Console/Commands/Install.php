@@ -81,7 +81,7 @@ class Install extends Command
         }
 
         if (empty($name)) {
-            $name = trim(basename(dirname(BASE_PATH)));
+            $name = trim(basename(BASE_PATH));
         }
 
         return Str::lower($name);
