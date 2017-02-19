@@ -32,7 +32,5 @@
             "php application install"
         ]
     },
-    "bin": [
-        "application"
-    ]
+    "bin": ["application"]
 }
