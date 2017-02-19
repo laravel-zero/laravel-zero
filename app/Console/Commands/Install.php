@@ -31,16 +31,6 @@ class Install extends Command
     protected $style;
 
     /**
-     * Configure the command options.
-     *
-     * Ask for the name of the build.
-     */
-    protected function configure()
-    {
-        $this->addArgument('name', InputArgument::OPTIONAL);
-    }
-
-    /**
      * Execute the console command.
      */
     public function handle()
@@ -52,10 +42,36 @@ class Install extends Command
     }
 
     /**
+     * Perform project modifications in order to apply the
+     * application name on the composer and on the binary.
+     *
+     * @return $this
+     */
+    private function install()
+    {
+        $name = $this->asksForApplicationName();
+
+        $this->rename($name)
+            ->updateComposer($name);
+    }
+
+    /**
+     * Display an welcome message.
+     *
+     * @return $this
+     */
+    private function displayWelcomeMessage()
+    {
+        $this->style->title('Welcome to Laravel Zero installer.');
+
+        return $this;
+    }
+
+    /**
      * Asks for the application name.
      *
-     * For the command came from a composer installer take the project folder name.
-     * 
+     * If there is no interaction, we take the folder basename.
+     *
      * @return string
      */
     private function asksForApplicationName()
@@ -72,41 +88,33 @@ class Install extends Command
     }
 
     /**
-     * Display an welcome message.
-     * 
+     * Update composer json with related information.
+     *
+     * @param  string $name
+     *
      * @return $this
      */
-    private function displayWelcomeMessage()
+    private function updateComposer($name)
     {
-        $this->style->title('Welcome to Laravel Zero installer.');
+        $this->setComposer(
+            Str::replaceFirst('"' . $this->getCurrentBinaryName() . '"', '"' . $name . '"', $this->getComposer())
+        );
+
+        $this->output->writeln("Updating composer: <info>✔</info>");
 
         return $this;
     }
 
     /**
-     * Perform project modifications in order to apply the 
-     * application name on the composer and on the binnary.
-     * 
-     * @return $this
-     */
-    private function install()
-    {
-        $name = $this->asksForApplicationName();
-
-        $this->rename($name)
-            ->updateComposer($name);
-    }
-
-    /**
-     * Renames the application binnary.
+     * Renames the application binary.
      *
      * @param  string $name
-     * 
+     *
      * @return $this
      */
     private function rename($name)
     {
-        rename(BASE_PATH . '/application', BASE_PATH . '/' . $name);
+        rename(BASE_PATH . '/' . $this->getCurrentBinaryName(), BASE_PATH . '/' . $name);
 
         $this->output->writeln("Renaming application: <info>✔</info>");
 
@@ -114,20 +122,48 @@ class Install extends Command
     }
 
     /**
-     * Update composer json with related information.
+     * Set composer file.
      *
-     * @param  string $name
-     * 
+     * @param  string $composer
+     *
      * @return $this
      */
-    private function updateComposer($name)
+    private function setComposer($composer)
     {
-        $composer = file_get_contents(BASE_PATH . '/composer.json');
-        $composer = Str::replaceFirst('"application"', '"' . $name . '"', $composer);
         file_put_contents(BASE_PATH . '/composer.json', $composer);
 
-        $this->output->writeln("Updating composer: <info>✔</info>");
-
         return $this;
+    }
+
+    /**
+     * Returns the current binary name.
+     *
+     * @return string
+     */
+    private function getCurrentBinaryName()
+    {
+        $composer = $this->getComposer();
+
+        return current(@json_decode($composer)->bin);
+    }
+
+    /**
+     * Get composer file.
+     *
+     * @return string
+     */
+    private function getComposer()
+    {
+        return file_get_contents(BASE_PATH . '/composer.json');
+    }
+
+    /**
+     * Configure the command options.
+     *
+     * Ask for the name of the build.
+     */
+    protected function configure()
+    {
+        $this->addArgument('name', InputArgument::OPTIONAL);
     }
 }
