@@ -62,7 +62,7 @@ class Install extends Command
      */
     private function displayWelcomeMessage()
     {
-        $this->style->title('Welcome to Laravel Zero installer.');
+        $this->style->title('Crafting application...');
 
         return $this;
     }
