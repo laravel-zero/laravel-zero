@@ -44,15 +44,15 @@ Laravel Zero utilizes [Composer](https://getcomposer.org) to manage its dependen
 Install Laravel Zero by issuing the Composer `create-project` command in your terminal:
 
 ```sh
-    composer create-project --prefer-dist nunomaduro/laravel-zero application-name
+    composer create-project --prefer-dist nunomaduro/laravel-zero application
 ```
 
-The create-project command will automatically run your app install command. We will take your <application-name> to configure your application.
+The create-project command will automatically run your application install command. We will take your application name to configure your application.
 
 You can always modify your application name running:
 
 ```sh
-$ php application install application-name
+    php application install awesome-app-name
 ```
 
 <a name="build-an-standalone"></a>
