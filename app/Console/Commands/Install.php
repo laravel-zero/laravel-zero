@@ -97,7 +97,11 @@ class Install extends Command
     private function updateComposer($name)
     {
         $this->setComposer(
-            Str::replaceFirst('"' . $this->getCurrentBinaryName() . '"', '"' . $name . '"', $this->getComposer())
+            Str::replaceFirst(
+                '"bin": ["' . $this->getCurrentBinaryName() . '"]',
+                '"bin": ["' . $name . '"]',
+                $this->getComposer()
+            )
         );
 
         $this->output->writeln("Updating composer: <info>✔</info>");
