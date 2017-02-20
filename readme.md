@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-    <img title="Terminal icon" height="300px" src="http://elementary.io/images/docs/human-interface-guidelines/icons/128/utilities-terminal.svg" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
 </p>
 
 ## Laravel Zero
