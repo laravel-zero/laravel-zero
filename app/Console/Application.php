@@ -23,9 +23,16 @@ class Application extends BaseApplication
     {
         parent::__construct($container, $dispatcher, self::VERSION);
 
+        // Register the build command.
         $this->add(new Commands\Build);
+
+        // Register the install command.
         $this->add(new Commands\Install);
+
+        // Register the app main command.
         $command = $this->add(new Commands\Main);
+
+        // Sets the app main command as default.
         $this->setDefaultCommand($command->getName());
     }
 }
