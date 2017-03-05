@@ -21,6 +21,13 @@ class Application extends BaseApplication
     private $container;
 
     /**
+     * The dispatcher.
+     *
+     * @var \Illuminate\Contracts\Events\Dispatcher
+     */
+    private $dispatcher;
+
+    /**
      * Create a new console application.
      *
      * @param  Container  $container
@@ -32,6 +39,9 @@ class Application extends BaseApplication
 
         // Holds the container.
         $this->container = $container;
+
+        // Holds the dispatcher.
+        $this->dispatcher = $dispatcher;
 
         // Register the app main command.
         $command = $this->add(new Commands\Main);
