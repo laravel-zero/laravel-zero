@@ -14,6 +14,20 @@ class Application extends BaseApplication
     const VERSION = '1.00';
 
     /**
+     * The container.
+     *
+     * @var \Illuminate\Contracts\Container\Container
+     */
+    private $container;
+
+    /**
+     * The dispatcher.
+     *
+     * @var \Illuminate\Contracts\Events\Dispatcher
+     */
+    private $dispatcher;
+
+    /**
      * Create a new console application.
      *
      * @param  Container  $container
@@ -23,16 +37,46 @@ class Application extends BaseApplication
     {
         parent::__construct($container, $dispatcher, self::VERSION);
 
+        // Holds the container.
+        $this->container = $container;
+
+        // Holds the dispatcher.
+        $this->dispatcher = $dispatcher;
+
+        // Register the app main command.
+        $command = $this->add(new Commands\Main);
+
+        // Sets the app main command as default.
+        $this->registerBaseCommands()
+            ->registerBaseBindings()
+            ->setDefaultCommand($command->getName());
+    }
+
+    /**
+     * Register the basic commands into the app.
+     *
+     * @return $this
+     */
+    private function registerBaseCommands()
+    {
         // Register the build command.
         $this->add(new Commands\Build);
 
         // Register the install command.
         $this->add(new Commands\Install);
 
-        // Register the app main command.
-        $command = $this->add(new Commands\Main);
+        return $this;
+    }
 
-        // Sets the app main command as default.
-        $this->setDefaultCommand($command->getName());
+    /**
+     * Register the basic bindings into the container.
+     *
+     * @return $this
+     */
+    private function registerBaseBindings()
+    {
+        $this->container->instance('app', $this);
+
+        return $this;
     }
 }
