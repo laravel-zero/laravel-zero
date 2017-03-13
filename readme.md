@@ -23,7 +23,9 @@
 <a name="introduction"></a>
 ## Introduction
 
-Laravel Zero provides an elegant starting point for your next Laravel Console Application. 
+Laravel Zero provides an elegant starting point for your next Laravel Console Application.
+
+A minimal console application with Illuminate components on top.
 
 <p align="center">
     <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
