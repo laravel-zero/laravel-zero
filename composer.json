@@ -11,7 +11,7 @@
         "illuminate/events": "5.4.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.0"
+        "phpunit/phpunit": "~6.0"
     },
     "autoload": {
         "psr-4": {
