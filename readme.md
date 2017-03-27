@@ -4,6 +4,7 @@
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/laravel-zero"><img src="https://poser.pugx.org/nunomaduro/laravel-zero/license.svg" alt="License"></a>
+  <a href='https://www.versioneye.com/user/projects/58d9809026a5bb0038e4206b'><img src='https://www.versioneye.com/user/projects/58d9809026a5bb0038e4206b/badge.svg?style=flat-square' alt="Dependency Status" /></a>
 </p>
 
 <p align="center">
