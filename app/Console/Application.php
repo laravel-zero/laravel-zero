@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use \ArrayAccess;
 use \BadMethodCallException;
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
@@ -10,7 +11,7 @@ use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Contracts\Container\Container as ContainerContract;
 
-class Application extends BaseApplication
+class Application extends BaseApplication implements ArrayAccess
 {
     /**
      * The application version.
@@ -160,5 +161,79 @@ class Application extends BaseApplication
         }
 
         throw new BadMethodCallException("Method [{$method}] does not exist.");
+    }
+
+    /**
+     * Determine if a given offset exists.
+     *
+     * @param  string $key
+     *
+     * @return bool
+     */
+    public function offsetExists($key): bool
+    {
+        return isset($this->container[$key]);
+    }
+
+    /**
+     * Get the value at a given offset.
+     *
+     * @param  string $key
+     *
+     * @return mixed
+     */
+    public function offsetGet($key)
+    {
+        return $this->container[$key];
+    }
+
+    /**
+     * Set the value at a given offset.
+     *
+     * @param  string $key
+     * @param  mixed  $value
+     *
+     * @return void
+     */
+    public function offsetSet($key, $value): void
+    {
+        $this->container[$key] = $value;
+    }
+
+    /**
+     * Unset the value at a given offset.
+     *
+     * @param  string $key
+     *
+     * @return void
+     */
+    public function offsetUnset($key): void
+    {
+        unset($this->container[$key]);
+    }
+
+    /**
+     * Dynamically access container services.
+     *
+     * @param  string $key
+     *
+     * @return mixed
+     */
+    public function __get($key)
+    {
+        return $this->container->{$key};
+    }
+
+    /**
+     * Dynamically set container services.
+     *
+     * @param  string $key
+     * @param  mixed  $value
+     *
+     * @return void
+     */
+    public function __set($key, $value): void
+    {
+        $this->container->{$key} = $value;
     }
 }
