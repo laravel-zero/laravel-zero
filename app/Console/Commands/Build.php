@@ -51,7 +51,7 @@ class Build extends Command
      *
      * Ask for the name of the build.
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this->addArgument('name', InputArgument::OPTIONAL);
     }
@@ -59,18 +59,18 @@ class Build extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
-        if (! Phar::canWrite()) {
-            return $this->error('Unable to compile a phar because of php\'s security settings. '
+        if (Phar::canWrite()) {
+            $this->build($this->input->getArgument('name') ?: self::BUILD_NAME);
+        } else {
+            $this->error('Unable to compile a phar because of php\'s security settings. '
                 . 'phar.readonly must be disabled in php.ini. ' . PHP_EOL . PHP_EOL
                 . 'You will need to edit ' . php_ini_loaded_file() . ' and add or set'
                 . PHP_EOL . PHP_EOL . "    phar.readonly = Off" . PHP_EOL . PHP_EOL
                 . 'to continue. Details here: http://php.net/manual/en/phar.configuration.php'
             );
         }
-
-        $this->build($this->input->getArgument('name') ?: self::BUILD_NAME);
     }
 
     /**
@@ -80,7 +80,7 @@ class Build extends Command
      *
      * @return $this
      */
-    private function build($name)
+    private function build(string $name): Build
     {
         $this->comment("Building: $name");
         $this->compile($name)
@@ -98,7 +98,7 @@ class Build extends Command
      *
      * @return $this
      */
-    private function compile($name)
+    private function compile(string $name): Build
     {
         $compiler = $this->makeFolder()
             ->getCompiler($name);
@@ -116,7 +116,7 @@ class Build extends Command
      *
      * @return Phar
      */
-    private function getCompiler($name)
+    private function getCompiler(string $name)
     {
         try {
             return new Phar(self::BUILD_PATH . '/' . $name . '.phar',
@@ -134,7 +134,7 @@ class Build extends Command
      *
      * @return $this
      */
-    private function makeFolder()
+    private function makeFolder(): Build
     {
         if (! file_exists(self::BUILD_PATH)) {
             mkdir(self::BUILD_PATH);
@@ -146,11 +146,11 @@ class Build extends Command
     /**
      * Moves the compiled files to the builds folder.
      *
-     * @param $name
+     * @param  string $name
      *
      * @return $this
      */
-    private function cleanUp($name)
+    private function cleanUp(string $name)
     {
         $file = self::BUILD_PATH . "/$name";
         rename("$file.phar", $file);

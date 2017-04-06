@@ -33,7 +33,7 @@ class Install extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         $this->style = new SymfonyStyle($this->input, $this->output);
 
@@ -47,7 +47,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function install()
+    private function install(): Install
     {
         $name = $this->asksForApplicationName();
 
@@ -60,7 +60,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function displayWelcomeMessage()
+    private function displayWelcomeMessage(): Install
     {
         $this->style->title('Crafting application...');
 
@@ -74,7 +74,7 @@ class Install extends Command
      *
      * @return string
      */
-    private function asksForApplicationName()
+    private function asksForApplicationName(): string
     {
         if (empty($name = $this->input->getArgument('name'))) {
             $name = $this->ask('What is your application name?');
@@ -94,7 +94,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function updateComposer($name)
+    private function updateComposer(string $name): Install
     {
         $this->setComposer(
             Str::replaceFirst(
@@ -116,7 +116,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function rename($name)
+    private function rename(string $name): Install
     {
         rename(BASE_PATH . '/' . $this->getCurrentBinaryName(), BASE_PATH . '/' . $name);
 
@@ -132,7 +132,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function setComposer($composer)
+    private function setComposer(string $composer): Install
     {
         file_put_contents(BASE_PATH . '/composer.json', $composer);
 
@@ -144,7 +144,7 @@ class Install extends Command
      *
      * @return string
      */
-    private function getCurrentBinaryName()
+    private function getCurrentBinaryName(): string
     {
         $composer = $this->getComposer();
 
@@ -156,7 +156,7 @@ class Install extends Command
      *
      * @return string
      */
-    private function getComposer()
+    private function getComposer(): string
     {
         return file_get_contents(BASE_PATH . '/composer.json');
     }
@@ -166,7 +166,7 @@ class Install extends Command
      *
      * Ask for the name of the build.
      */
-    protected function configure()
+    protected function configure(): void
     {
         $this->addArgument('name', InputArgument::OPTIONAL);
     }
