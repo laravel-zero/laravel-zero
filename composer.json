@@ -18,7 +18,6 @@
         "illuminate/container": "5.4.*",
         "illuminate/console": "5.4.*",
         "illuminate/events": "5.4.*",
-        "illuminate/encryption": "5.4.*",
         "illuminate/config": "5.4.*"
     },
     "require-dev": {
