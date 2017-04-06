@@ -44,10 +44,8 @@ class Install extends Command
     /**
      * Perform project modifications in order to apply the
      * application name on the composer and on the binary.
-     *
-     * @return $this
      */
-    private function install(): Install
+    private function install(): void
     {
         $name = $this->asksForApplicationName();
 
