@@ -2,9 +2,13 @@
 
 namespace App\Console;
 
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\Container\Container;
+use \BadMethodCallException;
+use Illuminate\Config\Repository;
+use Illuminate\Container\Container;
+use Illuminate\Events\EventServiceProvider;
 use Illuminate\Console\Application as BaseApplication;
+use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+use Illuminate\Contracts\Container\Container as ContainerContract;
 
 class Application extends BaseApplication
 {
@@ -28,28 +32,43 @@ class Application extends BaseApplication
     private $dispatcher;
 
     /**
-     * Create a new console application.
+     * All of the registered service providers.
      *
-     * @param  Container  $container
-     * @param  Dispatcher $dispatcher
+     * @var array
      */
-    public function __construct(Container $container, Dispatcher $dispatcher)
+    private $serviceProviders = [
+        EventServiceProvider::class,
+    ];
+
+    /**
+     * ALl the container aliases.
+     *
+     * @var array
+     */
+    private $aliases = [
+        'app' => [\Illuminate\Contracts\Container\Container::class],
+        'events' => [\Illuminate\Events\Dispatcher::class, \Illuminate\Contracts\Events\Dispatcher::class],
+        'config' => [\Illuminate\Config\Repository::class, \Illuminate\Contracts\Config\Repository::class],
+    ];
+
+    /**
+     * Create a new application.
+     *
+     * @param  \Illuminate\Contracts\Container\Container $container
+     * @param  \Illuminate\Contracts\Events\Dispatcher   $dispatcher
+     */
+    public function __construct(ContainerContract $container, DispatcherContract $dispatcher)
     {
         parent::__construct($container, $dispatcher, self::VERSION);
 
-        // Holds the container.
         $this->container = $container;
 
-        // Holds the dispatcher.
         $this->dispatcher = $dispatcher;
 
-        // Register the app main command.
-        $command = $this->add(new Commands\Main);
-
-        // Sets the app main command as default.
         $this->registerBaseCommands()
             ->registerBaseBindings()
-            ->setDefaultCommand($command->getName());
+            ->registerServiceProviders()
+            ->registerContainerAliases();
     }
 
     /**
@@ -57,12 +76,14 @@ class Application extends BaseApplication
      *
      * @return $this
      */
-    private function registerBaseCommands()
+    private function registerBaseCommands(): Application
     {
-        // Register the build command.
+        $command = $this->add(new Commands\Main);
+
+        $this->setDefaultCommand($command);
+
         $this->add(new Commands\Build);
 
-        // Register the install command.
         $this->add(new Commands\Install);
 
         return $this;
@@ -73,10 +94,71 @@ class Application extends BaseApplication
      *
      * @return $this
      */
-    private function registerBaseBindings()
+    private function registerBaseBindings(): Application
     {
+        Container::setInstance($this->container);
+
         $this->container->instance('app', $this);
 
+        $this->container->instance(Container::class, $this->container);
+
+        $this->container->instance('config', new Repository(
+            require BASE_PATH . '/' . 'config/config.php'
+        ));
+
         return $this;
+    }
+
+    /**
+     * Register the services into the container.
+     *
+     * @return $this
+     */
+    private function registerServiceProviders(): Application
+    {
+        array_walk($this->serviceProviders, function($serviceProvider) {
+            $instance = (new $serviceProvider($this))->register();
+
+            if (method_exists($instance, 'boot')) {
+                $instance->boot();
+            }
+        });
+
+        return $this;
+    }
+
+    /**
+     * Register the class aliases in the container.
+     *
+     * @return $this
+     */
+    private function registerContainerAliases(): Application
+    {
+        foreach ($this->aliases as $key => $aliases) {
+            foreach ($aliases as $alias) {
+                $this->container->alias($key, $alias);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Proxies calls into the container.
+     *
+     * @param  string $method
+     * @param  array  $parameters
+     *
+     * @return mixed
+     *
+     * @throws \BadMethodCallException
+     */
+    public function __call(string $method, array $parameters)
+    {
+        if (is_callable([$this->container, $method])) {
+            return call_user_func_array([$this->container, $method], $parameters);
+        }
+
+        throw new BadMethodCallException("Method [{$method}] does not exist.");
     }
 }

@@ -2,7 +2,9 @@
 
 namespace Tests;
 
-abstract class TestCase extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase as BaseTestCase;
+
+abstract class TestCase extends BaseTestCase
 {
     use CreatesApplication;
 
@@ -18,7 +20,7 @@ abstract class TestCase extends \PHPUnit\Framework\TestCase
      *
      * @return void
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->app = $this->createApplication();
     }

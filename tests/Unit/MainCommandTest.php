@@ -12,7 +12,7 @@ class MainCommandTest extends TestCase
      *
      * @return void
      */
-    public function testCall()
+    public function testCall(): void
     {
         $this->app->call((new Main)->getName());
 

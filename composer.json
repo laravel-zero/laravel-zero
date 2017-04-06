@@ -3,12 +3,23 @@
     "description": "Laravel Zero provides the perfect starting point for your next Laravel Console Application.",
     "keywords": ["framework", "laravel", "console", "zero"],
     "license": "MIT",
-    "type": "project",
+    "support": {
+        "issues": "https://github.com/nunomaduro/laravel-zero/issues",
+        "source": "https://github.com/nunomaduro/laravel-zero"
+    },
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=7.0",
         "illuminate/container": "5.4.*",
         "illuminate/console": "5.4.*",
-        "illuminate/events": "5.4.*"
+        "illuminate/events": "5.4.*",
+        "illuminate/encryption": "5.4.*",
+        "illuminate/config": "5.4.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0"
