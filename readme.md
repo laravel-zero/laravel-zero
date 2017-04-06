@@ -36,7 +36,7 @@ A minimal console application with Illuminate components on top.
 ## Server Requirements
 
 <div class="content-list" markdown="1">
-- PHP >= 7.0
+- PHP >= 7.1
 </div>
 
 <a name="installation"></a>
