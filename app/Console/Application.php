@@ -145,6 +145,20 @@ class Application extends BaseApplication implements ArrayAccess
     }
 
     /**
+     * Sets the application container.
+     *
+     * @param  \Illuminate\Contracts\Container\Container $container
+     *
+     * @return $this
+     */
+    public function setContainer(ContainerContract $container): Application
+    {
+        $this->container = $container;
+
+        return $this;
+    }
+
+    /**
      * Proxies calls into the container.
      *
      * @param  string $method

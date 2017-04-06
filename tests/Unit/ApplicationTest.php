@@ -2,20 +2,54 @@
 
 namespace Tests\Unit;
 
+use App\Console\Application;
 use Tests\TestCase;
-use App\Console\Commands\Main;
 
-class MainCommandTest extends TestCase
+class ApplicationTest extends TestCase
 {
     /**
-     * The main command test example.
-     *
-     * @return void
+     * Tests if the application proxies correctly unknown methods
+     * into the application container.
      */
-    public function testCall(): void
+    public function testProxyCall(): void
     {
-        $this->app->call((new Main)->getName());
+        $app = $this->createApplication();
 
-        $this->assertTrue(trim($this->app->output()) === 'Love beautiful code? We do too.');
+        $app->setContainer(
+            $mock = $this->createMock('\Illuminate\Container\Container')
+        );
+
+        $mock->expects($this->exactly(1))
+            ->method('bind')
+            ->with(
+                $this->stringContains('something'),
+                $this->callback(function() {
+                    return 'foo';
+                })
+            );
+
+        $app->bind(
+            'something',
+            function() {
+                return 'foo';
+            }
+        );
+    }
+
+    /**
+     * Tests if the application proxies correctly is array access.
+     * into the application container.
+     */
+    public function testProxyArrayAccess(): void
+    {
+        $app = $this->createApplication();
+
+        $app['something'] = function() {
+            return 'foo';
+        };
+        $this->assertTrue(isset($app['something']));
+        $this->assertEquals('foo', $app['something']);
+        unset($app['something']);
+        $this->assertFalse(isset($app['something']));
     }
 }
