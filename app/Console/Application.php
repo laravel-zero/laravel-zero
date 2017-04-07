@@ -81,7 +81,7 @@ class Application extends BaseApplication implements ArrayAccess
     {
         $command = $this->add(new Commands\Main);
 
-        $this->setDefaultCommand($command);
+        $this->setDefaultCommand($command->getName());
 
         $this->add(new Commands\Build);
 
