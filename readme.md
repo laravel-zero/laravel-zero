@@ -42,6 +42,10 @@ A minimal console application with Illuminate components on top.
 <a name="installation"></a>
 ## Installation
 
+<p align="center">
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/install.gif" />
+</p>
+
 Laravel Zero utilizes [Composer](https://getcomposer.org) to manage its dependencies. So, before using Laravel Zero, make sure you have Composer installed on your machine.
 
 Install Laravel Zero by issuing the Composer `create-project` command in your terminal:
