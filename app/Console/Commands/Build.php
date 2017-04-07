@@ -30,6 +30,7 @@ class Build extends Command
         'app/',
         'vendor/',
         'bootstrap/',
+        'config/',
     ];
 
     /**
