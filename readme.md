@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/26df832a0e72f1002d3a94455475ccd5534e9f40/docs/logo.png" />
 </p>
 
 ## Laravel Zero
@@ -29,7 +29,7 @@ Laravel Zero provides an elegant starting point for your next Laravel Console Ap
 A minimal console application with Illuminate components on top.
 
 <p align="center">
-    <img src="http://i.imgur.com/MSfhukT.png" alt="Laravel Zero" />
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/commands.gif" />
 </p>
 
 <a name="server-requirements"></a>
