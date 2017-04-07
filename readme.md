@@ -15,6 +15,7 @@
 
 - [Introduction](#introduction)
 - [Server Requirements](#server-requirements)
+- [Usage](#usage)
 - [Installation](#installation)
 - [Build an standalone application](#build-an-standalone)
 - [Documentation](#documentation)
@@ -26,10 +27,11 @@
 
 Laravel Zero provides an elegant starting point for your next Laravel Console Application.
 
-A minimal console application with Illuminate components on top.
+A minimal console application with Illuminate components on top. Enjoy all the magic of laravel service providers on your
+next Laravel console application.
 
 <p align="center">
-    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/commands.gif" />
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/service-providers.png" />
 </p>
 
 <a name="server-requirements"></a>
@@ -39,12 +41,15 @@ A minimal console application with Illuminate components on top.
 - PHP >= 7.1
 </div>
 
-<a name="installation"></a>
-## Installation
+<a name="usage"></a>
+## Usage
 
 <p align="center">
-    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/install.gif" />
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/commands.gif" />
 </p>
+
+<a name="installation"></a>
+## Installation
 
 Laravel Zero utilizes [Composer](https://getcomposer.org) to manage its dependencies. So, before using Laravel Zero, make sure you have Composer installed on your machine.
 
@@ -62,6 +67,10 @@ You can always modify your application name running:
 $ php application install <name>
 ```
 
+<p align="center">
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/install.gif" />
+</p>
+
 <a name="build-an-standalone"></a>
 ## Build an standalone
 
@@ -77,64 +86,6 @@ The build will provide you can a single executable, ready to use, of your applic
 ## Documentation
 
 Laravel Zero provides a main command. That is the default one of your application, placed in app/Console/Commands/Main.php. You should fill in the `signature` and `description` properties of the class, which will be used when displaying your command on the `list` screen. The `handle` method will be called when your command is executed. You may place your command logic in this method.
-
-Let's take a look at an example command.
-
-```php
-<?php
-
-namespace App\Console\Commands;
-
-use App\DripEmailer;
-use Illuminate\Console\Command;
-
-class SendEmails extends Command
-{
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'email:send {email}';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Send drip e-mails to a email';
-
-    /**
-     * The drip e-mail service.
-     *
-     * @var DripEmailer
-     */
-    protected $drip;
-
-    /**
-     * Create a new command instance.
-     *
-     * @param  DripEmailer|null  $drip
-     * @return void
-     */
-    public function __construct(DripEmailer $drip = null)
-    {
-        parent::__construct();
-
-        $this->drip = $drip ?: new DripEmailer;
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle()
-    {
-        $this->drip->send($this->argument('email'));
-    }
-}
-```
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
 
