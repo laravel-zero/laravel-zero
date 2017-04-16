@@ -18,7 +18,9 @@
 - [Usage](#usage)
 - [Installation](#installation)
 - [Build an standalone application](#build-an-standalone)
+- [Performance analyser](#performance-analyser)
 - [Documentation](#documentation)
+- [Git branching model](#git-model)
 - [Stay in touch](#stay-in-touch)
 - [License](#license)
 
@@ -82,12 +84,29 @@ $ php application build <name>
 
 The build will provide you can a single executable, ready to use, of your application.
 
+<a name="performance-analyser"></a>
+## Performance Analyser
+
+Laravel Zero ships with a **performance analyser**. Check easily of your application commands are taking too much memory or if they are spending too much time.
+ 
+ <p align="center">
+     <img title="Performance" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/performance.png" />
+ </p>
+ 
+ ```sh
+ $ php application <command> --performance
+ ```
+ 
 <a name="documentation"></a>
 ## Documentation
 
 Laravel Zero provides a main command. That is the default one of your application, placed in app/Console/Commands/Main.php. You should fill in the `signature` and `description` properties of the class, which will be used when displaying your command on the `list` screen. The `handle` method will be called when your command is executed. You may place your command logic in this method.
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
+
+<a name="git-model"></a>
+## Git branching model
+The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
 
 <a name="stay-in-touch"></a>
 ## Stay In Touch

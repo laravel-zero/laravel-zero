@@ -7,6 +7,7 @@ use \BadMethodCallException;
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Events\EventServiceProvider;
+use Symfony\Component\Console\Input\InputInterface;
 use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Contracts\Container\Container as ContainerContract;
@@ -62,6 +63,8 @@ class Application extends BaseApplication implements ArrayAccess
     {
         parent::__construct($container, $dispatcher, self::VERSION);
 
+        $this->setCatchExceptions(true);
+
         $this->container = $container;
 
         $this->dispatcher = $dispatcher;
@@ -70,78 +73,6 @@ class Application extends BaseApplication implements ArrayAccess
             ->registerBaseBindings()
             ->registerServiceProviders()
             ->registerContainerAliases();
-    }
-
-    /**
-     * Register the basic commands into the app.
-     *
-     * @return $this
-     */
-    private function registerBaseCommands(): Application
-    {
-        $command = $this->add(new Commands\Main);
-
-        $this->setDefaultCommand($command->getName());
-
-        $this->add(new Commands\Build);
-
-        $this->add(new Commands\Install);
-
-        return $this;
-    }
-
-    /**
-     * Register the basic bindings into the container.
-     *
-     * @return $this
-     */
-    private function registerBaseBindings(): Application
-    {
-        Container::setInstance($this->container);
-
-        $this->container->instance('app', $this);
-
-        $this->container->instance(Container::class, $this->container);
-
-        $this->container->instance('config', new Repository(
-            require BASE_PATH . '/' . 'config/config.php'
-        ));
-
-        return $this;
-    }
-
-    /**
-     * Register the services into the container.
-     *
-     * @return $this
-     */
-    private function registerServiceProviders(): Application
-    {
-        array_walk($this->serviceProviders, function($serviceProvider) {
-            $instance = (new $serviceProvider($this))->register();
-
-            if (method_exists($instance, 'boot')) {
-                $instance->boot();
-            }
-        });
-
-        return $this;
-    }
-
-    /**
-     * Register the class aliases in the container.
-     *
-     * @return $this
-     */
-    private function registerContainerAliases(): Application
-    {
-        foreach ($this->aliases as $key => $aliases) {
-            foreach ($aliases as $alias) {
-                $this->container->alias($key, $alias);
-            }
-        }
-
-        return $this;
     }
 
     /**
@@ -249,5 +180,89 @@ class Application extends BaseApplication implements ArrayAccess
     public function __set($key, $value): void
     {
         $this->container->{$key} = $value;
+    }
+
+    /**
+     * Gets the name of the command based on input.
+     *
+     * @param \Symfony\Component\Console\Input\InputInterface $input The input interface
+     *
+     * @return string The command name
+     */
+    protected function getCommandName(InputInterface $input)
+    {
+        $name = parent::getCommandName($input);
+
+        return $name ?: (new Commands\Main)->getName();
+    }
+
+    /**
+     * Register the basic commands into the app.
+     *
+     * @return $this
+     */
+    private function registerBaseCommands(): Application
+    {
+        $this->add(new Commands\Main);
+
+        $this->add(new Commands\Build);
+
+        $this->add(new Commands\Install);
+
+        return $this;
+    }
+
+    /**
+     * Register the basic bindings into the container.
+     *
+     * @return $this
+     */
+    private function registerBaseBindings(): Application
+    {
+        Container::setInstance($this->container);
+
+        $this->container->instance('app', $this);
+
+        $this->container->instance(Container::class, $this->container);
+
+        $this->container->instance('config', new Repository(
+            require BASE_PATH . '/' . 'config/config.php'
+        ));
+
+        return $this;
+    }
+
+    /**
+     * Register the services into the container.
+     *
+     * @return $this
+     */
+    private function registerServiceProviders(): Application
+    {
+        array_walk($this->serviceProviders, function($serviceProvider) {
+            $instance = (new $serviceProvider($this))->register();
+
+            if (method_exists($instance, 'boot')) {
+                $instance->boot();
+            }
+        });
+
+        return $this;
+    }
+
+    /**
+     * Register the class aliases in the container.
+     *
+     * @return $this
+     */
+    private function registerContainerAliases(): Application
+    {
+        foreach ($this->aliases as $key => $aliases) {
+            foreach ($aliases as $alias) {
+                $this->container->alias($key, $alias);
+            }
+        }
+
+        return $this;
     }
 }

@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Support\Str;
-use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
@@ -33,7 +32,7 @@ class Install extends Command
     /**
      * Execute the console command.
      */
-    public function handle(): void
+    public function fire(): void
     {
         $this->style = new SymfonyStyle($this->input, $this->output);
 

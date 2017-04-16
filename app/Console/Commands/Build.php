@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use \Phar;
 use \FilesystemIterator;
 use \UnexpectedValueException;
-use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 
 class Build extends Command
@@ -60,7 +59,7 @@ class Build extends Command
     /**
      * Execute the console command.
      */
-    public function handle(): void
+    public function fire(): void
     {
         if (Phar::canWrite()) {
             $this->build($this->input->getArgument('name') ?: self::BUILD_NAME);
