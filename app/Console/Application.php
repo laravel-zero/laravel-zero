@@ -62,6 +62,8 @@ class Application extends BaseApplication implements ArrayAccess
     {
         parent::__construct($container, $dispatcher, self::VERSION);
 
+        $this->setCatchExceptions(true);
+
         $this->container = $container;
 
         $this->dispatcher = $dispatcher;
@@ -70,78 +72,6 @@ class Application extends BaseApplication implements ArrayAccess
             ->registerBaseBindings()
             ->registerServiceProviders()
             ->registerContainerAliases();
-    }
-
-    /**
-     * Register the basic commands into the app.
-     *
-     * @return $this
-     */
-    private function registerBaseCommands(): Application
-    {
-        $command = $this->add(new Commands\Main);
-
-        $this->setDefaultCommand($command->getName());
-
-        $this->add(new Commands\Build);
-
-        $this->add(new Commands\Install);
-
-        return $this;
-    }
-
-    /**
-     * Register the basic bindings into the container.
-     *
-     * @return $this
-     */
-    private function registerBaseBindings(): Application
-    {
-        Container::setInstance($this->container);
-
-        $this->container->instance('app', $this);
-
-        $this->container->instance(Container::class, $this->container);
-
-        $this->container->instance('config', new Repository(
-            require BASE_PATH . '/' . 'config/config.php'
-        ));
-
-        return $this;
-    }
-
-    /**
-     * Register the services into the container.
-     *
-     * @return $this
-     */
-    private function registerServiceProviders(): Application
-    {
-        array_walk($this->serviceProviders, function($serviceProvider) {
-            $instance = (new $serviceProvider($this))->register();
-
-            if (method_exists($instance, 'boot')) {
-                $instance->boot();
-            }
-        });
-
-        return $this;
-    }
-
-    /**
-     * Register the class aliases in the container.
-     *
-     * @return $this
-     */
-    private function registerContainerAliases(): Application
-    {
-        foreach ($this->aliases as $key => $aliases) {
-            foreach ($aliases as $alias) {
-                $this->container->alias($key, $alias);
-            }
-        }
-
-        return $this;
     }
 
     /**
@@ -250,4 +180,77 @@ class Application extends BaseApplication implements ArrayAccess
     {
         $this->container->{$key} = $value;
     }
+
+    /**
+     * Register the basic commands into the app.
+     *
+     * @return $this
+     */
+    private function registerBaseCommands(): Application
+    {
+        $command = $this->add(new Commands\Main);
+
+        $this->setDefaultCommand($command->getName());
+
+        $this->add(new Commands\Build);
+
+        $this->add(new Commands\Install);
+
+        return $this;
+    }
+
+    /**
+     * Register the basic bindings into the container.
+     *
+     * @return $this
+     */
+    private function registerBaseBindings(): Application
+    {
+        Container::setInstance($this->container);
+
+        $this->container->instance('app', $this);
+
+        $this->container->instance(Container::class, $this->container);
+
+        $this->container->instance('config', new Repository(
+            require BASE_PATH . '/' . 'config/config.php'
+        ));
+
+        return $this;
+    }
+
+    /**
+     * Register the services into the container.
+     *
+     * @return $this
+     */
+    private function registerServiceProviders(): Application
+    {
+        array_walk($this->serviceProviders, function($serviceProvider) {
+            $instance = (new $serviceProvider($this))->register();
+
+            if (method_exists($instance, 'boot')) {
+                $instance->boot();
+            }
+        });
+
+        return $this;
+    }
+
+    /**
+     * Register the class aliases in the container.
+     *
+     * @return $this
+     */
+    private function registerContainerAliases(): Application
+    {
+        foreach ($this->aliases as $key => $aliases) {
+            foreach ($aliases as $alias) {
+                $this->container->alias($key, $alias);
+            }
+        }
+
+        return $this;
+    }
+
 }
