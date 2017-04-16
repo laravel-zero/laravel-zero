@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use \Phar;
 use \FilesystemIterator;
 use \UnexpectedValueException;
-use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 
 class Build extends Command
