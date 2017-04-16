@@ -4,3 +4,9 @@
 
 ### Added
 - First stable version
+
+## v1.3.0 (2017-04-16)
+
+### Added
+- Adds better error handling
+- Adds base abstract command
