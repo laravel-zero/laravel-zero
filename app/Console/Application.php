@@ -7,6 +7,7 @@ use \BadMethodCallException;
 use Illuminate\Config\Repository;
 use Illuminate\Container\Container;
 use Illuminate\Events\EventServiceProvider;
+use Symfony\Component\Console\Input\InputInterface;
 use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Contracts\Container\Container as ContainerContract;
@@ -182,15 +183,27 @@ class Application extends BaseApplication implements ArrayAccess
     }
 
     /**
+     * Gets the name of the command based on input.
+     *
+     * @param \Symfony\Component\Console\Input\InputInterface $input The input interface
+     *
+     * @return string The command name
+     */
+    protected function getCommandName(InputInterface $input)
+    {
+        $name = parent::getCommandName($input);
+
+        return $name ?: (new Commands\Main)->getName();
+    }
+
+    /**
      * Register the basic commands into the app.
      *
      * @return $this
      */
     private function registerBaseCommands(): Application
     {
-        $command = $this->add(new Commands\Main);
-
-        $this->setDefaultCommand($command->getName());
+        $this->add(new Commands\Main);
 
         $this->add(new Commands\Build);
 
@@ -252,5 +265,4 @@ class Application extends BaseApplication implements ArrayAccess
 
         return $this;
     }
-
 }

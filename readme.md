@@ -18,6 +18,7 @@
 - [Usage](#usage)
 - [Installation](#installation)
 - [Build an standalone application](#build-an-standalone)
+- [Performance analyser](#performance-analyser)
 - [Documentation](#documentation)
 - [Git branching model](#git-model)
 - [Stay in touch](#stay-in-touch)
@@ -83,6 +84,19 @@ $ php application build <name>
 
 The build will provide you can a single executable, ready to use, of your application.
 
+<a name="performance-analyser"></a>
+## Performance Analyser
+
+Laravel Zero ships with a **performance analyser**. Check easily of your application commands are taking too much memory or if they are spending too much time.
+ 
+ <p align="center">
+     <img title="Performance" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/performance.png" />
+ </p>
+ 
+ ```sh
+ $ php application <command> --performance
+ ```
+ 
 <a name="documentation"></a>
 ## Documentation
 

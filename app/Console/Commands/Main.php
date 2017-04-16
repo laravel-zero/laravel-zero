@@ -21,7 +21,7 @@ class Main extends Command
     /**
      * Execute the console command.
      */
-    public function handle(): void
+    public function fire(): void
     {
         $this->info('Love beautiful code? We do too.');
     }

@@ -15,13 +15,14 @@
     ],
     "require": {
         "php": ">=7.1",
-        "illuminate/container": "5.4.*",
+        "illuminate/config": "5.4.*",
         "illuminate/console": "5.4.*",
-        "illuminate/events": "5.4.*",
-        "illuminate/config": "5.4.*"
+        "illuminate/container": "5.4.*",
+        "illuminate/events": "5.4.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "bvanhoekelen/performance": "dev-master"
     },
     "autoload": {
         "psr-4": {

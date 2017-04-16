@@ -9,4 +9,5 @@
 
 ### Added
 - Adds better error handling
-- Adds base abstract command
+- Adds base abstract layer between you app commands and laravel commands
+- Adds feature `Performance analyser`

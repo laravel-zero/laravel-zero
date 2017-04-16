@@ -32,7 +32,7 @@ class Install extends Command
     /**
      * Execute the console command.
      */
-    public function handle(): void
+    public function fire(): void
     {
         $this->style = new SymfonyStyle($this->input, $this->output);
 
