@@ -88,19 +88,19 @@ The build will provide you can a single executable, ready to use, of your applic
 ## Performance Analyser
 
 Laravel Zero ships with a **performance analyser**. Check easily of your application commands are taking too much memory or if they are spending too much time.
- 
+
  <p align="center">
      <img title="Performance" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/performance.png" />
  </p>
- 
+
  ```sh
  $ php application <command> --performance
  ```
- 
+
 <a name="documentation"></a>
 ## Documentation
 
-Laravel Zero provides a main command. That is the default one of your application, placed in app/Console/Commands/Main.php. You should fill in the `signature` and `description` properties of the class, which will be used when displaying your command on the `list` screen. The `handle` method will be called when your command is executed. You may place your command logic in this method.
+Laravel Zero provides a main command. That is the default one of your application, placed in app/Console/Commands/Main.php. You should fill in the `signature` and `description` properties of the class, which will be used when displaying your command on the `list` screen. The `fire` method will be called when your command is executed. You may place your command logic in this method.
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
 
