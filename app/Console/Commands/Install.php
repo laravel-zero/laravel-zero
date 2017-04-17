@@ -87,7 +87,7 @@ class Install extends Command
     /**
      * Update composer json with related information.
      *
-     * @param  string $name
+     * @param string $name
      *
      * @return $this
      */
@@ -95,13 +95,13 @@ class Install extends Command
     {
         $this->setComposer(
             Str::replaceFirst(
-                '"bin": ["' . $this->getCurrentBinaryName() . '"]',
-                '"bin": ["' . $name . '"]',
+                '"bin": ["'.$this->getCurrentBinaryName().'"]',
+                '"bin": ["'.$name.'"]',
                 $this->getComposer()
             )
         );
 
-        $this->output->writeln("Updating composer: <info>✔</info>");
+        $this->output->writeln('Updating composer: <info>✔</info>');
 
         return $this;
     }
@@ -109,15 +109,15 @@ class Install extends Command
     /**
      * Renames the application binary.
      *
-     * @param  string $name
+     * @param string $name
      *
      * @return $this
      */
     private function rename(string $name): Install
     {
-        rename(BASE_PATH . '/' . $this->getCurrentBinaryName(), BASE_PATH . '/' . $name);
+        rename(BASE_PATH.'/'.$this->getCurrentBinaryName(), BASE_PATH.'/'.$name);
 
-        $this->output->writeln("Renaming application: <info>✔</info>");
+        $this->output->writeln('Renaming application: <info>✔</info>');
 
         return $this;
     }
@@ -125,13 +125,13 @@ class Install extends Command
     /**
      * Set composer file.
      *
-     * @param  string $composer
+     * @param string $composer
      *
      * @return $this
      */
     private function setComposer(string $composer): Install
     {
-        file_put_contents(BASE_PATH . '/composer.json', $composer);
+        file_put_contents(BASE_PATH.'/composer.json', $composer);
 
         return $this;
     }
@@ -155,7 +155,7 @@ class Install extends Command
      */
     private function getComposer(): string
     {
-        return file_get_contents(BASE_PATH . '/composer.json');
+        return file_get_contents(BASE_PATH.'/composer.json');
     }
 
     /**

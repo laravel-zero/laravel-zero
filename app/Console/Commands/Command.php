@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Performance\Performance;
 use Illuminate\Console\Command as BaseCommand;
+use Performance\Performance;
 
 abstract class Command extends BaseCommand
 {
@@ -25,7 +25,7 @@ abstract class Command extends BaseCommand
     public function handle(): void
     {
         if ($this->isProfilingAvailable() && $this->input->getOption('performance')) {
-            Performance::point('The command `' . $this->getName() . '`');
+            Performance::point('The command `'.$this->getName().'`');
         }
 
         $this->fire();
@@ -48,7 +48,7 @@ abstract class Command extends BaseCommand
     /**
      * Checks if the performance feature is available.
      *
-     * @return boolean
+     * @return bool
      */
     private function isProfilingAvailable()
     {

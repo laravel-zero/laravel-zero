@@ -23,14 +23,14 @@ class ApplicationTest extends TestCase
             ->method('bind')
             ->with(
                 $this->stringContains('something'),
-                $this->callback(function() {
+                $this->callback(function () {
                     return 'foo';
                 })
             );
 
         $app->bind(
             'something',
-            function() {
+            function () {
                 return 'foo';
             }
         );
@@ -44,7 +44,7 @@ class ApplicationTest extends TestCase
     {
         $app = $this->createApplication();
 
-        $app['something'] = function() {
+        $app['something'] = function () {
             return 'foo';
         };
         $this->assertTrue(isset($app['something']));
