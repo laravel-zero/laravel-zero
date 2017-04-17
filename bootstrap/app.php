@@ -11,11 +11,11 @@
 |
 */
 
-if (! defined('BASE_PATH')) {
+if (!defined('BASE_PATH')) {
     define('BASE_PATH', dirname(__DIR__));
 }
 
-$container = new Illuminate\Container\Container;
+$container = new Illuminate\Container\Container();
 $dispatcher = new Illuminate\Events\Dispatcher($container);
 $app = new App\Console\Application($container, $dispatcher);
 

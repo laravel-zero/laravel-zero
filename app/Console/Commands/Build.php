@@ -2,17 +2,17 @@
 
 namespace App\Console\Commands;
 
-use \Phar;
-use \FilesystemIterator;
-use \UnexpectedValueException;
+use FilesystemIterator;
+use Phar;
 use Symfony\Component\Console\Input\InputArgument;
+use UnexpectedValueException;
 
 class Build extends Command
 {
     /**
      * The directory that contains your application builds.
      */
-    const BUILD_PATH = BASE_PATH . '/builds';
+    const BUILD_PATH = BASE_PATH.'/builds';
 
     /**
      * The default build name.
@@ -65,10 +65,10 @@ class Build extends Command
             $this->build($this->input->getArgument('name') ?: self::BUILD_NAME);
         } else {
             $this->error('Unable to compile a phar because of php\'s security settings. '
-                . 'phar.readonly must be disabled in php.ini. ' . PHP_EOL . PHP_EOL
-                . 'You will need to edit ' . php_ini_loaded_file() . ' and add or set'
-                . PHP_EOL . PHP_EOL . "    phar.readonly = Off" . PHP_EOL . PHP_EOL
-                . 'to continue. Details here: http://php.net/manual/en/phar.configuration.php'
+                .'phar.readonly must be disabled in php.ini. '.PHP_EOL.PHP_EOL
+                .'You will need to edit '.php_ini_loaded_file().' and add or set'
+                .PHP_EOL.PHP_EOL.'    phar.readonly = Off'.PHP_EOL.PHP_EOL
+                .'to continue. Details here: http://php.net/manual/en/phar.configuration.php'
             );
         }
     }
@@ -94,7 +94,7 @@ class Build extends Command
     /**
      * Compiles the standalone application.
      *
-     * @param  string $name
+     * @param string $name
      *
      * @return $this
      */
@@ -103,7 +103,7 @@ class Build extends Command
         $compiler = $this->makeFolder()
             ->getCompiler($name);
 
-        $compiler->buildFromDirectory(BASE_PATH, '#' . implode('|', $this->structure) . '#');
+        $compiler->buildFromDirectory(BASE_PATH, '#'.implode('|', $this->structure).'#');
         $compiler->setStub($compiler->createDefaultStub('bootstrap/init.php'));
 
         return $this;
@@ -119,12 +119,12 @@ class Build extends Command
     private function getCompiler(string $name)
     {
         try {
-            return new Phar(self::BUILD_PATH . '/' . $name . '.phar',
+            return new Phar(self::BUILD_PATH.'/'.$name.'.phar',
                 FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::KEY_AS_FILENAME,
                 $name
             );
         } catch (UnexpectedValueException $e) {
-            $this->error("You cannot perform a build.");
+            $this->error('You cannot perform a build.');
             exit(0);
         }
     }
@@ -136,7 +136,7 @@ class Build extends Command
      */
     private function makeFolder(): Build
     {
-        if (! file_exists(self::BUILD_PATH)) {
+        if (!file_exists(self::BUILD_PATH)) {
             mkdir(self::BUILD_PATH);
         }
 
@@ -146,13 +146,13 @@ class Build extends Command
     /**
      * Moves the compiled files to the builds folder.
      *
-     * @param  string $name
+     * @param string $name
      *
      * @return $this
      */
     private function cleanUp(string $name)
     {
-        $file = self::BUILD_PATH . "/$name";
+        $file = self::BUILD_PATH."/$name";
         rename("$file.phar", $file);
 
         return $this;

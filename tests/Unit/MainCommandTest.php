@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use App\Console\Commands\Main;
+use Tests\TestCase;
 
 class MainCommandTest extends TestCase
 {
@@ -14,7 +14,7 @@ class MainCommandTest extends TestCase
      */
     public function testCall(): void
     {
-        $this->app->call((new Main)->getName());
+        $this->app->call((new Main())->getName());
 
         $this->assertTrue(trim($this->app->output()) === 'Love beautiful code? We do too.');
     }

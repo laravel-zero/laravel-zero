@@ -2,15 +2,15 @@
 
 namespace App\Console;
 
-use \ArrayAccess;
-use \BadMethodCallException;
+use ArrayAccess;
+use BadMethodCallException;
 use Illuminate\Config\Repository;
+use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Container\Container;
+use Illuminate\Contracts\Container\Container as ContainerContract;
+use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Events\EventServiceProvider;
 use Symfony\Component\Console\Input\InputInterface;
-use Illuminate\Console\Application as BaseApplication;
-use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
-use Illuminate\Contracts\Container\Container as ContainerContract;
 
 class Application extends BaseApplication implements ArrayAccess
 {
@@ -48,7 +48,7 @@ class Application extends BaseApplication implements ArrayAccess
      * @var array
      */
     private $aliases = [
-        'app' => [\Illuminate\Contracts\Container\Container::class],
+        'app'    => [\Illuminate\Contracts\Container\Container::class],
         'events' => [\Illuminate\Events\Dispatcher::class, \Illuminate\Contracts\Events\Dispatcher::class],
         'config' => [\Illuminate\Config\Repository::class, \Illuminate\Contracts\Config\Repository::class],
     ];
@@ -56,8 +56,8 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Create a new application.
      *
-     * @param  \Illuminate\Contracts\Container\Container $container
-     * @param  \Illuminate\Contracts\Events\Dispatcher   $dispatcher
+     * @param \Illuminate\Contracts\Container\Container $container
+     * @param \Illuminate\Contracts\Events\Dispatcher   $dispatcher
      */
     public function __construct(ContainerContract $container, DispatcherContract $dispatcher)
     {
@@ -78,7 +78,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Sets the application container.
      *
-     * @param  \Illuminate\Contracts\Container\Container $container
+     * @param \Illuminate\Contracts\Container\Container $container
      *
      * @return $this
      */
@@ -92,12 +92,12 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Proxies calls into the container.
      *
-     * @param  string $method
-     * @param  array  $parameters
-     *
-     * @return mixed
+     * @param string $method
+     * @param array  $parameters
      *
      * @throws \BadMethodCallException
+     *
+     * @return mixed
      */
     public function __call(string $method, array $parameters)
     {
@@ -111,7 +111,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Determine if a given offset exists.
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return bool
      */
@@ -123,7 +123,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Get the value at a given offset.
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return mixed
      */
@@ -135,8 +135,8 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Set the value at a given offset.
      *
-     * @param  string $key
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed  $value
      *
      * @return void
      */
@@ -148,7 +148,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Unset the value at a given offset.
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return void
      */
@@ -160,7 +160,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Dynamically access container services.
      *
-     * @param  string $key
+     * @param string $key
      *
      * @return mixed
      */
@@ -172,8 +172,8 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Dynamically set container services.
      *
-     * @param  string $key
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed  $value
      *
      * @return void
      */
@@ -193,7 +193,7 @@ class Application extends BaseApplication implements ArrayAccess
     {
         $name = parent::getCommandName($input);
 
-        return $name ?: (new Commands\Main)->getName();
+        return $name ?: (new Commands\Main())->getName();
     }
 
     /**
@@ -203,11 +203,11 @@ class Application extends BaseApplication implements ArrayAccess
      */
     private function registerBaseCommands(): Application
     {
-        $this->add(new Commands\Main);
+        $this->add(new Commands\Main());
 
-        $this->add(new Commands\Build);
+        $this->add(new Commands\Build());
 
-        $this->add(new Commands\Install);
+        $this->add(new Commands\Install());
 
         return $this;
     }
@@ -226,7 +226,7 @@ class Application extends BaseApplication implements ArrayAccess
         $this->container->instance(Container::class, $this->container);
 
         $this->container->instance('config', new Repository(
-            require BASE_PATH . '/' . 'config/config.php'
+            require BASE_PATH.'/'.'config/config.php'
         ));
 
         return $this;
@@ -239,7 +239,7 @@ class Application extends BaseApplication implements ArrayAccess
      */
     private function registerServiceProviders(): Application
     {
-        array_walk($this->serviceProviders, function($serviceProvider) {
+        array_walk($this->serviceProviders, function ($serviceProvider) {
             $instance = (new $serviceProvider($this))->register();
 
             if (method_exists($instance, 'boot')) {
