@@ -106,12 +106,13 @@ You may review the documentation of the Artisan Console component [on Laravel Of
 
 <a name="git-model"></a>
 ## Git branching model
+
 The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
 
 <a name="stay-in-touch"></a>
 ## Stay In Touch
 
-- For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
+For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
 
 <a name="license"></a>
 ## License
