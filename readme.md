@@ -27,7 +27,7 @@
 <a name="introduction"></a>
 ## Introduction
 
-Laravel Zero provides an elegant starting point for your next Laravel Console Application.
+Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
 
 A minimal console application with Illuminate components on top. Enjoy all the magic of laravel service providers on your
 next Laravel console application.
