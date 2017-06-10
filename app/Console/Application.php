@@ -208,7 +208,7 @@ class Application extends BaseApplication implements ArrayAccess
 
         $command = $this->container->make(reset($this->commands));
 
-        return $name ?: (new $command)->getName();
+        return $name ?: $command->getName();
     }
 
     /**
