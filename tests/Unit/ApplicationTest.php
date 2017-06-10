@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use App\Console\Application;
 use Tests\TestCase;
 
 class ApplicationTest extends TestCase
