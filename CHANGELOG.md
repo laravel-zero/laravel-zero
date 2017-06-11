@@ -11,3 +11,8 @@
 - Adds better error handling
 - Adds base abstract layer between you app commands and laravel commands
 - Adds feature `Performance analyser`
+
+## v1.5.0 (2017-06-11)
+
+### Added
+- Adds IOC automatic resolution on commands __construct
