@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use Phar;
 use FilesystemIterator;
-use UnexpectedValueException;
+use Phar;
 use Symfony\Component\Console\Input\InputArgument;
+use UnexpectedValueException;
 
 class Build extends Command
 {

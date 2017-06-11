@@ -5,12 +5,12 @@ namespace App\Console;
 use ArrayAccess;
 use BadMethodCallException;
 use Illuminate\Config\Repository;
+use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Container\Container;
+use Illuminate\Contracts\Container\Container as ContainerContract;
+use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Events\EventServiceProvider;
 use Symfony\Component\Console\Input\InputInterface;
-use Illuminate\Console\Application as BaseApplication;
-use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
-use Illuminate\Contracts\Container\Container as ContainerContract;
 
 class Application extends BaseApplication implements ArrayAccess
 {
@@ -61,7 +61,7 @@ class Application extends BaseApplication implements ArrayAccess
      * @var array
      */
     protected $aliases = [
-        'app' => [\Illuminate\Contracts\Container\Container::class],
+        'app'    => [\Illuminate\Contracts\Container\Container::class],
         'events' => [\Illuminate\Events\Dispatcher::class, \Illuminate\Contracts\Events\Dispatcher::class],
         'config' => [\Illuminate\Config\Repository::class, \Illuminate\Contracts\Config\Repository::class],
     ];
@@ -70,7 +70,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Create a new application.
      *
      * @param \Illuminate\Contracts\Container\Container $container
-     * @param \Illuminate\Contracts\Events\Dispatcher $dispatcher
+     * @param \Illuminate\Contracts\Events\Dispatcher   $dispatcher
      */
     public function __construct(ContainerContract $container, DispatcherContract $dispatcher)
     {
@@ -106,7 +106,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Proxies calls into the container.
      *
      * @param string $method
-     * @param array $parameters
+     * @param array  $parameters
      *
      * @throws \BadMethodCallException
      *
@@ -149,7 +149,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Set the value at a given offset.
      *
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      *
      * @return void
      */
@@ -186,7 +186,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Dynamically set container services.
      *
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      *
      * @return void
      */
@@ -239,7 +239,7 @@ class Application extends BaseApplication implements ArrayAccess
         $this->container->instance(Container::class, $this->container);
 
         $this->container->instance('config', new Repository(
-            require BASE_PATH . '/' . 'config/config.php'
+            require BASE_PATH.'/'.'config/config.php'
         ));
 
         return $this;

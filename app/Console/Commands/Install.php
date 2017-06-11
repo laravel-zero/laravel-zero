@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Support\Str;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 class Install extends Command
 {

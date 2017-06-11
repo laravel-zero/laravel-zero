@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use Performance\Performance;
 use Illuminate\Console\Command as BaseCommand;
+use Performance\Performance;
 
 abstract class Command extends BaseCommand
 {
