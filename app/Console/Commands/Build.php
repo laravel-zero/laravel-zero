@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use FilesystemIterator;
 use Phar;
-use Symfony\Component\Console\Input\InputArgument;
+use FilesystemIterator;
 use UnexpectedValueException;
+use Symfony\Component\Console\Input\InputArgument;
 
 class Build extends Command
 {
@@ -25,7 +25,7 @@ class Build extends Command
      *
      * @var array
      */
-    private $structure = [
+    protected $structure = [
         'app/',
         'vendor/',
         'bootstrap/',
@@ -47,16 +47,6 @@ class Build extends Command
     protected $description = 'The build app command';
 
     /**
-     * Configure the command options.
-     *
-     * Ask for the name of the build.
-     */
-    protected function configure(): void
-    {
-        $this->addArgument('name', InputArgument::OPTIONAL);
-    }
-
-    /**
      * Execute the console command.
      */
     public function fire(): void
@@ -74,13 +64,23 @@ class Build extends Command
     }
 
     /**
+     * Configure the command options.
+     *
+     * Ask for the name of the build.
+     */
+    protected function configure(): void
+    {
+        $this->addArgument('name', InputArgument::OPTIONAL);
+    }
+
+    /**
      * Builds the application.
      *
      * @param string $name
      *
      * @return $this
      */
-    private function build(string $name): Build
+    protected function build(string $name): Build
     {
         $this->comment("Building: $name");
         $this->compile($name)
@@ -98,7 +98,7 @@ class Build extends Command
      *
      * @return $this
      */
-    private function compile(string $name): Build
+    protected function compile(string $name): Build
     {
         $compiler = $this->makeFolder()
             ->getCompiler($name);
@@ -114,9 +114,9 @@ class Build extends Command
      *
      * @param string $name
      *
-     * @return Phar
+     * @return \Phar
      */
-    private function getCompiler(string $name)
+    protected function getCompiler(string $name)
     {
         try {
             return new Phar(self::BUILD_PATH.'/'.$name.'.phar',
@@ -134,7 +134,7 @@ class Build extends Command
      *
      * @return $this
      */
-    private function makeFolder(): Build
+    protected function makeFolder(): Build
     {
         if (!file_exists(self::BUILD_PATH)) {
             mkdir(self::BUILD_PATH);
@@ -150,7 +150,7 @@ class Build extends Command
      *
      * @return $this
      */
-    private function cleanUp(string $name)
+    protected function cleanUp(string $name): Build
     {
         $file = self::BUILD_PATH."/$name";
         rename("$file.phar", $file);

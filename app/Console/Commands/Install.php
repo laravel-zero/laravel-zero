@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Support\Str;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\Console\Input\InputArgument;
 
 class Install extends Command
 {
@@ -41,14 +41,26 @@ class Install extends Command
     }
 
     /**
+     * Configure the command options.
+     *
+     * Ask for the name of the build.
+     */
+    protected function configure(): void
+    {
+        $this->addArgument('name', InputArgument::OPTIONAL);
+    }
+
+    /**
      * Perform project modifications in order to apply the
      * application name on the composer and on the binary.
+     *
+     * @return $this
      */
-    private function install(): void
+    protected function install(): Install
     {
         $name = $this->asksForApplicationName();
 
-        $this->rename($name)
+        return $this->rename($name)
             ->updateComposer($name);
     }
 
@@ -57,7 +69,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function displayWelcomeMessage(): Install
+    protected function displayWelcomeMessage(): Install
     {
         $this->style->title('Crafting application...');
 
@@ -71,7 +83,7 @@ class Install extends Command
      *
      * @return string
      */
-    private function asksForApplicationName(): string
+    protected function asksForApplicationName(): string
     {
         if (empty($name = $this->input->getArgument('name'))) {
             $name = $this->ask('What is your application name?');
@@ -91,7 +103,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function updateComposer(string $name): Install
+    protected function updateComposer(string $name): Install
     {
         $this->setComposer(
             Str::replaceFirst(
@@ -113,7 +125,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function rename(string $name): Install
+    protected function rename(string $name): Install
     {
         rename(BASE_PATH.'/'.$this->getCurrentBinaryName(), BASE_PATH.'/'.$name);
 
@@ -129,7 +141,7 @@ class Install extends Command
      *
      * @return $this
      */
-    private function setComposer(string $composer): Install
+    protected function setComposer(string $composer): Install
     {
         file_put_contents(BASE_PATH.'/composer.json', $composer);
 
@@ -141,7 +153,7 @@ class Install extends Command
      *
      * @return string
      */
-    private function getCurrentBinaryName(): string
+    protected function getCurrentBinaryName(): string
     {
         $composer = $this->getComposer();
 
@@ -153,18 +165,15 @@ class Install extends Command
      *
      * @return string
      */
-    private function getComposer(): string
+    protected function getComposer(): string
     {
-        return file_get_contents(BASE_PATH.'/composer.json');
-    }
+        $file = BASE_PATH.'/composer.json';
 
-    /**
-     * Configure the command options.
-     *
-     * Ask for the name of the build.
-     */
-    protected function configure(): void
-    {
-        $this->addArgument('name', InputArgument::OPTIONAL);
+        if (! file_exists($file)) {
+            $this->error('You cannot perform a install.');
+            exit(0);
+        }
+
+        return file_get_contents($file);
     }
 }
