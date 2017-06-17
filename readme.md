@@ -29,6 +29,8 @@
 
 Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
 
+Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is based on [Laravel 5](http://laravel.com) components. Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
+
 A minimal console application with Illuminate components on top. Enjoy all the magic of laravel service providers on your
 next Laravel console application.
 
