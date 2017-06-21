@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/26df832a0e72f1002d3a94455475ccd5534e9f40/docs/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
 </p>
 
 Laravel Zero
