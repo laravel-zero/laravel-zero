@@ -21,3 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.6.0] - 2017-06-11
 ### Added
 - Adds format "Keep a Changelog"
+
+## [2.0.0] - 2017-06-21
+### Added
+- Adds support to desktop notifications
+- Adds better docs
