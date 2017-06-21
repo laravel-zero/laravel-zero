@@ -2,16 +2,26 @@
     <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
 </p>
 
+
+
 Laravel Zero
 ================
 
 Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
 
+<p align="center">
+  <a href="https://styleci.io/repos/80149647"><img src="https://styleci.io/repos/80149647/shield" alt="StyleCI Status"></img></a>
+  <a href="https://travis-ci.org/nunomaduro/laravel-zero"><img src="https://img.shields.io/travis/nunomaduro/laravel-zero/stable.svg?style=flat-square" alt="Build Status"></img></a>
+  <a href="https://scrutinizer-ci.com/g/nunomaduro/laravel-zero"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/laravel-zero.svg?style=flat-square" alt="Quality Score"></img></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
+  <a href="https://github.com/nunomaduro/laravel-zero/releases"><img src="https://img.shields.io/github/release/nunomaduro/laravel-zero.svg?style=flat-square" alt="Latest Version"></img></a>
+</p>
+
 - Build on top of the [Laravel 5](http://laravel.com) components.
 - Built with [PHP 7](http://php.net) using modern coding standards.
 - Ships with a [standalone compiler](#build-an-standalone) and a [performance analyser](#performance-analyser).
 - Automatic Dependency Injection on commands and support of [Laravel 5](http://laravel.com) Service Providers.
-- Supports [desktop notifications](https://github.com/nunomaduro/laravel-desktop-notifier) on Linux, Windows or MacOS.
+- Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows or MacOS.
 
 Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
