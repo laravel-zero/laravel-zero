@@ -1,9 +1,3 @@
-<p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
-</p>
-
-
-
 Laravel Zero
 ================
 
@@ -22,6 +16,10 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 - Ships with a [standalone compiler](#build-an-standalone) and a [performance analyser](#performance-analyser).
 - Automatic Dependency Injection on commands and support of [Laravel 5](http://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows or MacOS.
+
+<p align="center">
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
+</p>
 
 Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
