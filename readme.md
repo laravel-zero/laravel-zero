@@ -8,7 +8,7 @@ Laravel Zero
 Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
 
 - Build on top of the [Laravel 5](http://laravel.com) components.
-- Built on [PHP](http://php.net) 7 with modern coding standards.
+- Built with [PHP 7](http://php.net) using modern coding standards.
 - Ships with a [standalone compiler](#build-an-standalone) and a [performance analyser](#performance-analyser).
 - Automatic Dependency Injection on commands and support of [Laravel 5](http://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/nunomaduro/laravel-desktop-notifier) on Linux, Windows or MacOS.
