@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use App\Console\Commands\Main;
+use Tests\TestCase;
 
 class MainCommandTest extends TestCase
 {

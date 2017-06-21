@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use Illuminate\Support\Str;
-use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 class Install extends Command
 {
@@ -169,7 +169,7 @@ class Install extends Command
     {
         $file = BASE_PATH.'/composer.json';
 
-        if (! file_exists($file)) {
+        if (!file_exists($file)) {
             $this->error('You cannot perform a install.');
             exit(0);
         }
