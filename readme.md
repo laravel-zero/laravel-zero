@@ -32,7 +32,7 @@ $ composer create-project --prefer-dist nunomaduro/laravel-zero <application-nam
 <a name="usage"></a>
 ## Usage
 
-Laravel Zero provides a main command. That is the default one of your application, placed in app/Console/Commands/Main.php. You should fill in the `signature` and `description` properties of the class, which will be used when displaying your command on the `list` screen. The `fire` method will be called when your command is executed. You may place your command logic in this method.
+Laravel Zero provides a main command. That is the default one of your application, placed in app/Console/Commands/Main.php.
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
 
