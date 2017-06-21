@@ -18,7 +18,8 @@
         "illuminate/config": "5.4.*",
         "illuminate/console": "5.4.*",
         "illuminate/container": "5.4.*",
-        "illuminate/events": "5.4.*"
+        "illuminate/events": "5.4.*",
+        "nunomaduro/laravel-desktop-notifier": "1.0.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.0",

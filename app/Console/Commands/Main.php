@@ -24,5 +24,6 @@ class Main extends Command
     public function fire(): void
     {
         $this->info('Love beautiful code? We do too.');
+        $this->notify('Hey Artisan', "Enjoy the fresh air!");
     }
 }
