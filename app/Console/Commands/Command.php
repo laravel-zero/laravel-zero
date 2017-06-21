@@ -4,6 +4,9 @@ namespace App\Console\Commands;
 
 use Performance\Performance;
 use Illuminate\Console\Command as BaseCommand;
+use NunoMaduro\LaravelDesktopNotifier\Notifications;
+use NunoMaduro\LaravelDesktopNotifier\Contracts\Notifier;
+use NunoMaduro\LaravelDesktopNotifier\Contracts\Notification;
 
 abstract class Command extends BaseCommand
 {
@@ -43,6 +46,25 @@ abstract class Command extends BaseCommand
     public function getContainer()
     {
         return $this->getLaravel();
+    }
+
+    /**
+     * @param string  $text
+     * @param string  $body
+     * @param string|null  $icon
+     *
+     * @return void
+     */
+    public function notify($text, $body, $icon = null): void
+    {
+        $notifier = $this->getContainer()->make(Notifier::class);
+
+        $notification = $this->getContainer()->make(Notification::class)
+            ->setTitle($text)
+            ->setBody($body)
+            ->setIcon($icon);
+
+        $notifier->send($notification);
     }
 
     /**
