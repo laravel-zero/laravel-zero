@@ -10,8 +10,8 @@ use Illuminate\Container\Container;
 use Illuminate\Contracts\Container\Container as ContainerContract;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Events\EventServiceProvider;
-use Symfony\Component\Console\Input\InputInterface;
 use NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider;
+use Symfony\Component\Console\Input\InputInterface;
 
 class Application extends BaseApplication implements ArrayAccess
 {
