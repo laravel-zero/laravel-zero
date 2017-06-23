@@ -37,7 +37,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * The commands.
      *
-     * The first command is the application the default one.
+     * The first command is the application default one.
      *
      * @var array
      */

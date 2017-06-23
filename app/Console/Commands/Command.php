@@ -25,7 +25,7 @@ abstract class Command extends BaseCommand
     /**
      * Execute the console command.
      *
-     * Takes in consideration if the performance argument.
+     * Takes in consideration the performance argument.
      */
     public function handle(): void
     {
