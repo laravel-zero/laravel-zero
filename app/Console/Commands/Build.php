@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use Phar;
 use FilesystemIterator;
-use UnexpectedValueException;
+use Phar;
 use Symfony\Component\Console\Input\InputArgument;
+use UnexpectedValueException;
 
 class Build extends Command
 {
@@ -137,7 +137,7 @@ class Build extends Command
      */
     protected function makeFolder(): Build
     {
-        if (! file_exists(self::BUILD_PATH)) {
+        if (!file_exists(self::BUILD_PATH)) {
             mkdir(self::BUILD_PATH);
         }
 

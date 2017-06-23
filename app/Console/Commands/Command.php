@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use Performance\Performance;
 use Illuminate\Console\Command as BaseCommand;
 use Illuminate\Contracts\Container\Container;
 use NunoMaduro\LaravelDesktopNotifier\Contracts\Notification;
 use NunoMaduro\LaravelDesktopNotifier\Contracts\Notifier;
+use Performance\Performance;
 
 abstract class Command extends BaseCommand
 {
@@ -51,8 +51,8 @@ abstract class Command extends BaseCommand
     }
 
     /**
-     * @param string $text
-     * @param string $body
+     * @param string      $text
+     * @param string      $body
      * @param string|null $icon
      *
      * @return void
