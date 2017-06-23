@@ -5,12 +5,12 @@ namespace App\Console;
 use ArrayAccess;
 use BadMethodCallException;
 use Illuminate\Config\Repository;
-use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Container\Container;
-use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Events\EventServiceProvider;
-use Illuminate\Contracts\Container\Container as ContainerContract;
 use Symfony\Component\Console\Input\InputInterface;
+use Illuminate\Console\Application as BaseApplication;
+use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
+use Illuminate\Contracts\Container\Container as ContainerContract;
 use NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider;
 
 class Application extends BaseApplication implements ArrayAccess
