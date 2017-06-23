@@ -22,9 +22,11 @@ class ApplicationTest extends TestCase
             ->method('bind')
             ->with(
                 $this->stringContains('something'),
-                $this->callback(function () {
-                    return 'foo';
-                })
+                $this->callback(
+                    function () {
+                        return 'foo';
+                    }
+                )
             );
 
         $app->bind(

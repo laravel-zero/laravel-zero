@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use FilesystemIterator;
 use Phar;
-use Symfony\Component\Console\Input\InputArgument;
+use FilesystemIterator;
 use UnexpectedValueException;
+use Symfony\Component\Console\Input\InputArgument;
 
 class Build extends Command
 {
@@ -116,15 +116,16 @@ class Build extends Command
      *
      * @return \Phar
      */
-    protected function getCompiler(string $name)
+    protected function getCompiler(string $name): \Phar
     {
         try {
-            return new Phar(self::BUILD_PATH.'/'.$name.'.phar',
+            return new Phar(
+                self::BUILD_PATH.'/'.$name.'.phar',
                 FilesystemIterator::CURRENT_AS_FILEINFO | FilesystemIterator::KEY_AS_FILENAME,
                 $name
             );
         } catch (UnexpectedValueException $e) {
-            $this->error('You cannot perform a build.');
+            $this->error("You can't perform a build.");
             exit(0);
         }
     }
@@ -136,7 +137,7 @@ class Build extends Command
      */
     protected function makeFolder(): Build
     {
-        if (!file_exists(self::BUILD_PATH)) {
+        if (! file_exists(self::BUILD_PATH)) {
             mkdir(self::BUILD_PATH);
         }
 
