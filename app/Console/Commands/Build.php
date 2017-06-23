@@ -116,7 +116,7 @@ class Build extends Command
      *
      * @return \Phar
      */
-    protected function getCompiler(string $name)
+    protected function getCompiler(string $name): \Phar
     {
         try {
             return new Phar(
