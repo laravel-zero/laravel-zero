@@ -169,8 +169,8 @@ class Install extends Command
     {
         $file = BASE_PATH.'/composer.json';
 
-        if (!file_exists($file)) {
-            $this->error('You cannot perform a install.');
+        if (! file_exists($file)) {
+            $this->error("You can't perform a install.");
             exit(0);
         }
 

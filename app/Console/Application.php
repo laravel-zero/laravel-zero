@@ -7,11 +7,11 @@ use BadMethodCallException;
 use Illuminate\Config\Repository;
 use Illuminate\Console\Application as BaseApplication;
 use Illuminate\Container\Container;
-use Illuminate\Contracts\Container\Container as ContainerContract;
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Events\EventServiceProvider;
-use NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider;
+use Illuminate\Contracts\Container\Container as ContainerContract;
 use Symfony\Component\Console\Input\InputInterface;
+use NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider;
 
 class Application extends BaseApplication implements ArrayAccess
 {
@@ -21,14 +21,14 @@ class Application extends BaseApplication implements ArrayAccess
     const VERSION = '1.00';
 
     /**
-     * The container.
+     * The application container.
      *
      * @var \Illuminate\Contracts\Container\Container
      */
     protected $container;
 
     /**
-     * The dispatcher.
+     * The event dispatcher.
      *
      * @var \Illuminate\Contracts\Events\Dispatcher
      */
@@ -37,7 +37,7 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * The commands.
      *
-     * The first command is the default one.
+     * The first command is the application the default one.
      *
      * @var array
      */
@@ -58,12 +58,12 @@ class Application extends BaseApplication implements ArrayAccess
     ];
 
     /**
-     * ALl the container aliases.
+     * All the container aliases.
      *
      * @var array
      */
     protected $aliases = [
-        'app'    => [\Illuminate\Contracts\Container\Container::class],
+        'app' => [\Illuminate\Contracts\Container\Container::class],
         'events' => [\Illuminate\Events\Dispatcher::class, \Illuminate\Contracts\Events\Dispatcher::class],
         'config' => [\Illuminate\Config\Repository::class, \Illuminate\Contracts\Config\Repository::class],
     ];
@@ -72,7 +72,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Create a new application.
      *
      * @param \Illuminate\Contracts\Container\Container $container
-     * @param \Illuminate\Contracts\Events\Dispatcher   $dispatcher
+     * @param \Illuminate\Contracts\Events\Dispatcher $dispatcher
      */
     public function __construct(ContainerContract $container, DispatcherContract $dispatcher)
     {
@@ -108,7 +108,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Proxies calls into the container.
      *
      * @param string $method
-     * @param array  $parameters
+     * @param array $parameters
      *
      * @throws \BadMethodCallException
      *
@@ -151,7 +151,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Set the value at a given offset.
      *
      * @param string $key
-     * @param mixed  $value
+     * @param mixed $value
      *
      * @return void
      */
@@ -188,7 +188,7 @@ class Application extends BaseApplication implements ArrayAccess
      * Dynamically set container services.
      *
      * @param string $key
-     * @param mixed  $value
+     * @param mixed $value
      *
      * @return void
      */
@@ -204,7 +204,7 @@ class Application extends BaseApplication implements ArrayAccess
      *
      * @return string The command name
      */
-    protected function getCommandName(InputInterface $input)
+    protected function getCommandName(InputInterface $input): string
     {
         $name = parent::getCommandName($input);
 
@@ -220,9 +220,12 @@ class Application extends BaseApplication implements ArrayAccess
      */
     protected function registerCommands(): Application
     {
-        array_walk($this->commands, function ($command) {
-            $this->add($this->container->make($command));
-        });
+        array_walk(
+            $this->commands,
+            function ($command) {
+                $this->add($this->container->make($command));
+            }
+        );
 
         return $this;
     }
@@ -240,9 +243,12 @@ class Application extends BaseApplication implements ArrayAccess
 
         $this->container->instance(Container::class, $this->container);
 
-        $this->container->instance('config', new Repository(
-            require BASE_PATH.'/'.'config/config.php'
-        ));
+        $this->container->instance(
+            'config',
+            new Repository(
+                require BASE_PATH.'/'.'config/config.php'
+            )
+        );
 
         return $this;
     }
@@ -254,13 +260,16 @@ class Application extends BaseApplication implements ArrayAccess
      */
     protected function registerServiceProviders(): Application
     {
-        array_walk($this->serviceProviders, function ($serviceProvider) {
-            $instance = (new $serviceProvider($this))->register();
+        array_walk(
+            $this->serviceProviders,
+            function ($serviceProvider) {
+                $instance = (new $serviceProvider($this))->register();
 
-            if (method_exists($instance, 'boot')) {
-                $instance->boot();
+                if (method_exists($instance, 'boot')) {
+                    $instance->boot();
+                }
             }
-        });
+        );
 
         return $this;
     }

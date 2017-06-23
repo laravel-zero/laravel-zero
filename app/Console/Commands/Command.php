@@ -2,10 +2,11 @@
 
 namespace App\Console\Commands;
 
+use Performance\Performance;
 use Illuminate\Console\Command as BaseCommand;
+use Illuminate\Contracts\Container\Container;
 use NunoMaduro\LaravelDesktopNotifier\Contracts\Notification;
 use NunoMaduro\LaravelDesktopNotifier\Contracts\Notifier;
-use Performance\Performance;
 
 abstract class Command extends BaseCommand
 {
@@ -23,6 +24,8 @@ abstract class Command extends BaseCommand
 
     /**
      * Execute the console command.
+     *
+     * Takes in consideration if the performance argument.
      */
     public function handle(): void
     {
@@ -38,27 +41,28 @@ abstract class Command extends BaseCommand
     }
 
     /**
-     * Returns the container.
+     * Returns the application container.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Illuminate\Contracts\Container\Container
      */
-    public function getContainer()
+    public function getContainer(): Container
     {
         return $this->getLaravel();
     }
 
     /**
-     * @param string      $text
-     * @param string      $body
+     * @param string $text
+     * @param string $body
      * @param string|null $icon
      *
      * @return void
      */
-    public function notify($text, $body, $icon = null): void
+    public function notify(string $text, string $body, $icon = null): void
     {
         $notifier = $this->getContainer()->make(Notifier::class);
 
-        $notification = $this->getContainer()->make(Notification::class)
+        $notification = $this->getContainer()
+            ->make(Notification::class)
             ->setTitle($text)
             ->setBody($body)
             ->setIcon($icon);
@@ -67,11 +71,18 @@ abstract class Command extends BaseCommand
     }
 
     /**
+     * Execute the console command.
+     */
+    public function fire(): void
+    {
+    }
+
+    /**
      * Checks if the performance feature is available.
      *
      * @return bool
      */
-    private function isProfilingAvailable()
+    private function isProfilingAvailable(): bool
     {
         return class_exists('Performance\Performance');
     }
