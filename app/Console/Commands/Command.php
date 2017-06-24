@@ -3,10 +3,10 @@
 namespace App\Console\Commands;
 
 use Performance\Performance;
-use Illuminate\Console\Command as BaseCommand;
 use Illuminate\Contracts\Container\Container;
-use NunoMaduro\LaravelDesktopNotifier\Contracts\Notification;
+use Illuminate\Console\Command as BaseCommand;
 use NunoMaduro\LaravelDesktopNotifier\Contracts\Notifier;
+use NunoMaduro\LaravelDesktopNotifier\Contracts\Notification;
 
 abstract class Command extends BaseCommand
 {
