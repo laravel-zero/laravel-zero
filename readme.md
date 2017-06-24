@@ -80,6 +80,15 @@ The git branching model used for development is the one described and assisted b
 
 For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
 
+## Credits
+
+This project uses code from several open source packages.
+
+- [Laravel](https://laravel.com)
+- [Symfony](http://symfony.com)
+- [PHP performance tool](https://github.com/bvanhoekelen/performance)
+- [JoliNotif - Send notifications to your desktop](https://github.com/jolicode/JoliNotif)
+
 ## License
 
 The Zero is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
