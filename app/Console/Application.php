@@ -4,8 +4,8 @@ namespace App\Console;
 
 use ArrayAccess;
 use BadMethodCallException;
-use Illuminate\Events\Dispatcher;
 use Illuminate\Config\Repository;
+use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 use Illuminate\Events\EventServiceProvider;
 use Symfony\Component\Console\Input\InputInterface;
