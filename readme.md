@@ -18,7 +18,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 - Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows or MacOS.
 
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo.png" />
 </p>
 
 Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
@@ -34,7 +34,7 @@ $ composer create-project --prefer-dist nunomaduro/laravel-zero <application-nam
 ```
 
 <p align="center">
-    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/install.gif" />
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/install.gif" />
 </p>
 
 <a name="usage"></a>
@@ -45,7 +45,7 @@ Laravel Zero provides a main command. That is the default one of your applicatio
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
 
 <p align="center">
-    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/commands.gif" />
+    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/commands.gif" />
 </p>
 
 <a name="build-an-standalone"></a>
@@ -65,7 +65,7 @@ The build will provide you can a single executable, ready to use, of your applic
 Laravel Zero ships with a **performance analyser**. Check easily of your application commands are taking too much memory or if they are spending too much time.
 
  <p align="center">
-     <img title="Performance" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero/stable/docs/performance.png" />
+     <img title="Performance" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/performance.png" />
  </p>
 
  ```sh
