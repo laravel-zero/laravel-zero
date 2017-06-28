@@ -1,6 +1,16 @@
 #!/usr/bin/env php
 <?php
 
+if (file_exists(__DIR__.'/vendor/autoload.php')) {
+    require __DIR__.'/vendor/autoload.php';
+} else {
+    require __DIR__.'/../../autoload.php';
+}
+
+if (! defined('BASE_PATH')) {
+    define('BASE_PATH', __DIR__);
+}
+
 /**
  * Laravel Zero - An elegant starting point for your next Laravel Console Application
  *
@@ -8,4 +18,4 @@
  * @author   Nuno Maduro <enunomaduro@gmail.com>
  */
 
-require_once __DIR__ . '/bootstrap/init.php';
+(new App\Console\Application)->run();

@@ -5,6 +5,7 @@ namespace App\Console;
 use ArrayAccess;
 use BadMethodCallException;
 use Illuminate\Config\Repository;
+use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 use Illuminate\Events\EventServiceProvider;
 use Symfony\Component\Console\Input\InputInterface;
@@ -71,18 +72,17 @@ class Application extends BaseApplication implements ArrayAccess
     /**
      * Create a new application.
      *
-     * @param \Illuminate\Contracts\Container\Container $container
-     * @param \Illuminate\Contracts\Events\Dispatcher $dispatcher
+     * @param \Illuminate\Contracts\Container\Container|null $container
+     * @param \Illuminate\Contracts\Events\Dispatcher|null $dispatcher
      */
-    public function __construct(ContainerContract $container, DispatcherContract $dispatcher)
+    public function __construct(ContainerContract $container = null, DispatcherContract $dispatcher = null)
     {
-        parent::__construct($container, $dispatcher, self::VERSION);
+        $this->container = $container ?: new Container;
+        $this->dispatcher = $dispatcher ?: new Dispatcher($this->container);
+
+        parent::__construct($this->container, $this->dispatcher, self::VERSION);
 
         $this->setCatchExceptions(true);
-
-        $this->container = $container;
-
-        $this->dispatcher = $dispatcher;
 
         $this->registerBindings()
             ->registerServiceProviders()
