@@ -26,3 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Adds support to desktop notifications
 - Adds better docs
+
+## [2.0.11] - 2017-06-28
+### Changed
+- Updates project struture
