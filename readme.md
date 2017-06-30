@@ -91,6 +91,6 @@ This project uses code from several open source packages.
 
 ## License
 
-The Zero is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Laravel Zero is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 Copyright (c) 2017-2017 Nuno Maduro
