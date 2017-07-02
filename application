@@ -1,8 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__.'/bootstrap/autoload.php';
-
 /**
  * Laravel Zero - An elegant starting point for your next Laravel Console Application
  *
@@ -10,4 +8,4 @@ require __DIR__.'/bootstrap/autoload.php';
  * @author   Nuno Maduro <enunomaduro@gmail.com>
  */
 
-(new App\Console\Application)->run();
+require_once __DIR__ . '/bootstrap/init.php';

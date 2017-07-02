@@ -30,3 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.0.11] - 2017-06-28
 ### Changed
 - Updates project struture
+
+## [2.0.13] - 2017-07-02
+### Fixed
+- Fixes application build (#18)

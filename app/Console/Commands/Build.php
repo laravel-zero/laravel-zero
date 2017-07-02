@@ -27,6 +27,7 @@ class Build extends Command
      */
     protected $structure = [
         'app/',
+        'bootstrap/',
         'vendor/',
         'config/',
     ];
