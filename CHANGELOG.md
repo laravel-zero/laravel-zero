@@ -33,4 +33,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.0.13] - 2017-07-02
 ### Fixed
-- Fixes application build (#18)
+- Fixes application build [#18](https://github.com/nunomaduro/laravel-zero/issues/18)
