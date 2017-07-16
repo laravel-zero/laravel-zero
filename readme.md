@@ -4,10 +4,11 @@ Laravel Zero
 Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
 
 <p align="center">
-  <a href="https://styleci.io/repos/80149647"><img src="https://styleci.io/repos/80149647/shield" alt="StyleCI Status"></img></a>
-  <a href="https://travis-ci.org/nunomaduro/laravel-zero"><img src="https://img.shields.io/travis/nunomaduro/laravel-zero/stable.svg?style=flat-square" alt="Build Status"></img></a>
+  <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
+  <a href="https://travis-ci.org/nunomaduro/zero-framework"><img src="https://img.shields.io/travis/nunomaduro/zero-framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
+  <a href="https://scrutinizer-ci.com/g/nunomaduro/zero-framework"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/zero-framework.svg?style=flat-square" alt="Quality Score"></img></a>
+  <a href="https://packagist.org/packages/nunomaduro/zero-framework"><img src="https://poser.pugx.org/nunomaduro/zero-framework/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
-  <a href="https://github.com/nunomaduro/laravel-zero/releases"><img src="https://img.shields.io/github/release/nunomaduro/laravel-zero.svg?style=flat-square" alt="Latest Version"></img></a>
 </p>
 
 - Build on top of the [Laravel 5](http://laravel.com) components.
@@ -22,7 +23,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 
 Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
-## Installation
+## Installation && Usage
 
 [PHP](https://php.net) 7.1+
 
@@ -32,20 +33,15 @@ To get the latest version of Laravel Zero, simply create a new project using [Co
 $ composer create-project --prefer-dist nunomaduro/laravel-zero <application-name>
 ```
 
-<p align="center">
-    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/install.gif" />
-</p>
+Place yourself into the application folder, and execute the application:
 
-<a name="usage"></a>
-## Usage
+```bash
+$ php <application-name>
+```
 
-Laravel Zero provides a default command placed in app/DefaultCommand.php.
+Laravel Zero provides a default command placed in app/DefaultCommand.php
 
 You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
-
-<p align="center">
-    <img title="Installation" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/commands.gif" />
-</p>
 
 <a name="build-an-standalone"></a>
 ## Build an standalone
@@ -53,7 +49,7 @@ You may review the documentation of the Artisan Console component [on Laravel Of
 Your Laravel Zero project, by default, allows you to build an standalone application.
 
 ```sh
-$ php application build <name>
+$ php <application-name> build <name>
 ```
 
 The build will provide you can a single executable, ready to use, of your application.
