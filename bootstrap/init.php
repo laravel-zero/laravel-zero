@@ -13,4 +13,4 @@ require __DIR__.'/autoload.php';
 |
 */
 
-(new App\Console\Application)->run();
+(new NunoMaduro\ZeroFramework\Application)->run();

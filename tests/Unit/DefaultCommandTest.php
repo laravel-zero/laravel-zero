@@ -3,18 +3,18 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\Console\Commands\Main;
+use App\DefaultCommand;
 
-class MainCommandTest extends TestCase
+class DefaultCommandTest extends TestCase
 {
     /**
-     * The main command test example.
+     * The default command test example.
      *
      * @return void
      */
     public function testCall(): void
     {
-        $this->app->call((new Main())->getName());
+        $this->app->call((new DefaultCommand())->getName());
 
         $this->assertTrue(trim($this->app->output()) === 'Love beautiful code? We do too.');
     }

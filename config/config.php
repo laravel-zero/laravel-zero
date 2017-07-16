@@ -1,20 +1,49 @@
 <?php
 
+use NunoMaduro\ZeroFramework;
+
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Your application configuration
-    |--------------------------------------------------------------------------
-    | Configure your application! You may want to introduce the
-    | configuration associated to each service provider that you need.
-    |
-    | Assuming that you are using the service provider EncryptionServiceProvider
-    | you may want to configure the key and the cipher. Take a look
-    | on the example below.
-    */
+    /**
+     * Here goes your console application configuration. You
+     * may define default commands or even Laravel Service
+     * Providers configuration.
+     */
     'app' => [
-        // 'key' => 'base64:0h6bUwJcoLAhKfX2opWKmrQTYJ7hqyhbY5auCwpU38M=',
-        // 'cipher' => 'AES-256-CBC',
+
+        /**
+         * Here goes the application name.
+         */
+        'name' => 'Laravel Zero',
+
+        /**
+         * Here goes the application version.
+         */
+        'version' => "1.0.0",
+
+        /**
+         * The application default command.
+         *
+         * You may want to remove this line in order to ask the user what command he
+         * wants to execute.
+         */
+        'default-command' => App\DefaultCommand::class,
+
+        /**
+         * The application list of commands. Besides the default command the user can
+         * also call any of the commands specified below.
+         */
+        'commands' => [
+            ZeroFramework\Commands\Builder::class,
+            ZeroFramework\Commands\Renamer::class,
+        ],
+
+        /**
+         * Your application service providers. You may want work with an
+         * external Laravel package.
+         */
+        'providers' => [
+            \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
+        ],
     ],
 ];

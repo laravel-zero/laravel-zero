@@ -2,14 +2,14 @@
 
 namespace Tests;
 
-use App\Console\Application;
+use NunoMaduro\ZeroFramework\Application;
 
 trait CreatesApplication
 {
     /**
-     * Creates the application.
+     * Creates the application and returns it.
      *
-     * @return \App\Console\Application
+     * @return \NunoMaduro\ZeroFramework\Application
      */
     public function createApplication(): Application
     {
