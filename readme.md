@@ -13,7 +13,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 
 - Build on top of the [Laravel 5](http://laravel.com) components.
 - Built with [PHP 7](http://php.net) using modern coding standards.
-- Ships with a [standalone compiler](#build-an-standalone) and a [performance analyser](#performance-analyser).
+- Ships with a [standalone compiler](#build-an-standalone).
 - Automatic Dependency Injection on commands and support of [Laravel 5](http://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows or MacOS.
 
@@ -59,19 +59,6 @@ $ php application build <name>
 
 The build will provide you can a single executable, ready to use, of your application.
 
-<a name="performance-analyser"></a>
-## Performance Analyser
-
-Laravel Zero ships with a **performance analyser**. Check easily of your application commands are taking too much memory or if they are spending too much time.
-
- <p align="center">
-     <img title="Performance" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/performance.png" />
- </p>
-
- ```sh
- $ php application <command> --performance
- ```
-
 ## Git branching model
 
 The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
@@ -86,7 +73,6 @@ This project uses code from several open source packages.
 
 - [Laravel](https://laravel.com)
 - [Symfony](http://symfony.com)
-- [PHP performance tool](https://github.com/bvanhoekelen/performance)
 - [JoliNotif - Send notifications to your desktop](https://github.com/jolicode/JoliNotif)
 
 ## License
