@@ -15,16 +15,8 @@
     ],
     "require": {
         "php": ">=7.1",
-        "nunomaduro/zero-framework": "dev-master"
+        "nunomaduro/zero-framework": "~3.0"
     },
-    "repositories": [
-        {
-            "type":"path",
-            "url":"/Users/nunomaduro/Projects/zero-framework",
-            "branches-path": false,
-            "tags-path": false
-        }
-    ],
     "require-dev": {
         "phpunit/phpunit": "~6.2"
     },
