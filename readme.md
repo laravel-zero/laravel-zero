@@ -30,13 +30,13 @@ Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/lar
 To get the latest version of Laravel Zero, simply create a new project using [Composer](https://getcomposer.org):
 
 ```bash
-$ composer create-project --prefer-dist nunomaduro/laravel-zero <application-name>
+$ composer create-project --prefer-dist nunomaduro/laravel-zero app
 ```
 
 Place yourself into the application folder, and execute the application:
 
 ```bash
-$ php <application-name>
+$ php app
 ```
 
 Laravel Zero provides a default command placed in app/DefaultCommand.php
@@ -95,7 +95,7 @@ define your application list of commands and your Laravel Service Providers conf
 Your Laravel Zero project, by default, allows you to build an standalone application.
 
 ```sh
-$ php <application-name> build <name>
+$ php app build <name>
 ```
 
 The build will provide you can a single executable, ready to use, of your application.
