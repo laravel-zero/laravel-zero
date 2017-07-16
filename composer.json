@@ -44,7 +44,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "php application install"
+            "php application rename"
         ]
     },
     "bin": ["application"]
