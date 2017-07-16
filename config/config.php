@@ -3,24 +3,24 @@
 use NunoMaduro\ZeroFramework;
 
 return [
-    /**
+    /*
      * Here goes your console application configuration. You should
      * define your application list of commands and your Laravel
      * Service Providers configuration.
      */
     'app' => [
 
-        /**
+        /*
          * Here goes the application name.
          */
         'name' => 'Laravel Zero',
 
-        /**
+        /*
          * Here goes the application version.
          */
-        'version' => "1.0.0",
+        'version' => '1.0.0',
 
-        /**
+        /*
          * Here goes the application default command.
          *
          * You may want to remove this line in order to ask the user what command he
@@ -28,7 +28,7 @@ return [
          */
         'default-command' => App\DefaultCommand::class,
 
-        /**
+        /*
          * Here goes the application list of commands.
          *
          * Besides the default command the user can also call
@@ -39,7 +39,7 @@ return [
             ZeroFramework\Commands\Renamer::class,
         ],
 
-        /**
+        /*
          * Here goes the application goes the list of Laravel Service
          * Providers. Enjoy all the power of Laravel on your console.
          */
