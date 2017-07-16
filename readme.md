@@ -46,6 +46,10 @@ You may review the documentation of the Artisan Console component [on Laravel Of
 <a name="configuration"></a>
 
 ## Elegant configuration
+
+The configuration of your console application goes on `config\config.php`. On this file, you should
+define your application list of commands and your Laravel Service Providers configuration.
+
 ```php
         /*
          * Here goes the application name.
