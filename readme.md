@@ -51,14 +51,17 @@ The configuration of your console application goes on `config\config.php`. On th
 define your application list of commands and your Laravel Service Providers configuration.
 
 ```php
+```php
         /*
          * Here goes the application name.
          */
         'name' => 'Laravel Zero',
+
         /*
          * Here goes the application version.
          */
         'version' => '1.0.0',
+
         /*
          * Here goes the application default command.
          *
@@ -66,6 +69,7 @@ define your application list of commands and your Laravel Service Providers conf
          * wants to execute.
          */
         'default-command' => App\DefaultCommand::class,
+
         /*
          * Here goes the application list of commands.
          *
@@ -76,6 +80,15 @@ define your application list of commands and your Laravel Service Providers conf
             ZeroFramework\Commands\Builder::class,
             ZeroFramework\Commands\Renamer::class,
         ],
+
+        /*
+         * Here goes the application goes the list of Laravel Service
+         * Providers. Enjoy all the power of Laravel on your console.
+         */
+        'providers' => [
+            \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
+        ],
+```
 ```
 
 <a name="build-an-standalone"></a>
