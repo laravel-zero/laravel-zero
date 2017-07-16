@@ -51,7 +51,6 @@ The configuration of your console application goes on `config\config.php`. On th
 define your application list of commands and your Laravel Service Providers configuration.
 
 ```php
-```php
         /*
          * Here goes the application name.
          */
@@ -88,7 +87,6 @@ define your application list of commands and your Laravel Service Providers conf
         'providers' => [
             \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
-```
 ```
 
 <a name="build-an-standalone"></a>
