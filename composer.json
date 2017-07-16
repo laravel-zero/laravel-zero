@@ -15,15 +15,18 @@
     ],
     "require": {
         "php": ">=7.1",
-        "illuminate/config": "5.4.*",
-        "illuminate/console": "5.4.*",
-        "illuminate/container": "5.4.*",
-        "illuminate/events": "5.4.*",
-        "nunomaduro/laravel-desktop-notifier": "1.1.*"
+        "nunomaduro/zero-framework": "dev-master"
     },
+    "repositories": [
+        {
+            "type":"path",
+            "url":"/Users/nunomaduro/Projects/zero-framework",
+            "branches-path": false,
+            "tags-path": false
+        }
+    ],
     "require-dev": {
-        "phpunit/phpunit": "~6.0",
-        "bvanhoekelen/performance": "~2.0"
+        "phpunit/phpunit": "~6.2"
     },
     "autoload": {
         "psr-4": {
@@ -41,7 +44,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "php application install"
+            "php application rename"
         ]
     },
     "bin": ["application"]
