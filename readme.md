@@ -2,6 +2,7 @@ Laravel Zero
 ================
 
 Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
+**Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
 
 <p align="center">
   <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
