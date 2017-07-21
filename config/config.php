@@ -26,7 +26,7 @@ return [
          * You may want to remove this line in order to ask the user what command he
          * wants to execute.
          */
-        'default-command' => App\DefaultCommand::class,
+        'default-command' => App\Commands\DefaultCommand::class,
 
         /*
          * Here goes the application list of commands.
@@ -44,6 +44,7 @@ return [
          * Providers. Enjoy all the power of Laravel on your console.
          */
         'providers' => [
+            App\Providers\AppServiceProvider::class,
             \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
     ],

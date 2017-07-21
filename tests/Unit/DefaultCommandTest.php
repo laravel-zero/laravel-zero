@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use App\DefaultCommand;
+use App\Commands\DefaultCommand;
 
 class DefaultCommandTest extends TestCase
 {
