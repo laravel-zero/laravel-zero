@@ -7,14 +7,14 @@ use NunoMaduro\ZeroFramework\Commands\AbstractCommand;
 class DefaultCommand extends AbstractCommand
 {
     /**
-     * The name and signature of the console command.
+     * The name of the command.
      *
      * @var string
      */
-    protected $signature = 'default';
+    protected $name = 'default';
 
     /**
-     * The console command description.
+     * The description of the command.
      *
      * @var string
      */
