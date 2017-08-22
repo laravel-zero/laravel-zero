@@ -14,7 +14,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 
 - Build on top of the [Laravel 5](http://laravel.com) components.
 - Built with [PHP 7](http://php.net) using modern coding standards.
-- Ships with a [standalone compiler](#build-an-standalone).
+- Ships with a [standalone compiler](#build-a-standalone-application).
 - Automatic Dependency Injection on commands and support of [Laravel 5](http://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows or MacOS.
 
@@ -90,16 +90,28 @@ define your application list of commands and your Laravel Service Providers conf
         ],
 ```
 
-<a name="build-an-standalone"></a>
-## Build an standalone
+<a name="build-a-standalone-application"></a>
+## Build a standalone application
 
-Your Laravel Zero project, by default, allows you to build an standalone application.
+Your Laravel Zero project, by default, allows you to build a standalone phar archive to ease the deployment or the distribution of your project.
 
 ```sh
 $ php application build <name>
 ```
 
-The build will provide you can a single executable, ready to use, of your application.
+The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
+
+Note that the generated file will still need a PHP installation respecting your project's requirements (PHP version, extensions, etc.) on the users' computers to be used. You will then be able to execute it directly:
+
+```sh
+$ ./builds/<name>
+```
+
+or on Windows:
+
+```sh
+C:\application\path> php builds\<name>
+```
 
 ## Git branching model
 
