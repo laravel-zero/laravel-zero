@@ -1,4 +1,8 @@
-Laravel Zero
+<p align="center">
+    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo/1024x1024/Round/2.png" />
+</p>
+
+About Laravel Zero
 ================
 
 Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
