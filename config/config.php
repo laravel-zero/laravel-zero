@@ -40,8 +40,8 @@ return [
         ],
 
         /*
-         * Here goes the application goes the list of Laravel Service
-         * Providers. Enjoy all the power of Laravel on your console.
+         * Here goes the application list of Laravel Service Providers.
+         * Enjoy all the power of Laravel on your console.
          */
         'providers' => [
             App\Providers\AppServiceProvider::class,
