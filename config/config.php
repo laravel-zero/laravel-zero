@@ -1,6 +1,5 @@
 <?php
 
-use NunoMaduro\ZeroFramework;
 
 return [
     /*
