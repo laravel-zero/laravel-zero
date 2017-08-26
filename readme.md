@@ -1,13 +1,6 @@
 <p align="center">
     <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo/1024x1024/Round/2.png" />
 </p>
-
-About Laravel Zero
-================
-
-Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
-**Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
-
 <p align="center">
   <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
   <a href="https://travis-ci.org/nunomaduro/zero-framework"><img src="https://img.shields.io/travis/nunomaduro/zero-framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
@@ -15,6 +8,12 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
   <a href="https://packagist.org/packages/nunomaduro/zero-framework"><img src="https://poser.pugx.org/nunomaduro/zero-framework/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 </p>
+
+About Laravel Zero
+================
+
+Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
+**Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
 
 - Build on top of the [Laravel 5](http://laravel.com) components.
 - Built with [PHP 7](http://php.net) using modern coding standards.
@@ -28,29 +27,29 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 
 Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
-## Installation && Usage
+## Installation & Usage
 
-[PHP](https://php.net) 7.1+
+**Requires [PHP 7.1+](http://php.net/releases/)**
 
 To get the latest version of Laravel Zero, simply create a new project using [Composer](https://getcomposer.org):
 
 ```bash
-$ composer create-project --prefer-dist nunomaduro/laravel-zero application
+composer create-project --prefer-dist nunomaduro/laravel-zero application
 ```
 
 Place yourself into the application folder, and execute the application:
 
 ```bash
-$ php application
+php application
 ```
 
 Laravel Zero provides a default command placed in app/DefaultCommand.php
 
-You may review the documentation of the Artisan Console component [on Laravel Official Website](https://laravel.com/docs/5.4/artisan).
+You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.4/artisan).
 
 <a name="configuration"></a>
 
-## Elegant configuration
+## Configuration
 
 The configuration of your console application goes on `config\config.php`. On this file, you should
 define your application list of commands and your Laravel Service Providers configuration.
@@ -100,7 +99,7 @@ define your application list of commands and your Laravel Service Providers conf
 Your Laravel Zero project, by default, allows you to build a standalone phar archive to ease the deployment or the distribution of your project.
 
 ```sh
-$ php application build <name>
+php application build <name>
 ```
 
 The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
@@ -108,7 +107,7 @@ The build will provide a single phar archive, ready to use, containing all the c
 Note that the generated file will still need a PHP installation respecting your project's requirements (PHP version, extensions, etc.) on the users' computers to be used. You will then be able to execute it directly:
 
 ```sh
-$ ./builds/<name>
+./builds/<name>
 ```
 
 or on Windows:
