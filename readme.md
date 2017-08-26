@@ -25,7 +25,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
     <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo.png" />
 </p>
 
-Feel free to check out the [change log](CHANGELOG.md), [releases](nunomaduro/laravel-zero/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
+Feel free to check out the [change log](CHANGELOG.md), [releases](https://github.com/nunomaduro/laravel-zero/releases), [license](LICENSE.md), and [contribution guidelines](CONTRIBUTING.md).
 
 ## Installation & Usage
 
