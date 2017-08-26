@@ -21,6 +21,14 @@ return [
         'version' => '1.0.0',
 
         /*
+         * Set this to "true" if the app is in production.
+         *
+         * If set to true, the 'build' & 'rename' commands won't fire
+         * as the app will be in the production environment.
+         */
+        'production' => false,
+
+        /*
          * Here goes the application default command.
          *
          * You may want to remove this line in order to ask the user what command he
@@ -35,8 +43,7 @@ return [
          * any of the commands specified below.
          */
         'commands' => [
-            ZeroFramework\Commands\Builder::class,
-            ZeroFramework\Commands\Renamer::class,
+            // Like: App\Commands\YourNewCommand::class,
         ],
 
         /*
