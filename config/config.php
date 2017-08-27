@@ -54,7 +54,7 @@ return [
         ],
     ],
 
-    /**
+    /*
      * Here goes the illuminate/database component configuration.
      *
      * @see https://github.com/laravel/laravel/blob/master/config/database.php
@@ -67,5 +67,5 @@ return [
                 'database' => __DIR__.'/../database/database.sqlite',
             ],
         ],
-    ]
+    ],
 ];
