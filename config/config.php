@@ -21,6 +21,12 @@ return [
         'version' => '1.0.0',
 
         /*
+         * If true, development commands won't be available as the app
+         * will be in the production environment.
+         */
+        'production' => false,
+
+        /*
          * Here goes the application default command.
          *
          * You may want to remove this line in order to ask the user what command he
@@ -35,8 +41,7 @@ return [
          * any of the commands specified below.
          */
         'commands' => [
-            ZeroFramework\Commands\Builder::class,
-            ZeroFramework\Commands\Renamer::class,
+            // App\Commands\YourNewCommand::class,
         ],
 
         /*
