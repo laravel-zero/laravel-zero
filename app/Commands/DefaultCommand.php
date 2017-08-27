@@ -3,7 +3,6 @@
 namespace App\Commands;
 
 use NunoMaduro\ZeroFramework\Commands\AbstractCommand;
-
 // use Illuminate\Database\Capsule\Manager as DB;
 
 class DefaultCommand extends AbstractCommand
