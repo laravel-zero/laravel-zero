@@ -35,13 +35,19 @@ Feel free to check out the [change log](CHANGELOG.md), [releases](https://github
 Simply create a new project using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project --prefer-dist nunomaduro/laravel-zero application
+composer create-project nunomaduro/laravel-zero yourAppName
 ```
 
-Place yourself into the application folder, and execute the application:
+Your Laravel Zero project will be then created in the `yourAppName` folder. `CD` into that directory and execute your app:
 
 ```bash
-php application
+php yourappname
+```
+
+You can rename your app anytime by running the following command in your app directory:
+
+```sh
+php yourappname app:rename newName
 ```
 
 Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file.
@@ -120,7 +126,7 @@ define your application's list of commands and your Laravel Service Providers.
 Your Laravel Zero project, by default, allows you to build a standalone PHAR archive to ease the deployment or the distribution of your project.
 
 ```sh
-php application build <name>
+php yourappname build <name>
 ```
 
 The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
