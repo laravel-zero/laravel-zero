@@ -48,4 +48,19 @@ return [
             \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
     ],
+
+    /**
+     * Here goes the illuminate/database component configuration.
+     *
+     * @see https://github.com/laravel/laravel/blob/master/config/database.php
+     *      in order to understand how to configure other drivers.
+     */
+    'database' => [
+        'connections' => [
+            'default' => [
+                'driver'   => 'sqlite',
+                'database' => __DIR__.'/../database/database.sqlite',
+            ],
+        ],
+    ]
 ];
