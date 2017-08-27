@@ -1,7 +1,5 @@
 <?php
 
-use NunoMaduro\ZeroFramework;
-
 return [
     /*
      * Here goes your console application configuration. You should
@@ -21,6 +19,12 @@ return [
         'version' => '1.0.0',
 
         /*
+         * If true, development commands won't be available as the app
+         * will be in the production environment.
+         */
+        'production' => false,
+
+        /*
          * Here goes the application default command.
          *
          * You may want to remove this line in order to ask the user what command he
@@ -35,17 +39,31 @@ return [
          * any of the commands specified below.
          */
         'commands' => [
-            ZeroFramework\Commands\Builder::class,
-            ZeroFramework\Commands\Renamer::class,
+            // App\Commands\YourNewCommand::class,
         ],
 
         /*
-         * Here goes the application goes the list of Laravel Service
-         * Providers. Enjoy all the power of Laravel on your console.
+         * Here goes the application list of Laravel Service Providers.
+         * Enjoy all the power of Laravel on your console.
          */
         'providers' => [
             App\Providers\AppServiceProvider::class,
             \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
     ],
+
+    /**
+     * Here goes the illuminate/database component configuration.
+     *
+     * @see https://github.com/laravel/laravel/blob/master/config/database.php
+     *      in order to understand how to configure other drivers.
+     */
+    'database' => [
+        'connections' => [
+            'default' => [
+                'driver'   => 'sqlite',
+                'database' => __DIR__.'/../database/database.sqlite',
+            ],
+        ],
+    ]
 ];
