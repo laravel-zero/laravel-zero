@@ -120,7 +120,7 @@ define your application's list of commands and your Laravel Service Providers.
 Your Laravel Zero project, by default, allows you to build a standalone PHAR archive to ease the deployment or the distribution of your project.
 
 ```sh
-php application build <name>
+php application app:build <name>
 ```
 
 The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
