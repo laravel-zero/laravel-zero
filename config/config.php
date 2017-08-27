@@ -1,7 +1,5 @@
 <?php
 
-use NunoMaduro\ZeroFramework;
-
 return [
     /*
      * Here goes your console application configuration. You should
