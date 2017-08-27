@@ -21,10 +21,8 @@ return [
         'version' => '1.0.0',
 
         /*
-         * Set this to "true" if the app is in production.
-         *
-         * If set to true, the 'build' & 'rename' commands won't fire
-         * as the app will be in the production environment.
+         * If true, development commands won't be available as the app
+         * will be in the production environment.
          */
         'production' => false,
 
@@ -43,7 +41,7 @@ return [
          * any of the commands specified below.
          */
         'commands' => [
-            // Like: App\Commands\YourNewCommand::class,
+            // App\Commands\YourNewCommand::class,
         ],
 
         /*
