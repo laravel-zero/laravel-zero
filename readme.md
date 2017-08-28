@@ -59,7 +59,7 @@ Laravel Zero ships with a Database component out of the box to push your console
 To install the components run the following command in your Laravel Zero app directory:
 
 ```sh
-php application component:install
+php your-app-name component:install
 ```
 
 This will allow you to select the component to install from the list of available components. Right now, only the Database component is available but many more are in the pipeline.
