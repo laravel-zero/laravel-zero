@@ -26,19 +26,17 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
     <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo.png" />
 </p>
 
-Feel free to check out the [change log](CHANGELOG.md), [releases](https://github.com/nunomaduro/laravel-zero/releases), [license](LICENSE.md), and [contribution guidelines](CONTRIBUTING.md).
-
 ## Installation & Usage
 
-> **Requires [PHP 7.1+](http://php.net/releases/)**
+> **Requires [PHP 7.1+](https://php.net/releases/)**
 
-Simply create a new project using [Composer](https://getcomposer.org):
+Simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
 
 ```bash
 composer create-project --prefer-dist nunomaduro/laravel-zero your-app-name
 ```
 
-Your Laravel Zero project will be then created in the `your-app-name` folder. `CD` into that directory and execute your app:
+Your Laravel Zero project will be then created in the `your-app-name` folder. Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
 
 ```bash
 php your-app-name
@@ -49,8 +47,6 @@ You can rename your app anytime by running the following command in your app dir
 ```sh
 php your-app-name app:rename newName
 ```
-
-Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file.
 
 You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.4/artisan).
 
@@ -73,7 +69,7 @@ This will allow you to select the component to install from the list of availabl
 ## Configuration
 
 The configuration of your console application goes in `config\config.php`. In this file, you should
-define your application's list of commands and your Laravel Service Providers.
+define your application's list of commands and your Laravel Service Providers in this file.
 
 ```php
         /*
@@ -126,7 +122,7 @@ define your application's list of commands and your Laravel Service Providers.
 Your Laravel Zero project, by default, allows you to build a standalone PHAR archive to ease the deployment or the distribution of your project.
 
 ```sh
-php your-app-name app:build <name>
+php your-app-name app:build <your-build-name>
 ```
 
 The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
@@ -134,33 +130,31 @@ The build will provide a single phar archive, ready to use, containing all the c
 Note that the generated file will still need a PHP installation respecting your project's requirements (PHP version, extensions, etc.) on the users' computers to be used. You will then be able to execute it directly:
 
 ```sh
-./builds/<name>
+./builds/<your-build-name>
 ```
 
 or on Windows:
 
 ```sh
-C:\application\path> php builds\<name>
+C:\application\path> php builds\<your-build-name>
 ```
 
-## Git branching model
+## Contributing
 
-The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
+- Thank you for considering to contribute to Laravel Zero. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
 
 ## Stay In Touch
 
-For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
+You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github.com/nunomaduro/laravel-zero/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@laravelzero](https://twitter.com/laravelzero)
 
 ## Credits
 
-This project uses code from several open source packages.
+Laravel Zero uses code from several open source projects.
 
 - [Laravel](https://laravel.com)
-- [Symfony](http://symfony.com)
+- [Symfony](https://symfony.com)
 - [JoliNotif - Send notifications to your desktop](https://github.com/jolicode/JoliNotif)
 
 ## License
 
-Laravel Zero is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-Copyright (c) 2017 Nuno Maduro
+Laravel Zero is an open-sourced software licensed under the [MIT license](LICENSE.md).
