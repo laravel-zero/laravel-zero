@@ -103,8 +103,7 @@ define your application's list of commands and your Laravel Service Providers in
          * any of the commands specified below.
          */
         'commands' => [
-            ZeroFramework\Commands\Builder::class,
-            ZeroFramework\Commands\Renamer::class,
+            // App\Commands\YourNewCommand::class,
         ],
 
         /*
