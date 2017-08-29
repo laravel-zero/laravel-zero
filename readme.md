@@ -107,10 +107,11 @@ define your application's list of commands and your Laravel Service Providers in
         ],
 
         /*
-         * Here goes the list of Laravel Service Providers
+         * Here goes the application list of Laravel Service Providers.
          * Enjoy all the power of Laravel on your console.
          */
         'providers' => [
+            App\Providers\AppServiceProvider::class,
             \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
 ```
