@@ -1,18 +1,18 @@
 <p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo/1024x1024/Round/2.png" />
+    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/1024x1024/Round/2.png" />
 </p>
 <p align="center">
   <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
-  <a href="https://travis-ci.org/nunomaduro/zero-framework"><img src="https://img.shields.io/travis/nunomaduro/zero-framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/zero-framework"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/zero-framework.svg?style=flat-square" alt="Quality Score"></img></a>
-  <a href="https://packagist.org/packages/nunomaduro/zero-framework"><img src="https://poser.pugx.org/nunomaduro/zero-framework/v/stable.svg" alt="Latest Stable Version"></a>
+  <a href="https://travis-ci.org/laravel-zero/framework"><img src="https://img.shields.io/travis/laravel-zero/framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
+  <a href="https://scrutinizer-ci.com/g/laravel-zero/framework"><img src="https://img.shields.io/scrutinizer/g/laravel-zero/framework.svg?style=flat-square" alt="Quality Score"></img></a>
+  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 </p>
 
 About Laravel Zero
 ================
 
-Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
+Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and it is maintained by [Nuno Maduro](https://github.com/nunomaduro) & [Harish Toshniwal](https://github.com/introwit). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
 **Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
 
 - Build on top of the [Laravel 5](https://laravel.com) components.
@@ -20,31 +20,33 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 - Built with [PHP 7](https://php.net) using modern coding standards.
 - Ships with a [standalone compiler](#build-a-standalone-application).
 - Automatic Dependency Injection on commands and support of [Laravel 5](https://laravel.com) Service Providers.
-- Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows & MacOS.
+- Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo.png" />
 </p>
-
-Feel free to check out the [change log](CHANGELOG.md), [releases](https://github.com/nunomaduro/laravel-zero/releases), [license](LICENSE.md), and [contribution guidelines](CONTRIBUTING.md).
 
 ## Installation & Usage
 
-> **Requires [PHP 7.1+](http://php.net/releases/)**
+> **Requires [PHP 7.1+](https://php.net/releases/)**
 
-Simply create a new project using [Composer](https://getcomposer.org):
-
-```bash
-composer create-project --prefer-dist nunomaduro/laravel-zero application
-```
-
-Place yourself into the application folder, and execute the application:
+Simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
 
 ```bash
-php application
+composer create-project --prefer-dist laravel-zero/laravel-zero your-app-name
 ```
 
-Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file.
+Your Laravel Zero project will be then created in the `your-app-name` folder. Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
+
+```bash
+php your-app-name
+```
+
+You can rename your app anytime by running the following command in your app directory:
+
+```sh
+php your-app-name app:rename newName
+```
 
 You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.4/artisan).
 
@@ -57,7 +59,7 @@ Laravel Zero ships with a Database component out of the box to push your console
 To install the components run the following command in your Laravel Zero app directory:
 
 ```sh
-php application component:install
+php your-app-name component:install
 ```
 
 This will allow you to select the component to install from the list of available components. Right now, only the Database component is available but many more are in the pipeline.
@@ -67,7 +69,7 @@ This will allow you to select the component to install from the list of availabl
 ## Configuration
 
 The configuration of your console application goes in `config\config.php`. In this file, you should
-define your application's list of commands and your Laravel Service Providers.
+define your application's list of commands and your Laravel Service Providers in this file.
 
 ```php
         /*
@@ -101,15 +103,15 @@ define your application's list of commands and your Laravel Service Providers.
          * any of the commands specified below.
          */
         'commands' => [
-            ZeroFramework\Commands\Builder::class,
-            ZeroFramework\Commands\Renamer::class,
+            // App\Commands\YourNewCommand::class,
         ],
 
         /*
-         * Here goes the list of Laravel Service Providers
+         * Here goes the application list of Laravel Service Providers.
          * Enjoy all the power of Laravel on your console.
          */
         'providers' => [
+            App\Providers\AppServiceProvider::class,
             \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
 ```
@@ -120,7 +122,7 @@ define your application's list of commands and your Laravel Service Providers.
 Your Laravel Zero project, by default, allows you to build a standalone PHAR archive to ease the deployment or the distribution of your project.
 
 ```sh
-php application app:build <name>
+php your-app-name app:build <your-build-name>
 ```
 
 The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
@@ -128,33 +130,31 @@ The build will provide a single phar archive, ready to use, containing all the c
 Note that the generated file will still need a PHP installation respecting your project's requirements (PHP version, extensions, etc.) on the users' computers to be used. You will then be able to execute it directly:
 
 ```sh
-./builds/<name>
+./builds/<your-build-name>
 ```
 
 or on Windows:
 
 ```sh
-C:\application\path> php builds\<name>
+C:\application\path> php builds\<your-build-name>
 ```
 
-## Git branching model
+## Contributing
 
-The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
+- Thank you for considering to contribute to Laravel Zero. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
 
 ## Stay In Touch
 
-For latest releases and announcements, follow on Twitter: [@enunomaduro](https://twitter.com/enunomaduro)
+You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github.com/laravel-zero/laravel-zero/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@laravelzero](https://twitter.com/laravelzero)
 
 ## Credits
 
-This project uses code from several open source packages.
+Laravel Zero uses code from several open source projects.
 
 - [Laravel](https://laravel.com)
-- [Symfony](http://symfony.com)
+- [Symfony](https://symfony.com)
 - [JoliNotif - Send notifications to your desktop](https://github.com/jolicode/JoliNotif)
 
 ## License
 
-Laravel Zero is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-Copyright (c) 2017 Nuno Maduro
+Laravel Zero is an open-sourced software licensed under the [MIT license](LICENSE.md).
