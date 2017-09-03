@@ -1,18 +1,18 @@
 <p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo/1024x1024/Round/2.png" />
+    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/1024x1024/Round/2.png" />
 </p>
 <p align="center">
   <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
-  <a href="https://travis-ci.org/nunomaduro/zero-framework"><img src="https://img.shields.io/travis/nunomaduro/zero-framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/nunomaduro/zero-framework"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/zero-framework.svg?style=flat-square" alt="Quality Score"></img></a>
-  <a href="https://packagist.org/packages/nunomaduro/zero-framework"><img src="https://poser.pugx.org/nunomaduro/zero-framework/v/stable.svg" alt="Latest Stable Version"></a>
+  <a href="https://travis-ci.org/laravel-zero/framework"><img src="https://img.shields.io/travis/laravel-zero/framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
+  <a href="https://scrutinizer-ci.com/g/laravel-zero/framework"><img src="https://img.shields.io/scrutinizer/g/laravel-zero/framework.svg?style=flat-square" alt="Quality Score"></img></a>
+  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/v/stable.svg" alt="Latest Stable Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 </p>
 
 About Laravel Zero
 ================
 
-Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
+Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your next console application.
 **Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
 
 - Build on top of the [Laravel 5](https://laravel.com) components.
@@ -20,10 +20,10 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 - Built with [PHP 7](https://php.net) using modern coding standards.
 - Ships with a [standalone compiler](#build-a-standalone-application).
 - Automatic Dependency Injection on commands and support of [Laravel 5](https://laravel.com) Service Providers.
-- Supports [desktop notifications](https://github.com/nunomaduro/laravel-zero) on Linux, Windows & MacOS.
+- Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/nunomaduro/laravel-zero-docs/master/images/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo.png" />
 </p>
 
 ## Installation & Usage
@@ -33,7 +33,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 Simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project --prefer-dist nunomaduro/laravel-zero your-app-name
+composer create-project --prefer-dist laravel-zero/laravel-zero your-app-name
 ```
 
 Your Laravel Zero project will be then created in the `your-app-name` folder. Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
@@ -145,7 +145,7 @@ C:\application\path> php builds\<your-build-name>
 
 ## Stay In Touch
 
-You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github.com/nunomaduro/laravel-zero/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@laravelzero](https://twitter.com/laravelzero)
+You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github.com/laravel-zero/laravel-zero/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@laravelzero](https://twitter.com/laravelzero)
 
 ## Credits
 

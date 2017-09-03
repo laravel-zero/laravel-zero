@@ -1,11 +1,11 @@
 {
-    "name": "nunomaduro/laravel-zero",
+    "name": "laravel-zero/laravel-zero",
     "description": "Laravel Zero provides the perfect starting point for your next Laravel Console Application.",
     "keywords": ["framework", "laravel", "console", "zero"],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/nunomaduro/laravel-zero/issues",
-        "source": "https://github.com/nunomaduro/laravel-zero"
+        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
+        "source": "https://github.com/laravel-zero/laravel-zero"
     },
     "authors": [
         {
