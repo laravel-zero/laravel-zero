@@ -2,14 +2,14 @@
 
 namespace Tests;
 
-use NunoMaduro\ZeroFramework\Application;
+use LaravelZero\Framework\Application;
 
 trait CreatesApplication
 {
     /**
      * Creates the application and returns it.
      *
-     * @return \NunoMaduro\ZeroFramework\Application
+     * @return \LaravelZero\Framework\Application
      */
     public function createApplication(): Application
     {
