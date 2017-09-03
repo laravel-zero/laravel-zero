@@ -2,7 +2,7 @@
 
 namespace App\Commands;
 
-use NunoMaduro\ZeroFramework\Commands\AbstractCommand;
+use LaravelZero\Framework\Commands\AbstractCommand;
 
 // use Illuminate\Database\Capsule\Manager as DB;
 

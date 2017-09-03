@@ -13,4 +13,4 @@ require __DIR__.'/autoload.php';
 |
 */
 
-(new NunoMaduro\ZeroFramework\Application)->run();
+(new LaravelZero\Framework\Application)->run();
