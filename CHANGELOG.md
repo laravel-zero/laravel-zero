@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [3.4.0] - 2017-XX-XX
+## [3.4.0] - 2017-09-04
 ### Added
 - Core: Bumps Laravel components version to 5.5.
 
