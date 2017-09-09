@@ -1,5 +1,5 @@
 <p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/1024x1024/Round/2.png" />
+    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" />
 </p>
 <p align="center">
   <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
@@ -149,11 +149,10 @@ You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github
 
 ## Credits
 
-Laravel Zero uses code from several open source projects.
-
 - [Laravel](https://laravel.com)
 - [Symfony](https://symfony.com)
 - [JoliNotif - Send notifications to your desktop](https://github.com/jolicode/JoliNotif)
+- [Caneco - Wallpapers and logo](https://github.com/caneco)
 
 ## License
 
