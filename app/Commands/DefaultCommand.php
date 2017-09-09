@@ -3,6 +3,7 @@
 namespace App\Commands;
 
 use LaravelZero\Framework\Commands\AbstractCommand;
+
 // use Illuminate\Database\Capsule\Manager as DB;
 
 class DefaultCommand extends AbstractCommand
