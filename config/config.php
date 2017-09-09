@@ -48,7 +48,6 @@ return [
          */
         'providers' => [
             App\Providers\AppServiceProvider::class,
-            \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
     ],
 
