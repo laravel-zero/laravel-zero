@@ -23,7 +23,7 @@ Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and it 
 - Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/code.png" />
 </p>
 
 ## Installation & Usage
