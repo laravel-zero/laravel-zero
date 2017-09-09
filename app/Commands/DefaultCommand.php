@@ -3,22 +3,33 @@
 namespace App\Commands;
 
 use LaravelZero\Framework\Commands\AbstractCommand;
+// use Illuminate\Database\Capsule\Manager as DB;
 
 class DefaultCommand extends AbstractCommand
 {
     /**
-     * Want to build an elegant console app?
+     * The name of the command.
      *
-     * @with Laravel Zero
+     * @var string
+     */
+    protected $name = 'default';
+
+    /**
+     * The description of the command.
+     *
+     * @var string
+     */
+    protected $description = 'The default app command';
+
+    /**
+     * Execute the console command. Here goes the command
+     * code.
+     *
+     * @return void
      */
     public function handle(): void
     {
+        $this->info('Love beautiful code? We do too.');
         $this->notify('Hey Artisan', 'Enjoy the fresh air!');
-        $this->ask('Love beautiful code?');
-        $this->info('We do too.');
-
-        if ($this->confirm('Do you wish to continue?')) {
-            $this->choice('What is your name?', ['Nuno', 'Taylor']);
-        }
     }
 }
