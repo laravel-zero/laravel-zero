@@ -1,4 +1,6 @@
-<p align="center"><img src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.svg"></p>
+<p align="center">
+    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" />
+</p>
 <p align="center">
   <a href="https://styleci.io/repos/96572957"><img src="https://styleci.io/repos/96572957/shield" alt="StyleCI Status"></img></a>
   <a href="https://travis-ci.org/laravel-zero/framework"><img src="https://img.shields.io/travis/laravel-zero/framework/stable.svg?style=flat-square" alt="Build Status"></img></a>
@@ -21,7 +23,7 @@ Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and it 
 - Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
 <p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo.png" />
+    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/code.png" />
 </p>
 
 ## Installation & Usage
