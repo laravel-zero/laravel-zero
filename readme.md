@@ -9,7 +9,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 </p>
 
-This is community project and not an "official" Laravel one
+## This is a community project and not an "official" Laravel one
 ================
 
 Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and it is maintained by [Nuno Maduro](https://github.com/nunomaduro) & [Harish Toshniwal](https://github.com/introwit). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
