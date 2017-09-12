@@ -7,6 +7,6 @@
 - [JoliNotif](https://github.com/jolicode/JoliNotif) - Send notifications to your desktop
 
 ## Contributors
-[Harish Toshniwal](https://github.com/introwit) - Maintainer
-[Alexandre G. Raymond](https://github.com/ilesinge) - The build command
-[Caneco](https://github.com/caneco) - Wallpapers and logo
+- [Harish Toshniwal](https://github.com/introwit) - Maintainer
+- [Alexandre G. Raymond](https://github.com/ilesinge) - The build command
+- [Caneco](https://github.com/caneco) - Wallpapers and logo
