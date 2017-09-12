@@ -9,7 +9,7 @@ use LaravelZero\Framework\Commands\AbstractCommand;
 class HelloCommand extends AbstractCommand
 {
     /**
-     * The name and signature of the console command.
+     * The name and signature of the command.
      *
      * @var string
      */
@@ -23,8 +23,7 @@ class HelloCommand extends AbstractCommand
     protected $description = 'The hello app command';
 
     /**
-     * Execute the console command. Here goes the command
-     * code.
+     * Execute the command. Here goes the code.
      *
      * @return void
      */
