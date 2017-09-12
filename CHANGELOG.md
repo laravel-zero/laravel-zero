@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [3.5.0] - 2017-09-12
 ### Added
-- Core: Adds illuminate/filesystem component.
-- Core: Adds illuminate/cache component.
+- Core: Adds `illuminate/filesystem` component.
+- Core: Adds `illuminate/cache` component.
 - Renames default command to `Hello command`.
 
 ## [3.4.0] - 2017-09-04
