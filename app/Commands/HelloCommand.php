@@ -31,6 +31,6 @@ class HelloCommand extends AbstractCommand
     {
         $this->info('Love beautiful code? We do too.');
         $this->notify('Hello Artisan', 'Enjoy the fresh air!');
-        $this->comment('Wanna see more? Type `php your-command-name list`');
+        $this->comment('Wanna see more? Type `php your-app-name list`');
     }
 }
