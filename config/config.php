@@ -30,7 +30,7 @@ return [
          * You may want to remove this line in order to ask the user what command he
          * wants to execute.
          */
-        'default-command' => App\Commands\DefaultCommand::class,
+        'default-command' => App\Commands\HelloCommand::class,
 
         /*
          * Here goes the application list of commands.
@@ -48,12 +48,13 @@ return [
          */
         'providers' => [
             App\Providers\AppServiceProvider::class,
-            \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
     ],
 
     /*
      * Here goes the illuminate/database component configuration.
+     *
+     * In order to install the database component type: php your-command-name component:install
      *
      * @see https://github.com/laravel/laravel/blob/master/config/database.php
      *      in order to understand how to configure other drivers.
