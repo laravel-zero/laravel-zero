@@ -11,7 +11,7 @@
 
 ## This is a community project and not an "official" Laravel one
 
-Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and it is maintained by [Nuno Maduro](https://github.com/nunomaduro) & [Harish Toshniwal](https://github.com/introwit). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
+Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nunomaduro). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
 **Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
 
 - Build on top of the [Laravel 5](https://laravel.com) components.
@@ -145,13 +145,6 @@ C:\application\path> php builds\<your-build-name>
 ## Stay In Touch
 
 You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github.com/laravel-zero/laravel-zero/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@laravelzero](https://twitter.com/laravelzero)
-
-## Credits
-
-- [Laravel](https://laravel.com)
-- [Symfony](https://symfony.com)
-- [JoliNotif - Send notifications to your desktop](https://github.com/jolicode/JoliNotif)
-- [Caneco - Wallpapers and logo](https://github.com/caneco)
 
 ## License
 
