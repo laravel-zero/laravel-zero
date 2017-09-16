@@ -29,7 +29,17 @@ Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nuno
 
 > **Requires [PHP 7.1+](https://php.net/releases/)**
 
-Simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
+Via Laravel Zero Installer
+
+```bash
+composer global require "laravel-zero/installer"
+```
+
+```bash
+laravel-zero new your-app-name
+```
+
+Or Simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
 
 ```bash
 composer create-project --prefer-dist laravel-zero/laravel-zero your-app-name
