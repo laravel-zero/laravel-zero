@@ -15,9 +15,6 @@
     ],
     "require": {
         "php": ">=7.1",
-        "illuminate/cache": "5.5.*",
-        "illuminate/database": "5.5.*",
-        "illuminate/filesystem": "^5.5",
         "laravel-zero/framework": "dev-release-3.6.0",
         "mtdowling/cron-expression": "^1.2"
     },
