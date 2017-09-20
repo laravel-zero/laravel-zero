@@ -5,7 +5,9 @@ namespace App\Commands;
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 
-// use Illuminate\Database\Capsule\Manager as DB;
+// use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\Schema;
+// use Illuminate\Support\Facades\Cache;
 
 class HelloCommand extends Command
 {

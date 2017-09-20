@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Core: Adds Scheduler.
+- Core: Adds Facades.
 
 ### Changed
 - Renamed base command `AbstractCommand` to `Command`.
