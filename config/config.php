@@ -68,6 +68,12 @@ return [
         ],
     ],
 
+    /*
+     * Here goes the application cache configuration.
+     *
+     * @see https://github.com/laravel/laravel/blob/master/config/cache.php
+     *      in order to understand how to configure other drivers.
+     */
     'cache' => [
         'default' => 'array',
         'stores' => [
