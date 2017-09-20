@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Core: Adds Scheduler.
+- Core: Adds Facades.
+
+### Changed
+- Renamed base command `AbstractCommand` to `Command`.
+
+### Removed
+- Core: Removes `illuminate/cache` component. It's now by default.
+
 ## [3.5.4] - 2017-09-17
 ### Added
 - [Installer](https://github.com/laravel-zero/installer)

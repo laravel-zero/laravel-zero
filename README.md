@@ -21,10 +21,6 @@ Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nuno
 - Automatic Dependency Injection on commands and support of [Laravel 5](https://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
-<p align="center">
-    <img title="Terminal icon" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/code.png" />
-</p>
-
 ## Installation & Usage
 
 > **Requires [PHP 7.1+](https://php.net/releases/)**
@@ -59,6 +55,24 @@ php your-app-name app:rename newName
 
 You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.4/artisan).
 
+<a href="scheduler"></a>
+
+## Scheduler
+
+Laravel Zero ships with the [Task Scheduling](https://laravel.com/docs/5.5/scheduling) of Laravel, to use it you may need to add the following Cron entry to your server:
+
+```
+* * * * * php /path-to-your-project/your-app-name schedule:run >> /dev/null 2>&1
+```
+
+You may define all of your scheduled tasks in the `schedule` method of the command:
+```php
+    public function schedule(Schedule $schedule): void
+    {
+        $schedule->command(static::class)->everyMinute();
+    }
+```
+
 <a href="components"></a>
 
 ## Components
@@ -82,28 +96,12 @@ define your application's list of commands and your Laravel Service Providers in
 
 ```php
         /*
-         * Here goes the application name.
-         */
-        'name' => 'Laravel Zero',
-
-        /*
-         * Here goes the application version.
-         */
-        'version' => '1.0.0',
-
-        /*
-         * If true, development commands won't be available as the app
-         * will be in the production environment.
-         */
-        'production' => false,
-
-        /*
          * Here goes the application default command.
          *
          * You may want to remove this line in order to ask the user what command he
          * wants to execute.
          */
-        'default-command' => App\DefaultCommand::class,
+        'default-command' => App\Commands\HelloCommand::class,
 
         /*
          * Here goes the application list of commands.
@@ -113,15 +111,6 @@ define your application's list of commands and your Laravel Service Providers in
          */
         'commands' => [
             // App\Commands\YourNewCommand::class,
-        ],
-
-        /*
-         * Here goes the application list of Laravel Service Providers.
-         * Enjoy all the power of Laravel on your console.
-         */
-        'providers' => [
-            App\Providers\AppServiceProvider::class,
-            \NunoMaduro\LaravelDesktopNotifier\LaravelDesktopNotifierServiceProvider::class,
         ],
 ```
 
