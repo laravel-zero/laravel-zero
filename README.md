@@ -69,7 +69,7 @@ You may define all of your scheduled tasks in the `schedule` method of the comma
 ```php
     public function schedule(Schedule $schedule): void
     {
-        // $schedule->command(static::class)->everyMinute();
+        $schedule->command(static::class)->everyMinute();
     }
 ```
 
