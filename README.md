@@ -65,7 +65,7 @@ Laravel Zero ships with the [Task Scheduling](https://laravel.com/docs/5.5/sched
 * * * * * php /path-to-your-project/your-app-name schedule:run >> /dev/null 2>&1
 ```
 
-You may define all of your scheduled tasks in the schedule` method of the command:
+You may define all of your scheduled tasks in the `schedule` method of the command:
 ```php
     public function schedule(Schedule $schedule): void
     {
