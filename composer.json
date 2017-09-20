@@ -15,8 +15,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "laravel-zero/framework": "dev-release-3.6.0",
-        "mtdowling/cron-expression": "^1.2"
+        "laravel-zero/framework": "dev-release-3.6.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
