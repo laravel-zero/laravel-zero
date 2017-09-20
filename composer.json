@@ -15,8 +15,14 @@
     ],
     "require": {
         "php": ">=7.1",
-        "laravel-zero/framework": "~3.5"
+        "illuminate/cache": "5.5.*",
+        "illuminate/database": "5.5.*",
+        "illuminate/filesystem": "^5.5",
+        "laravel-zero/framework": "dev-release-3.6.0",
+        "mtdowling/cron-expression": "^1.2"
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
