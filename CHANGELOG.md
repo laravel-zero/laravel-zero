@@ -4,10 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [3.6] - 2017-09-21
 ### Added
 - Core: Adds Scheduler.
 - Core: Adds Facades.
+- Core: Adds `illuminate/filesystem` component
 
 ### Changed
 - Renamed base command `AbstractCommand` to `Command`.
