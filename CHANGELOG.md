@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Renamed base command `AbstractCommand` to `Command`.
+- Cache config added to `config.php`.
 
 ### Removed
 - Core: Removes `illuminate/cache` component. It's now by default.
