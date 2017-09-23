@@ -11,14 +11,13 @@
 
 ## This is a community project and not an "official" Laravel one
 
-Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nunomaduro). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application.
-**Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
+Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nunomaduro). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application. **Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
 
-- Build on top of the [Laravel 5](https://laravel.com) components.
-- Includes the [Database Component.](#components)
+- Build on top of the [Laravel](https://laravel.com) components.
+- Allows the installation of the [Database/Filesystem Components](#components).
 - Built with [PHP 7](https://php.net) using modern coding standards.
-- Ships with a [standalone compiler](#build-a-standalone-application).
-- Automatic Dependency Injection on commands and support of [Laravel 5](https://laravel.com) Service Providers.
+- Ships with a [standalone compiler](#build-a-standalone-application) and a [Scheduler](#scheduler) component.
+- Automatic dependency injection on commands and support of [Laravel](https://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
 ## Installation & Usage
@@ -41,7 +40,7 @@ Or Simply create a new Laravel Zero project using [Composer](https://getcomposer
 composer create-project --prefer-dist laravel-zero/laravel-zero your-app-name
 ```
 
-Your Laravel Zero project will be then created in the `your-app-name` folder. Laravel Zero provides a default command placed in the `app/DefaultCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
+Your Laravel Zero project will be then created in the `your-app-name` folder. Laravel Zero provides a default command placed in the `app/HelloCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
 
 ```bash
 php your-app-name
@@ -50,10 +49,10 @@ php your-app-name
 You can rename your app anytime by running the following command in your app directory:
 
 ```sh
-php your-app-name app:rename newName
+php your-app-name app:rename new-name
 ```
 
-You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.4/artisan).
+You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.5/artisan).
 
 <a href="scheduler"></a>
 
@@ -77,7 +76,9 @@ You may define all of your scheduled tasks in the `schedule` method of the comma
 
 ## Components
 
-Laravel Zero ships with a Database component out of the box to push your console app to the next level. As you might have already guessed it is Laravel's [Illuminate Database](https://github.com/illuminate/database) component that works with the same breeze in Laravel Zero environment too.
+Laravel Zero allows you to install a Database component out of the box to push your console app to the next level. As you might have already guessed it is Laravel's [Eloquent](https://laravel.com/docs/5.5/eloquent) component that works with the same breeze in Laravel Zero environment too.
+
+If you want to move files to multiple providers like AwsS3 and Dropbox, you may consider the [Filesystem](https://laravel.com/docs/5.5/filesystem) component.
 
 To install the components run the following command in your Laravel Zero app directory:
 
@@ -85,32 +86,20 @@ To install the components run the following command in your Laravel Zero app dir
 php your-app-name component:install
 ```
 
-This will allow you to select the component to install from the list of available components. Right now, only the Database component is available but many more are in the pipeline.
+This will allow you to select the component to install from the list of available components.
 
 <a name="configuration"></a>
 
 ## Configuration
 
-The configuration of your console application goes in `config\config.php`. In this file, you should
-define your application's list of commands and your Laravel Service Providers in this file.
+The configuration of your console application goes in `config\config.php`. In this file, you should define your application's list of commands and your Laravel Service Providers in this file.
 
 ```php
-        /*
-         * Here goes the application default command.
-         *
-         * You may want to remove this line in order to ask the user what command he
-         * wants to execute.
-         */
+
         'default-command' => App\Commands\HelloCommand::class,
 
-        /*
-         * Here goes the application list of commands.
-         *
-         * Besides the default command the user can also call
-         * any of the commands specified below.
-         */
         'commands' => [
-            // App\Commands\YourNewCommand::class,
+            App\Commands\AddUserCommand::class,
         ],
 ```
 
@@ -139,7 +128,7 @@ C:\application\path> php builds\<your-build-name>
 
 ## Contributing
 
-- Thank you for considering to contribute to Laravel Zero. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
+Thank you for considering to contribute to Laravel Zero. All the contribution guidelines are mentioned [here](CONTRIBUTING.md).
 
 ## Stay In Touch
 
