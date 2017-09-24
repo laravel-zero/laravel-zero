@@ -33,8 +33,10 @@ class HelloCommand extends Command
      */
     public function handle(): void
     {
-        $this->info('Love beautiful code? We do too.');
+        info('Love beautiful code? We do too.');
+
         $this->notify('Hello '.$this->argument('name'), 'Enjoy the fresh air!');
+
         $this->comment('Wanna see more? Type `php your-app-name list`');
     }
 
