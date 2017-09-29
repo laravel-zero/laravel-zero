@@ -27,7 +27,7 @@ Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nuno
 Via Laravel Zero Installer
 
 ```bash
-composer global require consolidation/cgr && cgr laravel-zero/installer
+composer global require laravel-zero/installer
 ```
 
 ```bash
