@@ -20,6 +20,9 @@
             <directory suffix="Test.php">./tests/Integration</directory>
         </testsuite>
     </testsuites>
+    <listeners>
+        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Listener"/>
+    </listeners>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
