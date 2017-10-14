@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.7.0] - 2017-10-12
+### Added
+- Adds Collision to composer `require-dev`.
+- Adds Collision listener to `phpunit.xml`.
+- Core: Auto registers collision.
+
 ## [3.6.11] - 2017-10-01
 ### Added
 - Core: Adds `config_path` helper.
