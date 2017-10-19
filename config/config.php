@@ -70,7 +70,7 @@ return [
      * installed, the configuration below is used.
      */
     'database' => [
-        /**
+        /*
          * If true, migrations commands will be available.
          */
         'migrations' => true,
