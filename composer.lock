@@ -465,12 +465,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-zero/framework.git",
-                "reference": "6cce5e7b11d0b801132599425151ea85dc6ff991"
+                "reference": "8a235d0d6601c605c23d7d988ca46b2889abe9e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/6cce5e7b11d0b801132599425151ea85dc6ff991",
-                "reference": "6cce5e7b11d0b801132599425151ea85dc6ff991",
+                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/8a235d0d6601c605c23d7d988ca46b2889abe9e9",
+                "reference": "8a235d0d6601c605c23d7d988ca46b2889abe9e9",
                 "shasum": ""
             },
             "require": {
@@ -517,7 +517,7 @@
                 "laravel",
                 "zero"
             ],
-            "time": "2017-10-19T18:55:16+00:00"
+            "time": "2017-10-19T22:48:59+00:00"
         },
         {
             "name": "mtdowling/cron-expression",
