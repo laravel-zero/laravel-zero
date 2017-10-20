@@ -52,33 +52,38 @@ return [
     ],
 
     /*
-     * Here goes the illuminate/database component configuration.
-     *
-     * In order to install the database component type: php your-command-name component:install
-     *
-     * @see https://github.com/laravel/laravel/blob/master/config/database.php
-     *      in order to understand how to configure other drivers.
+     * Here goes the application cache configuration. In order to keep
+     * it simple we use the `array driver. Fell free to use another
+     * driver that checking the cache compomenent documentation.
+     */
+        'cache' => [
+            'default' => 'array',
+            'stores' => [
+                'array' => [
+                    'driver' => 'array',
+                ],
+            ],
+        ],
+
+    /*
+     * Here goes the illuminate/database component configuration. Once
+     * installed, the configuration below is used.
      */
     'database' => [
+        /**
+         * If true, migrations commands will be available.
+         */
+        'migrations' => true,
+
+        /*
+         * Here goes the application database connection configuration. By
+         * default, we use `sqlite` as driver. Fell free to use another
+         * driver that checking the cache compomenent documentation.
+         */
         'connections' => [
             'default' => [
                 'driver'   => 'sqlite',
                 'database' => __DIR__.'/../database/database.sqlite',
-            ],
-        ],
-    ],
-
-    /*
-     * Here goes the application cache configuration.
-     *
-     * @see https://github.com/laravel/laravel/blob/master/config/cache.php
-     *      in order to understand how to configure other drivers.
-     */
-    'cache' => [
-        'default' => 'array',
-        'stores' => [
-            'array' => [
-                'driver' => 'array',
             ],
         ],
     ],
