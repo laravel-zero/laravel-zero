@@ -65,7 +65,7 @@ return [
      * database component.
      */
     'database' => [
-        /**
+        /*
          * If true, migrations commands will be available.
          */
         'with-migrations' => true,
