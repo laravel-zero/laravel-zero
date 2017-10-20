@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.8.0] - 2017-10-20
+### Added
+- Moves Collision from composer `require-dev` to `require`.
+- Adds option `with-migrations` to database config.
+- Core: Migrations feature.
+
 ## [3.7.0] - 2017-10-12
 ### Added
 - Adds Collision to composer `require-dev`.

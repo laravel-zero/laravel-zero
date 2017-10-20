@@ -2,9 +2,7 @@
 
 return [
     /*
-     * Here goes your console application configuration. You should
-     * define your application list of commands and your Laravel
-     * Service Providers configuration.
+     * Here goes the application configuration.
      */
     'app' => [
 
@@ -25,18 +23,14 @@ return [
         'production' => false,
 
         /*
-         * Here goes the application default command.
-         *
-         * You may want to remove this line in order to ask the user what command he
-         * wants to execute.
+         * Here goes the application default command. If you remove this
+         * line, the list of commands will appear.
          */
         'default-command' => App\Commands\HelloCommand::class,
 
         /*
-         * Here goes the application list of commands.
-         *
-         * Besides the default command the user can also call
-         * any of the commands specified below.
+         * Here goes the application list of commands. Besides the default
+         * command the user can also call any of the commands specified below.
          */
         'commands' => [
             // App\Commands\YourNewCommand::class,
@@ -53,7 +47,7 @@ return [
 
     /*
      * Here goes the application cache configuration. In order to keep
-     * it simple we use the `array driver. Fell free to use another
+     * it simple we use the `array` driver. Fell free to use another
      * driver that checking the cache compomenent documentation.
      */
         'cache' => [
@@ -67,7 +61,8 @@ return [
 
     /*
      * Here goes the illuminate/database component configuration. Once
-     * installed, the configuration below is used.
+     * installed, the configuration below is used to configure your
+     * database component.
      */
     'database' => [
         /**
@@ -78,7 +73,7 @@ return [
         /*
          * Here goes the application database connection configuration. By
          * default, we use `sqlite` as driver. Fell free to use another
-         * driver that checking the cache compomenent documentation.
+         * driver that checking the database compomenent documentation.
          */
         'connections' => [
             'default' => [
