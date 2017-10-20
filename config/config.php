@@ -73,7 +73,7 @@ return [
         /**
          * If true, migrations commands will be available.
          */
-        'migrations' => true,
+        'with-migrations' => true,
 
         /*
          * Here goes the application database connection configuration. By
