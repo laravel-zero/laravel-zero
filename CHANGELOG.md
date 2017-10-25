@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.9.0] - 2017-10-25
 ### Added
 - Core: Moves cache config exists now by default on core.
-- Fixes bug on renamer if the file with the same name already exists.
+- Core: Fixes bug on renamer if the file with the same name already exists.
 - Cache config remove from `config.php`.
 
 ## [3.8.0] - 2017-10-20
