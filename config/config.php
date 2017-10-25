@@ -46,20 +46,6 @@ return [
     ],
 
     /*
-     * Here goes the application cache configuration. In order to keep
-     * it simple we use the `array` driver. Fell free to use another
-     * driver that checking the cache compomenent documentation.
-     */
-        'cache' => [
-            'default' => 'array',
-            'stores' => [
-                'array' => [
-                    'driver' => 'array',
-                ],
-            ],
-        ],
-
-    /*
      * Here goes the illuminate/database component configuration. Once
      * installed, the configuration below is used to configure your
      * database component.
@@ -72,8 +58,8 @@ return [
 
         /*
          * Here goes the application database connection configuration. By
-         * default, we use `sqlite` as driver. Fell free to use another
-         * driver that checking the database compomenent documentation.
+         * default, we use `sqlite` as a driver. Feel free to use another
+         * driver, be sure to check the database component documentation.
          */
         'connections' => [
             'default' => [
