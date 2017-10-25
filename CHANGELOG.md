@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.9.0] - 2017-10-25
+### Added
+- Core: Moves cache config exists now by default on core.
+- Core: Fixes bug on renamer if the file with the same name already exists.
+- Cache config remove from `config.php`.
+
 ## [3.8.0] - 2017-10-20
 ### Added
 - Requires from composer Laravel Zero Framework `3.8.*`.

@@ -46,20 +46,6 @@ return [
     ],
 
     /*
-     * Here goes the application cache configuration. In order to keep
-     * it simple we use the `array` driver. Feel free to use another
-     * driver, be sure to check the cache component documentation.
-     */
-        'cache' => [
-            'default' => 'array',
-            'stores' => [
-                'array' => [
-                    'driver' => 'array',
-                ],
-            ],
-        ],
-
-    /*
      * Here goes the illuminate/database component configuration. Once
      * installed, the configuration below is used to configure your
      * database component.
