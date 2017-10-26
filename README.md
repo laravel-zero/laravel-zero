@@ -17,7 +17,7 @@ Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nuno
 - Optional the installation of the [Database/Filesystem components](#components).
 - Built with [PHP 7](https://php.net) using modern coding standards.
 - Ships with a [Scheduler](#scheduler) and an [Standalone Compiler](#build-a-standalone-application).
-- Automatic dependency injection on commands and support of [Laravel](https://laravel.com) Service Providers.
+- Auto detects commands and supports [Laravel](https://laravel.com) service providers.
 - Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
 ## Installation & Usage

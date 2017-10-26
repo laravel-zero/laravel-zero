@@ -24,17 +24,10 @@ return [
 
         /*
          * Here goes the application default command. If you remove this
-         * line, the list of commands will appear.
+         * line, the list of commands will appear. The rest of the
+         * application commands will be auto-detected.
          */
         'default-command' => App\Commands\HelloCommand::class,
-
-        /*
-         * Here goes the application list of commands. Besides the default
-         * command the user can also call any of the commands specified below.
-         */
-        'commands' => [
-            // App\Commands\YourNewCommand::class,
-        ],
 
         /*
          * Here goes the application list of Laravel Service Providers.
@@ -63,7 +56,7 @@ return [
          */
         'connections' => [
             'default' => [
-                'driver'   => 'sqlite',
+                'driver' => 'sqlite',
                 'database' => __DIR__.'/../database/database.sqlite',
             ],
         ],
