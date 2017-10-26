@@ -9,14 +9,14 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="Software License"></img></a>
 </p>
 
-## This is a community project and not an "official" Laravel one
+## This is a **community project** and not an official Laravel one
 
-Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nunomaduro). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application. **Unofficial** and customized version of Laravel optimized for building console/shell/command-line applications.
+Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nunomaduro). Laravel Zero is a micro-framework that provides an elegant starting point for your next console application. **Unofficial** and customized version of Laravel optimized for building command-line applications.
 
 - Build on top of the [Laravel](https://laravel.com) components.
-- Allows the installation of the [Database/Filesystem Components](#components).
+- Optional the installation of the [Database/Filesystem components](#components).
 - Built with [PHP 7](https://php.net) using modern coding standards.
-- Ships with a [standalone compiler](#build-a-standalone-application) and a [Scheduler](#scheduler) component.
+- Ships with a [Scheduler](#scheduler) and an [Standalone Compiler](#build-a-standalone-application).
 - Automatic dependency injection on commands and support of [Laravel](https://laravel.com) Service Providers.
 - Supports [desktop notifications](https://github.com/laravel-zero/laravel-zero) on Linux, Windows & MacOS.
 
@@ -34,13 +34,13 @@ composer global require laravel-zero/installer
 laravel-zero new your-app-name
 ```
 
-Or Simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
+Or simply create a new Laravel Zero project using [Composer](https://getcomposer.org):
 
 ```bash
 composer create-project --prefer-dist laravel-zero/laravel-zero your-app-name
 ```
 
-Your Laravel Zero project will be then created in the `your-app-name` folder. Laravel Zero provides a default command placed in the `app/HelloCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
+Laravel Zero provides a default command placed in the `app/HelloCommand.php` file which will be executed by default. To execute it, run the following command in your app's directory:
 
 ```bash
 php your-app-name
@@ -52,7 +52,56 @@ You can rename your app anytime by running the following command in your app dir
 php your-app-name app:rename new-name
 ```
 
-You may review the documentation of the Artisan Console component [on Laravel's Official Website](https://laravel.com/docs/5.5/artisan).
+## Usage
+
+You may review the documentation of the Artisan Console component:
+
+ - [Defining Input Expectations](https://laravel.com/docs/5.5/artisan#defining-input-expectations).
+ - [Command I/O](https://laravel.com/docs/5.5/artisan#command-io).
+
+<a href="components"></a>
+## Components
+
+Laravel Zero allows you to install a **Database** component out of the box to push your console app to the next level. As you might have already guessed it is Laravel's [Eloquent](https://laravel.com/docs/5.5/eloquent) component that works with the same breeze in Laravel Zero environment too.
+
+If you want to move files in your system, or to multiple providers like AwsS3 and Dropbox, you may consider the [Filesystem](https://laravel.com/docs/5.5/filesystem) component.
+
+To install the components run the following command in your Laravel Zero app directory:
+
+```sh
+php your-app-name component:install
+```
+
+Database usage:
+
+```php
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
+Schema::create('users', function ($table) {
+    $table->increments('id');
+    $table->string('email')->unique();
+    $table->timestamps();
+});
+
+DB::table('users')->insert(
+    ['email' => 'enunomaduro@gmail.com']
+);
+
+$users = DB::table('users')->get();
+
+```
+
+Filesystem usage:
+
+```php
+use Illuminate\Support\Facades\File;
+
+File::put("file.txt", "Thank you for considering Laravel Zero.");
+
+```
+
+<a name="configuration"></a>
 
 <a href="scheduler"></a>
 
@@ -71,24 +120,6 @@ You may define all of your scheduled tasks in the `schedule` method of the comma
         $schedule->command(static::class)->everyMinute();
     }
 ```
-
-<a href="components"></a>
-
-## Components
-
-Laravel Zero allows you to install a Database component out of the box to push your console app to the next level. As you might have already guessed it is Laravel's [Eloquent](https://laravel.com/docs/5.5/eloquent) component that works with the same breeze in Laravel Zero environment too.
-
-If you want to move files to multiple providers like AwsS3 and Dropbox, you may consider the [Filesystem](https://laravel.com/docs/5.5/filesystem) component.
-
-To install the components run the following command in your Laravel Zero app directory:
-
-```sh
-php your-app-name component:install
-```
-
-This will allow you to select the component to install from the list of available components.
-
-<a name="configuration"></a>
 
 ## Configuration
 
@@ -114,7 +145,7 @@ php your-app-name app:build <your-build-name>
 
 The build will provide a single phar archive, ready to use, containing all the code of your project and its dependencies.
 
-Note that the generated file will still need a PHP installation respecting your project's requirements (PHP version, extensions, etc.) on the users' computers to be used. You will then be able to execute it directly:
+Note that the generated file will still need a PHP installation respecting your project's requirements (PHP version, extensions, etc.). You will then be able to execute it directly:
 
 ```sh
 ./builds/<your-build-name>
@@ -132,7 +163,7 @@ Thank you for considering to contribute to Laravel Zero. All the contribution gu
 
 ## Stay In Touch
 
-You can have a look at the [CHANGELOG](CHANGELOG.md) & [Releases](https://github.com/laravel-zero/laravel-zero/releases) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements or just come say hi!: [@laravelzero](https://twitter.com/laravelzero)
+You can have a look at the [CHANGELOG](CHANGELOG.md) for constant updates & detailed information about the changes. You can also follow the twitter account for latest announcements : [@enunomaduro](https://twitter.com/laravelzero)
 
 ## License
 
