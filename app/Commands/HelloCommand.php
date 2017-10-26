@@ -5,11 +5,6 @@ namespace App\Commands;
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 
-// use Illuminate\Support\Facades\DB;
-// use Illuminate\Support\Facades\Schema;
-// use Illuminate\Support\Facades\Cache;
-// use Illuminate\Support\Facades\File;
-
 class HelloCommand extends Command
 {
     /**
@@ -42,9 +37,6 @@ class HelloCommand extends Command
 
     /**
      * Define the command's schedule.
-     *
-     * Add the following cron entry:
-     *     * * * * * php /path-to-your-project/your-app-name schedule:run >> /dev/null 2>&1
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      *
