@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.10.0] - 2017-11-01
+### Changed
+- Uses symfony default command by default.
+
 ## [3.9.2] - 2017-10-26
 ### Added
 - Core: Auto-detect commands.
