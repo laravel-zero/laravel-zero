@@ -19,7 +19,7 @@ class HelloCommand extends Command
      *
      * @var string
      */
-    protected $description = 'The hello app command';
+    protected $description = 'Displays an "Hello" message';
 
     /**
      * Execute the command. Here goes the code.
@@ -38,7 +38,7 @@ class HelloCommand extends Command
     /**
      * Define the command's schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param  \Illuminate\Console\Scheduling\Schedule $schedule
      *
      * @return void
      */

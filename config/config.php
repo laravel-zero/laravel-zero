@@ -23,11 +23,12 @@ return [
         'production' => false,
 
         /*
-         * Here goes the application default command. If you remove this
-         * line, the list of commands will appear. The rest of the
+         * Here goes the application default command. By default
+         * the list of commands will appear. All commands
          * application commands will be auto-detected.
-         */
-        'default-command' => App\Commands\HelloCommand::class,
+         *
+         * 'default-command' => App\Commands\RunCommand::class,
+        */
 
         /*
          * Here goes the application list of Laravel Service Providers.
