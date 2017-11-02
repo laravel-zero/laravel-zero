@@ -101,8 +101,6 @@ File::put("file.txt", "Thank you for considering Laravel Zero.");
 
 ```
 
-<a name="configuration"></a>
-
 <a href="scheduler"></a>
 
 ## Scheduler
@@ -119,19 +117,6 @@ You may define all of your scheduled tasks in the `schedule` method of the comma
     {
         $schedule->command(static::class)->everyMinute();
     }
-```
-
-## Configuration
-
-The configuration of your console application goes in `config\config.php`. In this file, you should define your application's list of commands and your Laravel Service Providers in this file.
-
-```php
-
-        'default-command' => App\Commands\HelloCommand::class,
-
-        'commands' => [
-            App\Commands\AddUserCommand::class,
-        ],
 ```
 
 <a name="build-a-standalone-application"></a>
