@@ -6,8 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
+- Core: All configs are auto detected.
 - Core: Database component installer now publishes a `database.php` config.
-- Database config removed from `app.php`
+- `config/config.php` removed.
+- `config/app.php` added contains now only app key config.
 
 ## [3.10.0] - 2017-11-01
 ### Changed
