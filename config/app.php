@@ -15,18 +15,23 @@ return [
     'version' => '1.0.0',
 
     /*
-     * If true, development commands won't be available as the app
-     * will be in the production environment.
-     */
-    'production' => false,
-
-    /*
      * Here goes the application default command. By default
      * the list of commands will appear. All commands
      * application commands will be auto-detected.
      *
      * 'default-command' => App\Commands\HelloCommand::class,
     */
+
+    /*
+     * If true, development commands won't be available as the app
+     * will be in the production environment.
+     */
+    'production' => false,
+
+    /*
+     * If true, scheduler commands will be available.
+     */
+    'with-scheduler' => true,
 
     /*
      * Here goes the application list of Laravel Service Providers.
