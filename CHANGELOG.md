@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.0] - 2017-11-08
+
+### Added
+- Core: All configs are auto detected.
+- Core: `nunomaduro/collision` added on require section of composer.
+- Core: Database component installer now publishes a `database.php` config.
+- Core: Improves builder & renamer command signature.
+- Core: Adds `with-scheduler` config option.
+- Core: Adds `command:make` feature.
+- Core: Adds support to `Storage` facade & Flysystem.
+- `config/app.php` added containing now only app config.
+
+### Changed
+- The file `config/config.php` was removed.
+
+### Removed
+- `nunomaduro/collision` removed from composer.json.
+
 ## [3.10.0] - 2017-11-01
 ### Changed
 - Uses symfony default command by default.
