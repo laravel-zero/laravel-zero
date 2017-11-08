@@ -15,8 +15,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "laravel-zero/framework": "dev-release-4.0.0",
-        "nunomaduro/collision": "^1.1"
+        "laravel-zero/framework": "4.0.*",
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
