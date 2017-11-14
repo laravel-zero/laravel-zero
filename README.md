@@ -23,7 +23,7 @@ Laravel Zero was created and maintained by [Nuno Maduro](https://github.com/nuno
 
 ## Documentation
 
-For full documentation, visit [laravel-zero.com](https://laravel-zero.com/).
+For full documentation, visit [laravel-zero.com](http://laravel-zero.com/).
 
 ## License
 
