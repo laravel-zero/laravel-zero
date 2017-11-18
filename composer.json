@@ -2,6 +2,7 @@
     "name": "laravel-zero/laravel-zero",
     "description": "Laravel Zero provides the perfect starting point for your next Laravel Console Application.",
     "keywords": ["framework", "laravel", "console", "zero"],
+    "homepage": "http://laravel-zero.com",
     "license": "MIT",
     "support": {
         "issues": "https://github.com/laravel-zero/laravel-zero/issues",
