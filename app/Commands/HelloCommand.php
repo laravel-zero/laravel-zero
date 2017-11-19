@@ -37,17 +37,6 @@ class HelloCommand extends Command
 
     /**
      * Define the command's schedule.
-    public function handle(): void
-    {
-    $this->info('Love beautiful code? We do too.');
-
-    $this->notify('Hello '.$this->argument('name'), 'Enjoy the fresh air!');
-
-    $this->comment('Wanna see more? Type `php your-app-name list`');
-    }
-
-    /**
-     * Define the command's schedule.
      *
      * @param  \Illuminate\Console\Scheduling\Schedule $schedule
      *
