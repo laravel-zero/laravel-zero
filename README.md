@@ -14,11 +14,11 @@
 
 Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your console application. It is an **unofficial** and customized version of Laravel optimized for building command-line applications.
 
-- Build on top of the [Laravel](https://laravel.com) components.
-- Optional the installation of [Eloquent](#database).
-- Auto detects commands and supports [desktop notifications](#desktop-notifications) on Linux, Windows & MacOS.
-- Ships with a [Scheduler](#scheduler) and an [Standalone Compiler](#build-a-standalone-application).
-- Integration with [Collision](https://github.com/nunomaduro/collision) - A Detailed & intuitive error handler
+- Built on top of the [Laravel](https://laravel.com) components.
+- Optional installation of [Eloquent](#database).
+- Auto detects commands and supports [desktop notifications](https://github.com/nunomaduro/laravel-desktop-notifier) on Linux, Windows & MacOS.
+- Ships with a [Scheduler](#scheduler) and a [Standalone Compiler](#build-a-standalone-application).
+- Integration with [Collision](https://github.com/nunomaduro/collision) - A Detailed & intuitive error handler.
 ------
 
 ## Documentation
@@ -27,4 +27,4 @@ For full documentation, visit [laravel-zero.com](http://laravel-zero.com/).
 
 ## License
 
-Laravel Zero is an open-sourced software licensed under the [MIT license](https://github.com/laravel-zero/laravel-zero/blob/stable/LICENSE.md).
+Laravel Zero is an open-source software licensed under the [MIT license](https://github.com/laravel-zero/laravel-zero/blob/stable/LICENSE.md).
