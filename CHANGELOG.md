@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Core: Seeds command.
+- New database.php configuration `with-seeds => true`.
+
 ## [4.0.10] - 2017-11-28
 
 ### Fixed
