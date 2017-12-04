@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "laravel-zero/framework": "4.0.*"
+        "laravel-zero/framework": "dev-hotfix-4.0.12"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -24,6 +24,9 @@
         "phpunit/phpunit": "~6.4"
     },
     "autoload": {
+        "classmap": [
+            "database/seeds"
+        ],
         "psr-4": {
             "App\\": "app/"
         }
