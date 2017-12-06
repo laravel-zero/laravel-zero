@@ -6,4 +6,4 @@
 .twgit_features_subject
 
 /builds/
-/database/
+/database/database.sqlite
