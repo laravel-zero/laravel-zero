@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [4.0.12] - 2017-12-06
 ### Added
+- Core: Adds `task` method on command class.
 - Core: Adds log component.
 - Core: Adds seeds related commands.
 - New database.php configuration `with-seeds => true`.
