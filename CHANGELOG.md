@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.15] - 2017-12-13
+### Fixed
+- Core: Namespace is now found from composer.json.
+
 ## [4.0.14] - 2017-12-13
 ### Fixed
 - Core: Scheduler working with PHAR buids. [#115](https://github.com/laravel-zero/framework/pull/115)
