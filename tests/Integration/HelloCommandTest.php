@@ -12,6 +12,6 @@ class HelloCommandTest extends TestCase
     {
         $this->app->call((new HelloCommand())->getName());
 
-        $this->assertTrue(strpos($this->app->output(), 'Love beautiful code? We do too.') !== false);
+        $this->assertContains('Love beautiful code? We do too.', $this->app->output());
     }
 }
