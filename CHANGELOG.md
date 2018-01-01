@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.18] - 2018-01-01
+### Changed
+- Core: Refactor integration tests. [#126](https://github.com/laravel-zero/framework/pull/126)
+
 ## [4.0.17] - 2018-01-01
 ### Changed
 - More clear integration test example. [#102](https://github.com/laravel-zero/laravel-zero/pull/102)
