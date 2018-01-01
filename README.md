@@ -7,7 +7,7 @@
   <a href="https://scrutinizer-ci.com/g/laravel-zero/framework"><img src="https://img.shields.io/scrutinizer/g/laravel-zero/framework.svg" alt="Quality Score"></img></a>
   <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/d/total.svg" alt="Total Downloads"></a>
   <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/v/stable.svg" alt="Latest Stable Version"></a>
-  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="Software License"></img></a>
+  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/license.svg" alt="License"></a>
 </p>
 
 <h4> <center>This is a <bold>community project</bold> and not an official Laravel one </center></h4>
@@ -24,6 +24,10 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 ## Documentation
 
 For full documentation, visit [laravel-zero.com](http://laravel-zero.com/).
+
+## Support me
+
+Does your business depend on this project? Reach out and support me on [Patreon](https://www.patreon.com/nunomaduro).
 
 ## License
 
