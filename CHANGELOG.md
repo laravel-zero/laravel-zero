@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.20] - 2018-01-05
+### Fixed
+- Core: `task` method on command class now returns the result of the task.
+- Core: Command Renamer now works on windows.
+- Core: `database.php` `with-*` properties are now by default true if missing.
+
 ## [4.0.19] - 2018-01-03
 ### Fixed
 - Core: Directory separator used on core binds and core constants.
