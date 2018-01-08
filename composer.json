@@ -21,7 +21,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "phpunit/phpunit": "~6.4"
+        "phpunit/phpunit": "~6.4",
+        "symfony/thanks": "^1.0"
     },
     "autoload": {
         "psr-4": {
