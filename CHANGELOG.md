@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.22] - 2018-01-09
+### Added
+- Core: Adds dotenv component.
+
 ## [4.0.21] - 2018-01-05
 ### Added
 - Core: Helpers `abort`, `abort_if` and `abort_unless`.
