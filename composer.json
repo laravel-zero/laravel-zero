@@ -16,13 +16,12 @@
     ],
     "require": {
         "php": ">=7.1",
-        "laravel-zero/framework": "4.0.*"
+        "laravel-zero/framework": "dev-release-5.6.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require-dev": {
-        "phpunit/phpunit": "~6.4",
-        "symfony/thanks": "^1.0"
+        "phpunit/phpunit": "~6.5"
     },
     "autoload": {
         "psr-4": {
