@@ -1,13 +1,15 @@
 <?php
 
-namespace Tests\Integration;
+namespace Tests\Feature;
 
 use Tests\TestCase;
 
 class InspiringCommandTest extends TestCase
 {
-    /** @test */
-    public function it_checks_the_inspire_sentence(): void
+    /**
+     * A basic test example.
+     */
+    public function testInspiringCommand(): void
     {
         $this->app->call('inspiring');
 
