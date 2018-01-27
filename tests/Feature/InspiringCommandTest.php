@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use Illuminate\Support\Facades\Artisan;
 
 class InspiringCommandTest extends TestCase
 {
@@ -11,8 +12,8 @@ class InspiringCommandTest extends TestCase
      */
     public function testInspiringCommand(): void
     {
-        $this->app->call('inspiring');
+        Artisan::call('inspiring');
 
-        $this->assertContains('Simplicity is the ultimate sophistication. - Leonardo da Vinci', $this->app->output());
+        $this->assertContains('Leonardo da Vinci', Artisan::output());
     }
 }
