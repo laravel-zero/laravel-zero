@@ -2,8 +2,8 @@
 
 namespace App\Commands;
 
-use LaravelZero\Framework\Commands\Command;
 use Illuminate\Console\Scheduling\Schedule;
+use LaravelZero\Framework\Commands\Command;
 
 class InspiringCommand extends Command
 {
@@ -28,7 +28,7 @@ class InspiringCommand extends Command
     {
         $this->info('Simplicity is the ultimate sophistication. - Leonardo da Vinci');
 
-        $this->notify('Hey ' . $this->argument('name'), 'Enjoy the fresh air!');
+        $this->notify('Hey '.$this->argument('name'), 'Enjoy the fresh air!');
     }
 
     /**
