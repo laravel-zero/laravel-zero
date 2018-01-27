@@ -28,18 +28,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Application Default Command
-    |--------------------------------------------------------------------------
-    |
-    | Laravel Zero will always run the command specified below when no command name is
-    | provided. Consider change the default command specifing another command class.
-    | You cannot pass arguments to the default command because they are ignored.
-    |
-    */
-    'default-command' => Symfony\Component\Console\Command\ListCommand::class,
-
-    /*
-    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
@@ -49,18 +37,6 @@ return [
     |
     */
     'production' => false,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Scheduler
-    |--------------------------------------------------------------------------
-    |
-    | Laravel Zero's command scheduler allows you to fluently and expressively define
-    | your command schedule. When using the scheduler, only a single Cron entry is
-    | needed on your server. Your task schedule is defined on each command class.
-    |
-    */
-    'with-scheduler' => true,
 
     /*
     |--------------------------------------------------------------------------
