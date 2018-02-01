@@ -25,8 +25,6 @@ return [
     |
     */
 
-
-
     'version' => app('git.version'),
 
     /*
