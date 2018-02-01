@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.0.26] - 2018-02-01
+### Fixes
+- Core: Fixes usage of facades in service providers.
+
 ## [4.0.25] - 2018-01-12
 ### Fixes
 - Core: Respects Service Provider Lifecycle.
