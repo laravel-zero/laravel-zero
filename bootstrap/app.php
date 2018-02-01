@@ -12,7 +12,7 @@
 */
 
 $app = new LaravelZero\Framework\Application(
-    realpath(dirname(__DIR__))
+    dirname(__DIR__)
 );
 
 /*
