@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Added `config/commands.php` to hold Symfony ListCommand configuration.
+- Added `bootstrap/cache` folder to hold application services cache.
+- Core: Added `menu` method on base command class.
+
+### Changed
+- On tests, the `Integration` folder got renamed to `Feature`.
+
+### Removed
+- `bootstrap/autoload` and `bootstrap/init` got removed.
+- App config `with-scheduler` is no longer available. You should use `config/commands.php` for it.
+- Database config `with-migrations` is no longer available. You should use `config/commands.php` for it.
+- Database config `with-seeds` is no longer available. You should use `config/commands.php` for it.
+
 ## [4.0.25] - 2018-01-12
 ### Fixes
 - Core: Respects Service Provider Lifecycle.
