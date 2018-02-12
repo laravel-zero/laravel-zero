@@ -12,7 +12,7 @@ return [
     | You cannot pass arguments to the default command because they are ignored.
     |
     */
-    'default' => Symfony\Component\Console\Command\ListCommand::class,
+    'default' => NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
     'hidden' => [
-        Symfony\Component\Console\Command\ListCommand::class,
+        NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
         Symfony\Component\Console\Command\HelpCommand::class,
         Illuminate\Console\Scheduling\ScheduleRunCommand::class,
         Illuminate\Console\Scheduling\ScheduleFinishCommand::class,
