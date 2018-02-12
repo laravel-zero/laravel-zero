@@ -28,7 +28,7 @@ class InspiringCommand extends Command
     {
         $this->info('Simplicity is the ultimate sophistication. - Leonardo da Vinci');
 
-        $this->notify('Hey '.$this->argument('name'), 'Enjoy the fresh air!');
+        $this->notify("Hey {$this->argument('name')}", 'Enjoy the fresh air!');
     }
 
     /**
