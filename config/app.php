@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     |
     */
-    'name' => 'Laravel Zero',
+    'name' => \Illuminate\Support\Str::studly(ARTISAN_BINARY),
 
     /*
     |--------------------------------------------------------------------------
@@ -24,8 +24,6 @@ return [
     | number MAJOR.MINOR.PATCH when an update happens: https://semver.org.
     |
     */
-
-
 
     'version' => app('git.version'),
 
