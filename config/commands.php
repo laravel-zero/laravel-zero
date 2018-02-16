@@ -55,6 +55,7 @@ return [
         Symfony\Component\Console\Command\HelpCommand::class,
         Illuminate\Console\Scheduling\ScheduleRunCommand::class,
         Illuminate\Console\Scheduling\ScheduleFinishCommand::class,
+        Illuminate\Foundation\Console\VendorPublishCommand::class,
     ],
 
     /*
