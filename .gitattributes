@@ -1,7 +1,7 @@
-* text=auto
-.travis.yml export-ignore
-.styleci.yml export-ignore
-.scrutinizer.yml export-ignore
-BACKERS.md export-ignore
-CONTRIBUTING.md export-ignore
-CHANGELOG.md export-ignore
+* text=auto eol=crlf
+.travis.yml export-ignore eol=crlf
+.styleci.yml export-ignore eol=crlf
+.scrutinizer.yml export-ignore eol=crlf
+BACKERS.md export-ignore eol=crlf
+CONTRIBUTING.md export-ignore eol=crlf
+CHANGELOG.md export-ignore eol=crlf
