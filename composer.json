@@ -40,7 +40,6 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php application app:rename"
         ]
     },
