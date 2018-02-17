@@ -16,14 +16,12 @@
         }
     ],
     "require": {
-        "php": "^7.1.3",
+        "php": ">=7.1.3",
         "laravel-zero/framework": "dev-release-5.6.0"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require-dev": {
         "phpunit/phpunit": "~7.0",
-        "symfony/thanks": "~1.0"
+        "symfony/thanks": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -36,16 +34,17 @@
         }
     },
     "config": {
-        "platform": {
-            "php": "7.1.3"
-        },
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true
     },
     "scripts": {
         "post-create-project-cmd": [
-            "php application app:rename"
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php application app:rename"
         ]
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "bin": ["application"]
 }
