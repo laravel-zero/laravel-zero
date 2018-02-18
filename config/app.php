@@ -1,43 +1,55 @@
 <?php
 
-/*
- * Here goes the application configuration.
- */
 return [
-    /*
-     * Here goes the application name.
-     */
-    'name' => 'Laravel Zero',
 
     /*
-     * Here goes the application version.
-     */
-    'version' => '1.0.0',
-
-    /*
-     * Here goes the application default command. By default
-     * the list of commands will appear. All commands
-     * application commands will be auto-detected.
-     *
-     * 'default-command' => App\Commands\HelloCommand::class,
+    |--------------------------------------------------------------------------
+    | Application Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of your application. This value is used when the
+    | framework needs to place the application's name in a notification or
+    | any other location as required by the application or its packages.
+    |
     */
+    'name' => 'Application',
 
     /*
-     * If true, development commands won't be available as the app
-     * will be in the production environment.
-     */
+    |--------------------------------------------------------------------------
+    | Application Version
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "version" your application is currently running
+    | in. You may want to follow the "Semantic Versioning" - Given a version
+    | number MAJOR.MINOR.PATCH when an update happens: https://semver.org.
+    |
+    */
+    'version' => app('git.version'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Environment
+    |--------------------------------------------------------------------------
+    |
+    | This value determines the "environment" your application is currently
+    | running in. This may determine how you prefer to configure various
+    | services your application utilizes. Should be true in production.
+    |
+    */
     'production' => false,
 
     /*
-     * If true, scheduler commands will be available.
-     */
-    'with-scheduler' => true,
-
-    /*
-     * Here goes the application list of Laravel Service Providers.
-     * Enjoy all the power of Laravel on your console.
-     */
+    |--------------------------------------------------------------------------
+    | Autoloaded Service Providers
+    |--------------------------------------------------------------------------
+    |
+    | The service providers listed here will be automatically loaded on the
+    | request to your application. Feel free to add your own services to
+    | this array to grant expanded functionality to your applications.
+    |
+    */
     'providers' => [
         App\Providers\AppServiceProvider::class,
     ],
+
 ];

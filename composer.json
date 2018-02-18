@@ -1,8 +1,9 @@
 {
     "name": "laravel-zero/laravel-zero",
-    "description": "Laravel Zero provides the perfect starting point for your next Laravel Console Application.",
-    "keywords": ["framework", "laravel", "console", "zero"],
+    "description": "The Laravel Zero Framework.",
+    "keywords": ["framework", "laravel", "console", "zero", "cli"],
     "homepage": "http://laravel-zero.com",
+    "type": "project",
     "license": "MIT",
     "support": {
         "issues": "https://github.com/laravel-zero/laravel-zero/issues",
@@ -15,13 +16,11 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "laravel-zero/framework": "4.0.*"
+        "php": ">=7.1.3",
+        "laravel-zero/framework": "dev-release-5.6.0"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require-dev": {
-        "phpunit/phpunit": "~6.4",
+        "phpunit/phpunit": "~7.0",
         "symfony/thanks": "^1.0"
     },
     "autoload": {
@@ -36,12 +35,15 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true
     },
     "scripts": {
         "post-create-project-cmd": [
-            "php application app:rename"
+            "@php application app:rename"
         ]
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "bin": ["application"]
 }

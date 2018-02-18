@@ -5,42 +5,36 @@ namespace App\Commands;
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 
-class HelloCommand extends Command
+class InspiringCommand extends Command
 {
     /**
-     * The name and signature of the command.
+     * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'hello {name=Artisan}';
+    protected $signature = 'inspiring {name=Artisan}';
 
     /**
      * The description of the command.
      *
      * @var string
      */
-    protected $description = 'Displays an "Hello" message';
+    protected $description = 'Display an inspiring quote';
 
     /**
-     * Execute the command. Here goes the code.
-     *
-     * @return void
+     * Execute the console command.
      */
     public function handle(): void
     {
-        $this->info('Love beautiful code? We do too.');
+        $this->info('Simplicity is the ultimate sophistication. - Leonardo da Vinci');
 
-        $this->notify('Hello '.$this->argument('name'), 'Enjoy the fresh air!');
-
-        $this->comment('Wanna see more? Type `php your-app-name list`');
+        $this->notify("Hey {$this->argument('name')}", 'Enjoy the fresh air!');
     }
 
     /**
      * Define the command's schedule.
      *
      * @param  \Illuminate\Console\Scheduling\Schedule $schedule
-     *
-     * @return void
      */
     public function schedule(Schedule $schedule): void
     {

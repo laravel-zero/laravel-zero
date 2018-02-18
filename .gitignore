@@ -1,10 +1,4 @@
-/vendor/
-.idea/*
-
-.idea/codeStyleSettings.xml
-
-.twgit_features_subject
-
-/builds/
-/database/database.sqlite
-.env
+/vendor
+/.idea
+/.vscode
+/.vagrant
