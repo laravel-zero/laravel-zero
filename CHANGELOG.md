@@ -4,20 +4,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [5.6.0] - 2018-02-18
 ### Added
-- Added `config/commands.php` to hold Symfony ListCommand configuration.
+- Added `config/commands.php` to hold the ListCommand configuration.
 - Added `bootstrap/cache` folder to hold application services cache.
 - Core: Added `menu` method on base command class.
+- Core: Collision v2
 
 ### Changed
 - On tests, the `Integration` folder got renamed to `Feature`.
+- The value version on `config/app.php` should be updated to `app('git.version')`.
 
 ### Removed
 - `bootstrap/autoload` and `bootstrap/init` got removed.
 - App config `with-scheduler` is no longer available. You should use `config/commands.php` for it.
+- App config `default-command` is no longer available. You should use `config/commands.php` for it.
+- App config `commands-paths` is no longer available. You should use `config/commands.php` for it.
+- App config `commandss` is no longer available. You should use `config/commands.php` for it.
 - Database config `with-migrations` is no longer available. You should use `config/commands.php` for it.
 - Database config `with-seeds` is no longer available. You should use `config/commands.php` for it.
+
+## [4.0.26] - 2018-02-01
+### Fixes
+- Core: Fixes usage of facades in service providers.
 
 ## [4.0.25] - 2018-01-12
 ### Fixes
