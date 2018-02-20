@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Laravel Zero will always run the command specified below when no command name is
-    | provided. Consider change the default command specifing another command class.
+    | provided. Consider update the default command for single command applications.
     | You cannot pass arguments to the default command because they are ignored.
     |
     */
@@ -16,7 +16,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Load Commands Paths.
+    | Commands Paths
     |--------------------------------------------------------------------------
     |
     | This value determines the "paths" that should be loaded by the console's
@@ -28,12 +28,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Add Commands
+    | Added Commands
     |--------------------------------------------------------------------------
     |
-    | You may want to include a single command class without have to load an
-    | intire folder. Here you may specify which commands classes you wish
-    | to include. Of course the console's kernel will try to load them.
+    | You may want to include a single command class without having to load an
+    | entire folder. Here you can specify which commands should be added to
+    | your list of commands. The console's kernel will try to load them.
     |
     */
     'add' => [
@@ -46,8 +46,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Your application commands will always be visible on the application list
-    | of commands. But you still may want make them hidden, so Laravel Zero
-    | allows you to make it happen on the list of values provided bellow.
+    | of commands. But you can still make them "hidden" specifying an array
+    | of commands below. All "hidden" commands can still be run/executed.
     |
     */
     'hidden' => [
@@ -60,7 +60,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Remove Commands
+    | Removed Commands
     |--------------------------------------------------------------------------
     |
     | Do you have a service provider that loads a list of commands that
