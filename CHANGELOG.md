@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.4] - 2018-03-03
+### Changes
+- Improves `app:build` command. [#211](https://github.com/laravel-zero/framework/pull/211)
+
 ## [5.6.3] - 2018-02-20
 ### Fixed
 - Phpdocs
