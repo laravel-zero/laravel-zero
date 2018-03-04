@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.5] - 2018-03-04
+### Fixes
+- Fixes unwanted first line appearance on compiled file.
+
 ## [5.6.4] - 2018-03-03
 ### Changes
 - Improves `app:build` command. [#211](https://github.com/laravel-zero/framework/pull/211)
