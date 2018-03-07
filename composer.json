@@ -36,7 +36,10 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "platform": {
+            "ext-posix": "0"
+        }
     },
     "scripts": {
         "post-create-project-cmd": [
