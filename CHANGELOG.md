@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.8] - 2018-03-07
+### Fixes
+- Create project on Windows.
+
 ## [5.6.7] - 2018-03-04
 ### Fixes
 - `file in use` error on Windows. [#222](https://github.com/laravel-zero/framework/pull/222)
