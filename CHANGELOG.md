@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.11] - 2018-03-21
+### Removed
+- Package `symfony/thanks`.
+
 ## [5.6.9] - 2018-03-07
 ### Adds
 - Alternative component installer on windows.
