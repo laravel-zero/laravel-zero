@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.12] - 2018-03-25
+### Fixed
+- Fixes console stub identation. [#222](https://github.com/laravel-zero/framework/pull/235)
+
 ## [5.6.11] - 2018-03-21
 ### Removed
-- Package `symfony/thanks`.
+- Package `symfony/thanks`. [#138](https://github.com/laravel-zero/laravel-zero/pull/138)
 
 ## [5.6.9] - 2018-03-07
 ### Adds
