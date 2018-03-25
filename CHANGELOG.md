@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.13] - 2018-03-25
+### Fixed
+- Registers console commands if component is available.
+
 ## [5.6.12] - 2018-03-25
 ### Fixed
 - Fixes console stub identation. [#222](https://github.com/laravel-zero/framework/pull/235)
