@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.15] - 2018-03-26
+### Fixed
+- Revert: Fixes the register of auto discovery service providers.
+
 ## [5.6.14] - 2018-03-26
 ### Fixed
 - Fixes the register of auto discovery service providers.
