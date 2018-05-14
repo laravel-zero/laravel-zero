@@ -1,39 +1,27 @@
-CONTRIBUTING
-============
+# Contributing
+
+Contributions are **welcome** and will be fully **credited**.
+
+We accept contributions via Pull Requests on [Github](https://github.com/laravel-zero/laravel-zero).
 
 
-Contributions are welcome, and are accepted via pull requests. Please review these guidelines before submitting any pull requests.
+## Pull Requests
 
+- **Add tests!** - Your patch won't be accepted if it doesn't have tests.
 
-## Guidelines
+- **Document any change in behaviour** - Make sure the `README.md` and any other relevant documentation are kept up-to-date.
 
-* The git branching model used for development is the one described and assisted by `twgit` tool: [https://github.com/Twenga/twgit](https://github.com/Twenga/twgit).
-* Please follow the [PSR-2 Coding Style Guide](http://www.php-fig.org/psr/psr-2/), enforced by [StyleCI](https://styleci.io/).
-* Ensure that the current tests pass, and if you've added something new, add the tests where relevant.
-* Send a coherent commit history, making sure each individual commit in your pull request is meaningful.
-* You may need to [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) to avoid merge conflicts.
-* If you are changing the behavior, or the public api, you may need to update the docs.
-* Please remember that we follow [SemVer](http://semver.org/).
+- **Consider our release cycle** - We follow Laravel's versioning scheme. We follow the convention `paradigm.major.minor`. Minor releases should never contain breaking changes.
+
+- **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
+
+- **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
 
 
 ## Running Tests
 
-You will need an install of [Composer](https://getcomposer.org/) before continuing.
-
-First, install the dependencies:
-
-```bash
-$ composer install
+``` bash
+$ ./vendor/bin/phpunit
 ```
 
-Then run PHPUnit:
-
-```bash
-$ vendor/bin/phpunit
-```
-
-If the test suite passes on your local machine you should be good to go.
-
-When you make a pull request, the tests will automatically be run again by [Travis CI](https://travis-ci.org/).
-
-We also have [StyleCI](https://styleci.io/) setup to automatically fix any code style issues.
+**Happy coding**!
