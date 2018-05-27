@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.18] - 2018-05-27
+### Adds
+- Method injection on handle method in command classes. [#242](https://github.com/laravel-zero/framework/pull/242)
+
 ## [5.6.17] - 2018-05-08
 ### Adds
 - Console Dusk component.
@@ -30,7 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [5.6.12] - 2018-03-25
 ### Fixed
-- Fixes console stub identation. [#222](https://github.com/laravel-zero/framework/pull/235)
+- Fixes console stub identation. [#235](https://github.com/laravel-zero/framework/pull/235)
 
 ## [5.6.11] - 2018-03-21
 ### Removed
