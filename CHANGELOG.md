@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.19] - 2018-05-28
+### Fixes
+- Create project cmd.
+
 ## [5.6.18] - 2018-05-27
 ### Adds
 - Method injection on handle method in command classes. [#242](https://github.com/laravel-zero/framework/pull/242)
