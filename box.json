@@ -1,0 +1,13 @@
+{
+    "chmod": "0755",
+    "directories": [
+        "."
+    ],
+    "banner": [],
+
+    "compression": "GZ",
+    "compactors": [
+        "Herrera\\Box\\Compactor\\Php",
+        "Herrera\\Box\\Compactor\\Json"
+    ]
+}
