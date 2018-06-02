@@ -1,10 +1,14 @@
 {
     "chmod": "0755",
     "directories": [
-        "."
+        "app",
+        "bootstrap",
+        "config",
+        "vendor"
     ],
-    "banner": [],
-
+    "files": [
+        "composer.json"
+    ],
     "compression": "GZ",
     "compactors": [
         "Herrera\\Box\\Compactor\\Php",
