@@ -9,7 +9,7 @@ use Illuminate\Contracts\Foundation\Application as ApplicationContract;
 trait CreatesApplication
 {
     /**
-     * Creates the application and returns it.
+     * Creates the application.
      *
      * @return \Illuminate\Contracts\Foundation\Application
      */

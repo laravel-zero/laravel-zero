@@ -9,6 +9,7 @@
     "files": [
         "composer.json"
     ],
+    "exclude-composer-files": false,
     "compression": "GZ",
     "compactors": [
         "Herrera\\Box\\Compactor\\Php",
