@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Adds
+- Database component now adds Model generator.
+
+### Changes
+- Internal behavior of build feature. Using "humbug/box" to provide fast application bundling.
+
 ## [5.6.19] - 2018-05-28
 ### Fixes
 - Create project cmd.
