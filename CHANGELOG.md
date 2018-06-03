@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changes
 - Internal behavior of build feature. Using "humbug/box" to provide fast application bundling.
 
+### Fixes
+- Removes seed command from production commands.
+
 ## [5.6.19] - 2018-05-28
 ### Fixes
 - Create project cmd.
