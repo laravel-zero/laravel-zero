@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.6.20] - 2018-07-05
+### Fixes
+TTY in CI envs. [#279](https://github.com/laravel-zero/framework/pull/279)
+
 ## [5.6.19] - 2018-05-28
 ### Fixes
 - Create project cmd.
