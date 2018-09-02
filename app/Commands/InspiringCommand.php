@@ -23,20 +23,21 @@ class InspiringCommand extends Command
 
     /**
      * Execute the console command.
+     *
+     * @return mixed
      */
-    public function handle(): void
+    public function handle()
     {
-        $this->info('Simplicity is the ultimate sophistication. - Leonardo da Vinci');
-
-        $this->notify("Hey {$this->argument('name')}", 'Enjoy the fresh air!');
+        $this->info('Simplicity is the ultimate sophistication.');
     }
 
     /**
      * Define the command's schedule.
      *
      * @param  \Illuminate\Console\Scheduling\Schedule $schedule
+     * @return void
      */
-    public function schedule(Schedule $schedule): void
+    public function schedule(Schedule $schedule)
     {
         // $schedule->command(static::class)->everyMinute();
     }

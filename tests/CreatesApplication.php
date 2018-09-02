@@ -4,7 +4,6 @@ namespace Tests;
 
 use LaravelZero\Framework\Kernel;
 use LaravelZero\Framework\Application;
-use Illuminate\Contracts\Foundation\Application as ApplicationContract;
 
 trait CreatesApplication
 {
@@ -13,7 +12,7 @@ trait CreatesApplication
      *
      * @return \Illuminate\Contracts\Foundation\Application
      */
-    public function createApplication(): ApplicationContract
+    public function createApplication()
     {
         $app = require __DIR__.'/../bootstrap/app.php';
 
