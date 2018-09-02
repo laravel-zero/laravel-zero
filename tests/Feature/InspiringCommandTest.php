@@ -9,11 +9,13 @@ class InspiringCommandTest extends TestCase
 {
     /**
      * A basic test example.
+     *
+     * @return void
      */
-    public function testInspiringCommand(): void
+    public function testInspiringCommand()
     {
-        Artisan::call('inspiring');
-
-        $this->assertContains('Leonardo da Vinci', Artisan::output());
+	    $this->artisan('inspiring')
+	         ->expectsOutput('Simplicity is the ultimate sophistication.')
+	         ->assertExitCode(0);
     }
 }

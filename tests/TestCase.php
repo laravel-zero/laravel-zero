@@ -3,10 +3,14 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithConsole;
+use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication;
+    use CreatesApplication,
+        InteractsWithConsole,
+        InteractsWithContainer;
 
     /**
      * Holds an application instance.
