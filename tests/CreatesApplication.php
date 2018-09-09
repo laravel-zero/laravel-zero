@@ -2,15 +2,14 @@
 
 namespace Tests;
 
-use LaravelZero\Framework\Kernel;
-use LaravelZero\Framework\Application;
+use Illuminate\Contracts\Console\Kernel;
 
 trait CreatesApplication
 {
     /**
      * Creates the application.
      *
-     * @return \Illuminate\Contracts\Foundation\Application
+     * @return \Illuminate\Foundation\Application
      */
     public function createApplication()
     {

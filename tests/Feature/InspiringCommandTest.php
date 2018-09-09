@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use Illuminate\Support\Facades\Artisan;
 
 class InspiringCommandTest extends TestCase
 {
