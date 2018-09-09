@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Adds
 - Database component now adds the `make:model` command.
+- Mockery as dev-dependency.
 
 ### Changes
 - Internal behavior of build feature. Using "humbug/box" to provide fast application bundling.
