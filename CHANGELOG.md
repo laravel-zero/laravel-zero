@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+## [Unreleased]
 ### Adds
 - Database component now adds the `make:model` command.
 - Mockery as dev-dependency.
@@ -12,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changes
 - Internal behavior of build feature. Using "humbug/box" to provide fast application bundling.
 - Option `with-dev` on the command `app:build` got removed.
-- Internal framework classes are now not available for inheritance.
+- Internal framework classes may not available for inheritance.
 - Internal framework structure main contain some changes, e.g: `Commands/App/Builder::class` got moved to `Commands\BuildCommand::class`
 - Removed return type from `Command::handle()`.
 - Removed return type from `Command::schedule()`.
