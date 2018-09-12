@@ -12,6 +12,7 @@ return [
     | You cannot pass arguments to the default command because they are ignored.
     |
     */
+
     'default' => NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
 
     /*
@@ -24,6 +25,7 @@ return [
     | will extract all "Illuminate\Console\Command" based class commands.
     |
     */
+
     'paths' => [app_path('Commands')],
 
     /*
@@ -36,6 +38,7 @@ return [
     | your list of commands. The console's kernel will try to load them.
     |
     */
+
     'add' => [
         // ..
     ],
@@ -50,6 +53,7 @@ return [
     | of commands below. All "hidden" commands can still be run/executed.
     |
     */
+
     'hidden' => [
         NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
         Symfony\Component\Console\Command\HelpCommand::class,
@@ -68,6 +72,7 @@ return [
     | below a list of commands that you don't to see in your app.
     |
     */
+
     'remove' => [
         // ..
     ],

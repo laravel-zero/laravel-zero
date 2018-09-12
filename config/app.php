@@ -12,6 +12,7 @@ return [
     | any other location as required by the application or its packages.
     |
     */
+
     'name' => 'Application',
 
     /*
@@ -24,6 +25,7 @@ return [
     | number MAJOR.MINOR.PATCH when an update happens: https://semver.org.
     |
     */
+
     'version' => app('git.version'),
 
     /*
@@ -36,6 +38,7 @@ return [
     | services your application utilizes. Should be true in production.
     |
     */
+
     'production' => false,
 
     /*
@@ -48,6 +51,7 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+
     'providers' => [
         App\Providers\AppServiceProvider::class,
     ],

@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.0] - 2018-09-12
+### Adds
+- Adds queue component. Usage: `php application app:install queue`.
+- Adds `command::title($title)`.
+- Database component now adds the `make:model` command.
+- Mockery as dev-dependency.
+
+### Changes
+- Internal behavior of build feature. Using "humbug/box" to provide fast application bundling.
+- Option `with-dev` on the command `app:build` got removed.
+- Internal framework classes may not available for inheritance.
+- Internal framework structure main contain some changes, e.g: `Commands/App/Builder::class` got moved to `Commands\BuildCommand::class`
+- Removed return type from `Command::handle()`.
+- Removed return type from `Command::schedule()`.
+
+### Fixes
+- Removes seed command from production commands.
+- `.env` are no longer included in builds.
+
 ## [5.6.20] - 2018-07-05
 ### Fixes
 TTY in CI envs. [#279](https://github.com/laravel-zero/framework/pull/279)
