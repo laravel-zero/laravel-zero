@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.2] - 2018-09-16
+### Changed
+- Queue component description on `app:install`.
+
 ## [5.7.1] - 2018-09-13
 ### Fixes
 - Revert commited `composer.lock` file.
