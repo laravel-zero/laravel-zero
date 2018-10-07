@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.5] - 2018-10-07
+### Changed
+- Components description [1de76c4](https://github.com/laravel-zero/framework/commit/1de76c4421ea8db3b6f8ab122d680addcb3ecbfa)
+
 ## [5.7.4] - 2018-09-30
 ### Changed
 - Commands description [ee085fc](https://github.com/laravel-zero/framework/commit/ee085fc2fe396bfbd1f01e05f875cea49f443f5e)
