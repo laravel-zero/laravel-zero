@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.6] - 2018-10-10
+### Added
+- Logo component ([#292](https://github.com/laravel-zero/framework/pull/292))
+
 ## [5.7.5] - 2018-10-07
 ### Changed
 - Components description [1de76c4](https://github.com/laravel-zero/framework/commit/1de76c4421ea8db3b6f8ab122d680addcb3ecbfa)
