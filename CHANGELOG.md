@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.8] - 2018-10-14
+### Changed
+- Updates box binary ([0c3b844](https://github.com/laravel-zero/framework/commit/0c3b844994f59a5ca58c0af1d0b6e892bf077a3a))
+
 ## [5.7.7] - 2018-10-14
 ### Changed
 - Menu colors of `app:install` command ([39bea33](https://github.com/laravel-zero/framework/commit/39bea33627092e547d28ca45269ec17481dfc9e7))
