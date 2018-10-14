@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.7] - 2018-10-14
+### Changed
+- Menu colors of `app:install` command ([39bea33](https://github.com/laravel-zero/framework/commit/39bea33627092e547d28ca45269ec17481dfc9e7))
+
 ## [5.7.6] - 2018-10-10
 ### Added
 - Logo component ([#292](https://github.com/laravel-zero/framework/pull/292))
