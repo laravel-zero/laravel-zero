@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.9] - 2018-10-16
+### Changed
+- Updates box binary ([1959b13](https://github.com/laravel-zero/framework/commit/1959b13c5850b54351557da0f4c81412d005df96))
+
 ## [5.7.8] - 2018-10-14
 ### Changed
 - Updates box binary ([0c3b844](https://github.com/laravel-zero/framework/commit/0c3b844994f59a5ca58c0af1d0b6e892bf077a3a))
