@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.11] - 2018-11-06
+### Fixed
+- Git version getter on Windows env ([#294](https://github.com/laravel-zero/framework/pull/294))
+
 ## [5.7.10] - 2018-10-16
 ### Changed
 - Updates box binary permissions
