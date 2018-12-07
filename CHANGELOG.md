@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.13] - 2018-12-07
+### Fixed
+- Unexpected filename while running `app:build` on Windows ([#298](https://github.com/laravel-zero/framework/pull/298))
+
 ## [5.7.12] - 2018-12-04
 ### Added
 - Upgrades box binary to 3.3.1 ([c606ae9](https://github.com/laravel-zero/framework/commit/c606ae94aac85e2c2a0bc793decce93bfa8e2a1a))
