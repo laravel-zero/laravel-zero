@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.15] - 2018-12-09
+### Fixed
+- Wrong bind ([3377ac8](https://github.com/laravel-zero/framework/commit/3377ac8959b7e9591691cb2c9d8278f2c4231ffb))
+
 ## [5.7.14] - 2018-12-09
 ### Fixed
 - Exit code not respected on exceptions ([230363d](https://github.com/laravel-zero/framework/commit/230363dd195f691795bca2155439475eb5c894ca))
