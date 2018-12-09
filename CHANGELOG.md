@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.14] - 2018-12-09
+### Fixed
+- Exit code not respected on exceptions ([230363d](https://github.com/laravel-zero/framework/commit/230363dd195f691795bca2155439475eb5c894ca))
+
 ## [5.7.13] - 2018-12-07
 ### Fixed
 - Unexpected filename while running `app:build` on Windows ([#298](https://github.com/laravel-zero/framework/pull/298))
