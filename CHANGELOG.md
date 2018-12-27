@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.17] - 2018-12-27
+### Added
+- Possibility of assert command called on testing ([#306](https://github.com/laravel-zero/framework/pull/306))
+
 ## [5.7.16] - 2018-12-10
 ### Added
 - New option `timeout` on `app:build` Artisan command ([#302](https://github.com/laravel-zero/framework/pull/302))
