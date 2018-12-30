@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.18] - 2018-12-30
+### Fixed
+- Fixes broken `setHidden` method ([4f17a74](https://github.com/laravel-zero/framework/commit/4f17a74be46312a579b253cae0cbe5d9af331928))
+
 ## [5.7.17] - 2018-12-27
 ### Added
 - Possibility of assert command called on testing ([#306](https://github.com/laravel-zero/framework/pull/306))
