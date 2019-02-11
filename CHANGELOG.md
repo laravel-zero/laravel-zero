@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.7.20] - 2019-02-11
+### Fixed
+- Allow spaces in directory names when building the app ([#310](https://github.com/laravel-zero/framework/pull/310))
+
+## [5.7.19] - 2019-01-04
+### Fixed
+- Installation of dotenv component ([ff23744](https://github.com/laravel-zero/framework/commit/ff2374470eb2d9aba3e4782f4a73548ca1b58683))
+
 ## [5.7.18] - 2018-12-30
 ### Fixed
 - Fixes broken `setHidden` method ([4f17a74](https://github.com/laravel-zero/framework/commit/4f17a74be46312a579b253cae0cbe5d9af331928))
