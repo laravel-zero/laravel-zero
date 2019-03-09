@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.8.0] - 2019-03-XX
+### Added
+- `self:update` command on build commands
+- reads `.env` files from the root of build commands
+
+### Changed
+- `menu` method it's now optional
+
 ## [5.7.20] - 2019-02-11
 ### Fixed
 - Allow spaces in directory names when building the app ([#310](https://github.com/laravel-zero/framework/pull/310))

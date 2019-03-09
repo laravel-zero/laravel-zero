@@ -5,3 +5,6 @@ Backers in the same pledge level appear in the order of pledge date.
 
 ### $1+
 - Mike Erickson
+- Nicolas Bentz
+- Martin
+- hacktk

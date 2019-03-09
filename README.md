@@ -24,7 +24,7 @@ Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.c
 
 ## Documentation
 
-For full documentation, visit [laravel-zero.com](http://laravel-zero.com/).
+For full documentation, visit [laravel-zero.com](https://laravel-zero.com/).
 
 ## Support the development
 **Do you like this project? Support it by donating**
