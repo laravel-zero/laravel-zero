@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.8.2] - 2019-03-10
+### Fixes
+- Requires `dotenv` package
+
 ## [5.8.1] - 2019-03-10
 ### Fixes
 - Component `self-update` name
