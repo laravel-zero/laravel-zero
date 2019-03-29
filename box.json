@@ -12,7 +12,7 @@
     "exclude-composer-files": false,
     "compression": "GZ",
     "compactors": [
-        "Herrera\\Box\\Compactor\\Php",
-        "Herrera\\Box\\Compactor\\Json"
+        "KevinGH\\Box\\Compactor\\Php",
+        "KevinGH\\Box\\Compactor\\Json"
     ]
 }
