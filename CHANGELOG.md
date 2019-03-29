@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.8.4] - 2019-03-29
+### Adds
+- Upgrades Collision to `v3.0`
+
 ## [5.8.3] - 2019-03-11
 ### Fixes
 - `BuildCommand` with `bin/builds` composer json cases
