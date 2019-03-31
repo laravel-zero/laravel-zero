@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [5.8.5] - 2019-03-31
+### Adds
+- Upgrades box to `v3.6.0`
+
 ## [5.8.4] - 2019-03-29
 ### Adds
 - Upgrades Collision to `v3.0`
