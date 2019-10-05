@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.0.0] - 2019-10-05
+
+Check the upgrade guide in the [Official Laravel Zero Upgrade Documentation](https://laravel-zero.com/docs/upgrade/#upgrade-6.0.0). Also you can see some changes in the [Official Laravel Upgrade Documentation](https://laravel.com/docs/6.x/upgrade).
+
 ## [5.8.5] - 2019-03-31
 ### Adds
 - Upgrades box to `v3.6.0`
@@ -119,7 +123,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [5.7.0] - 2018-09-12
 ### Adds
 - Adds queue component. Usage: `php application app:install queue`.
-- Adds `command::title($title)`.
+- Adds `command::title($title)` method.
 - Database component now adds the `make:model` command.
 - Mockery as dev-dependency.
 
@@ -137,7 +141,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [5.6.20] - 2018-07-05
 ### Fixes
-TTY in CI envs. [#279](https://github.com/laravel-zero/framework/pull/279)
+- TTY in CI envs. [#279](https://github.com/laravel-zero/framework/pull/279)
 
 ## [5.6.19] - 2018-05-28
 ### Fixes
@@ -189,7 +193,7 @@ TTY in CI envs. [#279](https://github.com/laravel-zero/framework/pull/279)
 
 ## [5.6.7] - 2018-03-04
 ### Fixes
-- `file in use` error on Windows. [#222](https://github.com/laravel-zero/framework/pull/222)
+- `file in use` error on Windows on `app:build` command. [#222](https://github.com/laravel-zero/framework/pull/222)
 
 ## [5.6.6] - 2018-03-04
 ### Added
