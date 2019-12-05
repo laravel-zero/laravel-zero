@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.1.0] - 2019-12-05
+
+### Added
+- Add missing `db:wipe` command ([#367](https://github.com/laravel-zero/framework/pull/367))
+
+### Changed
+- Update Box to v3.8.3 ([#371](https://github.com/laravel-zero/framework/pull/371))
+
+### Fixed
+- Fix build command cancellation ([#365](https://github.com/laravel-zero/framework/pull/365))
+- Fix breaking change with factory autoloading ([#366](https://github.com/laravel-zero/framework/pull/366))
+
 ## [6.0.0] - 2019-10-05
 
 Check the upgrade guide in the [Official Laravel Zero Upgrade Documentation](https://laravel-zero.com/docs/upgrade/#upgrade-6.0.0). Also you can see some changes in the [Official Laravel Upgrade Documentation](https://laravel.com/docs/6.x/upgrade).
