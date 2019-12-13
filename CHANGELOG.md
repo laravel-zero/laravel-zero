@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.2.0] - 2019-12-13
+
+### Added
+- Add `schedule-list` component ([#351](https://github.com/laravel-zero/framework/pull/351))
+
 ## [6.1.0] - 2019-12-05
 
 ### Added
