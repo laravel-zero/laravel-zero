@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.3.0] - 2020-01-12
+
+### Added
+- Allow for overriding default providers on installed components ([#370](https://github.com/laravel-zero/framework/pull/370))
+
+### Changed
+- Remove 'useDefaultProvider' from config stubs ([#372](https://github.com/laravel-zero/framework/pull/372))
+
 ## [6.2.0] - 2019-12-13
 
 ### Added
