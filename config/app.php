@@ -35,11 +35,11 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Should be true in production.
+    | services the application utilizes. Set this in your ".env" file.
     |
     */
 
-    'production' => false,
+    'env' => env('APP_ENV', 'production'),
 
     /*
     |--------------------------------------------------------------------------
