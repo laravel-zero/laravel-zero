@@ -35,7 +35,8 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services the application utilizes.
+    | services the application utilizes. This can be overridden using
+    | the global command line "--env" option when calling commands.
     |
     */
 
