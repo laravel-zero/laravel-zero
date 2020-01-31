@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.4.0] - 2020-01-31
+
+### Changed
+- Update dependencies to prepare for Laravel 7 ([#376](https://github.com/laravel-zero/framework/pull/376))
+- Update to support PHP 7.4 ([#375](https://github.com/laravel-zero/framework/pull/375))
+
 ## [6.3.0] - 2020-01-12
 
 ### Added
