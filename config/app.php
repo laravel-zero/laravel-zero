@@ -35,11 +35,12 @@ return [
     |
     | This value determines the "environment" your application is currently
     | running in. This may determine how you prefer to configure various
-    | services your application utilizes. Should be true in production.
+    | services the application utilizes. This can be overridden using
+    | the global command line "--env" option when calling commands.
     |
     */
 
-    'production' => false,
+    'env' => 'development',
 
     /*
     |--------------------------------------------------------------------------
