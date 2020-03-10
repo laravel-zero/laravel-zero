@@ -1,0 +1,40 @@
+name: Continuous Integration
+
+on: ['push', 'pull_request']
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: [7.2, 7.3, 7.4]
+        dependency-version: [prefer-lowest, prefer-stable]
+
+    name: CI - PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.composer/cache/files
+        key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php }}
+        extensions: mbstring, zip
+        tools: prestissimo
+        coverage: pcov
+
+    - name: Install Composer dependencies
+      run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
+
+    - name: PHPUnit Testing
+      run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+
