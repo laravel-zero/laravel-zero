@@ -1,4 +1,5 @@
 * text=auto
+/.github export-ignore
 .travis.yml export-ignore
 .styleci.yml export-ignore
 .scrutinizer.yml export-ignore
