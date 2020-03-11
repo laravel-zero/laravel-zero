@@ -7,6 +7,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
+         printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer"
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Feature">
@@ -16,9 +17,6 @@
             <directory suffix="Test.php">./tests/Unit</directory>
         </testsuite>
     </testsuites>
-    <listeners>
-        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Printer"/>
-    </listeners>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
