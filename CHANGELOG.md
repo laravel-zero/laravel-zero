@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.1.0] - 2020-04-17
+
+### Added
+- Add support for the `stub:publish` command ([#394](https://github.com/laravel-zero/framework/pull/394))
+- Add fallback to default command with arguments if first parameter doesn't match a command ([#395](https://github.com/laravel-zero/framework/pull/395))
+
 ## [7.0.0] - 2020-03-15
 
 Check the upgrade guide in the [Official Laravel Zero Upgrade Documentation](https://laravel-zero.com/docs/upgrade#upgrade-7.0.0). Also you can see some changes in the [Official Laravel Upgrade Documentation](https://laravel.com/docs/7.x/upgrade).
