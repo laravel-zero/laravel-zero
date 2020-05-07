@@ -4,10 +4,11 @@ on: ['push', 'pull_request']
 
 jobs:
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
         php: [7.2, 7.3, 7.4]
         dependency-version: [prefer-lowest, prefer-stable]
 
@@ -37,4 +38,7 @@ jobs:
 
     - name: PHPUnit Testing
       run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+
+    - name: Build
+      run: php application app:build --build-version=0.0
 
