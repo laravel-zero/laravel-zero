@@ -42,3 +42,6 @@ jobs:
     - name: Build
       run: php application app:build --build-version=0.0
 
+    - name: Build Check
+      run: php builds/application --version
+
