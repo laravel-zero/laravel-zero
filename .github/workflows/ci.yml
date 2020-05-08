@@ -12,7 +12,7 @@ jobs:
         php: [7.2, 7.3, 7.4]
         dependency-version: [prefer-lowest, prefer-stable]
 
-    name: CI - PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
+    name: CI - OS ${{ matrix.os }} PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
 
     steps:
 
@@ -44,4 +44,3 @@ jobs:
 
     - name: Build Check
       run: php builds/application --version
-
