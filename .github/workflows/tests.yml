@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Tests
 
 on: ['push', 'pull_request']
 
@@ -9,35 +9,33 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        php: [7.2, 7.3, 7.4]
+        php: ['7.2', '7.3', '7.4']
         dependency-version: [prefer-lowest, prefer-stable]
 
-    name: CI - OS ${{ matrix.os }} PHP ${{ matrix.php }} (${{ matrix.dependency-version }})
+    name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }}
 
     steps:
 
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.composer/cache/files
-        key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
-
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php }}
-        extensions: mbstring, zip
-        tools: prestissimo
+        tools: composer:v2
         coverage: pcov
+
+    - name: Setup Problem Matches
+      run: |
+        echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+        echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
     - name: Install Composer dependencies
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
 
     - name: PHPUnit Testing
-      run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+      run: vendor/bin/phpunit --coverage-text
 
     - name: Build
       run: php application app:build --build-version=0.0
