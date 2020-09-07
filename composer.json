@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": "^7.2.5",
-        "laravel-zero/framework": "^7.0"
+        "php": "^7.3",
+        "laravel-zero/framework": "^8.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.3.1",
