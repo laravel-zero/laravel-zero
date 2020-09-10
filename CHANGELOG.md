@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.0] - 2020-09-10
+
+Check the upgrade guide in the [Official Laravel Zero Upgrade Documentation](https://laravel-zero.com/docs/upgrade#upgrade-8.0.0). Also you can see some changes in the [Official Laravel Upgrade Documentation](https://laravel.com/docs/8.x/upgrade).
+
 ## [7.2.2] - 2020-09-01
 
 ### Fixed
