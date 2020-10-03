@@ -15,10 +15,6 @@ jobs:
         include:
           - php: 8.0
             os: ubuntu-latest
-            dependency-version: prefer-lowest
-            prerelease: true
-          - php: 8.0
-            os: ubuntu-latest
             dependency-version: prefer-stable
             prerelease: true
 
