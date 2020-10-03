@@ -11,6 +11,16 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         php: ['7.3', '7.4']
         dependency-version: [prefer-lowest, prefer-stable]
+        prerelease: [ false ]
+        include:
+          - php: 8.0
+            os: ubuntu-latest
+            dependency-version: prefer-lowest
+            prerelease: true
+          - php: 8.0
+            os: ubuntu-latest
+            dependency-version: prefer-stable
+            prerelease: true
 
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }}
 
@@ -32,8 +42,13 @@ jobs:
         echo "::add-matcher::${{ runner.tool_cache }}/php.json"
         echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-    - name: Install Composer dependencies
-      run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
+    - name: Install PHP 7 dependencies
+      run: composer update --${{ matrix.dependency-version }} --no-interaction --no-progress
+      if: "matrix.php < 8"
+
+    - name: Install PHP 8 dependencies
+      run: composer update --${{ matrix.dependency-version }} --ignore-platform-req=php --no-interaction --no-progress
+      if: "matrix.php >= 8"
 
     - name: PHPUnit Testing
       run: vendor/bin/phpunit --coverage-text
