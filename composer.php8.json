@@ -1,0 +1,47 @@
+{
+    "name": "laravel-zero/laravel-zero",
+    "description": "The Laravel Zero Framework.",
+    "keywords": ["framework", "laravel", "laravel zero", "console", "cli"],
+    "homepage": "https://laravel-zero.com",
+    "type": "project",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
+        "source": "https://github.com/laravel-zero/laravel-zero"
+    },
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "laravel-zero/framework": "^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.2",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0.0"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "bin": ["application"]
+}

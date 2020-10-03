@@ -49,6 +49,12 @@ jobs:
     - name: PHPUnit Testing
       run: vendor/bin/phpunit --coverage-text
 
+    - name: Use right composer.json config with PHP8
+      run: |
+        rm composer.json
+        mv composer.php8.json composer.json
+      if: "matrix.php >= 8"
+
     - name: Build
       run: php application app:build --build-version=0.0
 
