@@ -36,7 +36,7 @@ jobs:
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --no-suggest
 
     - name: PHPUnit Testing
-      run: vendor/bin/phpunit --coverage-text
+      run: vendor/bin/pest --coverage
 
     - name: Build
       run: php application app:build --build-version=0.0

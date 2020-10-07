@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "mockery/mockery": "^1.4.2",
-        "phpunit/phpunit": "^9.3"
+        "pestphp/pest": "^0.3"
     },
     "autoload": {
         "psr-4": {
