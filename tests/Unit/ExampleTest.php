@@ -1,3 +1,5 @@
 <?php
 
-test('basic test')->assertTrue(true);
+test('example', function () {
+    expect(true)->toBeTrue();
+});
