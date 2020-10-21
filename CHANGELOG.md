@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.1.0] - 2020-10-21
+
+### Added
+- Add ability to remove Composer packages in components ([#414](https://github.com/laravel-zero/framework/pull/414))
+- Add Pest component ([#415](https://github.com/laravel-zero/framework/pull/415))
+
+### Changed
+- Update Composer timeout to 15 minutes ([#417](https://github.com/laravel-zero/framework/pull/417))
+
 ## [8.0.0] - 2020-09-10
 
 Check the upgrade guide in the [Official Laravel Zero Upgrade Documentation](https://laravel-zero.com/docs/upgrade#upgrade-8.0.0). Also you can see some changes in the [Official Laravel Upgrade Documentation](https://laravel.com/docs/8.x/upgrade).
