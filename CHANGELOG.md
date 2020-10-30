@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.2.0] - 2020-10-30
+
+### Added
+- Allow logo text to be overridden in config ([#420](https://github.com/laravel-zero/framework/pull/420))
+- Add Redis component ([#418](https://github.com/laravel-zero/framework/pull/418))
+
 ## [8.1.0] - 2020-10-21
 
 ### Added
