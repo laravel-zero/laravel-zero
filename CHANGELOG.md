@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.3.0] - 2020-12-08
+
+### Changed
+- Update Box binary to v3.10.0 ([#425](https://github.com/laravel-zero/framework/pull/425))
+
 ## [8.2.0] - 2020-10-30
 
 ### Added
