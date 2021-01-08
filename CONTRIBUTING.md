@@ -21,7 +21,7 @@ We accept contributions via Pull Requests on [Github](https://github.com/laravel
 ## Running Tests
 
 ``` bash
-$ ./vendor/bin/phpunit
+$ ./vendor/bin/pest
 ```
 
 **Happy coding**!
