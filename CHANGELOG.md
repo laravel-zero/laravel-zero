@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.6.0] - 2021-01-20
+
+### Added
+- Add support for migrating a single file ([#427](https://github.com/laravel-zero/framework/pull/427))
+
+### Fixed
+- Add exit code return value to `BuildCommand::run()` ([#432](https://github.com/laravel-zero/framework/pull/432))
+
 ## [8.5.0] - 2021-01-03
 
 ### Added
