@@ -17,6 +17,7 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
+        "ext-intl": "*",
         "laravel-zero/framework": "^8.4"
     },
     "require-dev": {
