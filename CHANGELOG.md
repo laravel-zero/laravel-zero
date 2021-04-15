@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.7.0] - 2021-04-15
+
+### Changed
+- Update to use stable dependencies in CI ([#433](https://github.com/laravel-zero/framework/pull/433))
+- Update Box to v3.12.2 ([#436](https://github.com/laravel-zero/framework/pull/436))
+
 ## [8.6.0] - 2021-01-20
 
 ### Added
