@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.8.0] - 2021-05-27
+
+### Changed
+- Update to use `illuminate/database:^8.40` for Database component ([#437](https://github.com/laravel-zero/framework/pull/437))
+- Update to use `laravel-zero/phar-updater` for self-updates ([#434](https://github.com/laravel-zero/framework/pull/434))
+
 ## [8.7.0] - 2021-04-15
 
 ### Changed
