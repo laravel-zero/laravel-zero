@@ -33,6 +33,11 @@
             "Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php -r \"chmod('vendor/laravel-zero/framework/bin/box', 0555)\""
+        ]
+    }
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
