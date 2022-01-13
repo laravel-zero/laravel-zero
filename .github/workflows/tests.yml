@@ -37,6 +37,3 @@ jobs:
 
     - name: PHPUnit Testing
       run: vendor/bin/pest
-
-    - name: Build Check
-      run: php builds/application --version
