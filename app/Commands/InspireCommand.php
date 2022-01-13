@@ -2,17 +2,18 @@
 
 namespace App\Commands;
 
+use function Termwind\{render};
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 
-class InspiringCommand extends Command
+class InspireCommand extends Command
 {
     /**
      * The signature of the command.
      *
      * @var string
      */
-    protected $signature = 'inspiring {name=Artisan}';
+    protected $signature = 'inspire {name=Artisan}';
 
     /**
      * The description of the command.
@@ -28,7 +29,14 @@ class InspiringCommand extends Command
      */
     public function handle()
     {
-        $this->info('Simplicity is the ultimate sophistication.');
+        render(<<<'HTML'
+            <div class="py-1 ml-2">
+                <div class="px-1 bg-blue-300">Laravel Zero</div>
+                <em class="ml-1">
+                  Simplicity is the ultimate sophistication.
+                </em>
+            </div>
+        HTML);
     }
 
     /**
