@@ -2,9 +2,9 @@
 
 namespace App\Commands;
 
-use function Termwind\{render};
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
+use function Termwind\{render};
 
 class InspireCommand extends Command
 {
