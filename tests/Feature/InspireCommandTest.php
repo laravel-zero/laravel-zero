@@ -1,5 +1,5 @@
 <?php
 
-it('inspire artisans', function () {
+it('inspires artisans', function () {
     $this->artisan('inspire')->assertExitCode(0);
 });
