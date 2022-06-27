@@ -40,7 +40,7 @@ jobs:
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist --ansi
 
     - name: Style Testing
-      run: vendor/bin/pint --test
+      run: vendor/bin/pint --test --ansi
 
     - name: Unit Testing
       run: vendor/bin/pest --colors=always
