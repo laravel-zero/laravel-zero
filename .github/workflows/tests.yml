@@ -15,6 +15,10 @@ jobs:
     name: PHP ${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }}
 
     steps:
+    - name: Set git to use LF
+      run: |
+        git config --global core.autocrlf false
+        git config --global core.eol lf
 
     - name: Checkout
       uses: actions/checkout@v2
