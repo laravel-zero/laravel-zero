@@ -4,10 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com) and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [9.1.3 - 2022-08-22](https://github.com/laravel-zero/framework/compare/v9.1.2...v9.1.3)
+
+### Fixed
+- Resolve hidden commands ([#468](https://github.com/laravel-zero/framework/pull/468))
+
 ## [9.1.2 - 2022-06-27](https://github.com/laravel-zero/framework/compare/v9.1.1...v9.1.2)
 
 ### Changed
 - Update to use Pint ([e3c8789](https://github.com/laravel-zero/laravel-zero/commit/e3c87898ca828828e69bc551b9d3677e958f7725))
+- Resolve path to publish seeders to ([#466](https://github.com/laravel-zero/framework/pull/466))
+- Resolve `$components` property collision ([#467](https://github.com/laravel-zero/framework/pull/467))
 
 ## [9.1.1 - 2022-03-01](https://github.com/laravel-zero/framework/compare/v9.1.0...v9.1.1)
 
