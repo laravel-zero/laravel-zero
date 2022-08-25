@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com) and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [9.1.4 - 2022-08-25](https:////github.com/laravel-zero/framework/compare/v9.1.3...v9.1.4)
+
+### Added
+- Add timezone to app config ([#425](https://github.com/laravel-zero/laravel-zero/pull/425))
+
 ## [9.1.3 - 2022-08-22](https://github.com/laravel-zero/framework/compare/v9.1.2...v9.1.3)
 
 ### Fixed
