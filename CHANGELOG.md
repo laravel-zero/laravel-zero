@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com) and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [9.2.0 - 2022-09-29](https://github.com/laravel-zero/framework/compare/v9.1.4...v9.2.0)
+
+### Changed
+- Resolve updater strategy from container ([#469](https://github.com/laravel-zero/framework/pull/469))
+
 ## [9.1.4 - 2022-08-25](https:////github.com/laravel-zero/framework/compare/v9.1.3...v9.1.4)
 
 ### Added
