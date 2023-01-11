@@ -1,4 +1,4 @@
-* text=auto
+* text=auto eol=lf
 /.github export-ignore
 .scrutinizer.yml export-ignore
 BACKERS.md export-ignore
