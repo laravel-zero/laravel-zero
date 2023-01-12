@@ -27,7 +27,7 @@ class InspireCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): void
     {
         render(<<<'HTML'
             <div class="py-1 ml-2">
