@@ -21,7 +21,7 @@
         "nunomaduro/termwind": "^1.15"
     },
     "require-dev": {
-        "laravel/pint": "^1.4.1",
+        "laravel/pint": "^1.5",
         "mockery/mockery": "^1.5.1",
         "pestphp/pest": "^1.22.3"
     },
