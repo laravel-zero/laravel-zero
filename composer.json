@@ -23,7 +23,7 @@
     "require-dev": {
         "laravel/pint": "^1.5",
         "mockery/mockery": "^1.5.1",
-        "pestphp/pest": "^1.22.3"
+        "pestphp/pest": "^2.0"
     },
     "autoload": {
         "psr-4": {
