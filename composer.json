@@ -21,9 +21,9 @@
         "nunomaduro/termwind": "^1.15"
     },
     "require-dev": {
-        "laravel/pint": "^1.5",
+        "laravel/pint": "^1.7",
         "mockery/mockery": "^1.5.1",
-        "pestphp/pest": "^2.0"
+        "pestphp/pest": "^2.2.3"
     },
     "autoload": {
         "psr-4": {
