@@ -45,6 +45,28 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Hidden Commands
+    |--------------------------------------------------------------------------
+    |
+    | Your application commands will always be visible on the application list
+    | of commands. But you can still make them "hidden" specifying an array
+    | of commands below. All "hidden" commands can still be run/executed.
+    |
+    */
+
+    'hidden' => [
+        NunoMaduro\LaravelConsoleSummary\SummaryCommand::class,
+        Symfony\Component\Console\Command\DumpCompletionCommand::class,
+        Symfony\Component\Console\Command\HelpCommand::class,
+        Illuminate\Console\Scheduling\ScheduleRunCommand::class,
+        Illuminate\Console\Scheduling\ScheduleListCommand::class,
+        Illuminate\Console\Scheduling\ScheduleFinishCommand::class,
+        Illuminate\Foundation\Console\VendorPublishCommand::class,
+        LaravelZero\Framework\Commands\StubPublishCommand::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Removed Commands
     |--------------------------------------------------------------------------
     |
