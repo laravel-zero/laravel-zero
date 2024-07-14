@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: laravel-zero
+    build:
+      context: .
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    volumes:
+      - .:/app
+    working_dir: /app
+    user: ${UID:-1000}:${GID:-1000}
+    tty: true
