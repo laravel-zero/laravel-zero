@@ -16,7 +16,6 @@ Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and [Ow
 - Supports interactive [menus](https://laravel-zero.com/docs/build-interactive-menus/) and [desktop notifications](https://laravel-zero.com/docs/send-desktop-notifications/) on Linux, Windows & MacOS.
 - Ships with a [Scheduler](https://laravel-zero.com/docs/task-scheduling/) and  a [Standalone Compiler](https://laravel-zero.com/docs/build-a-standalone-application/).
 - Integration with [Collision](https://github.com/nunomaduro/collision) - Beautiful error reporting
-
 - Follow the creator Nuno Maduro:
     - YouTube: **[youtube.com/@nunomaduro](https://www.youtube.com/@nunomaduro)** — Videos every weekday
     - Twitch: **[twitch.tv/enunomaduro](https://www.twitch.tv/enunomaduro)** — Streams (almost) every weekday
