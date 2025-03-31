@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "php": "^8.2.0",
-        "laravel-zero/framework": "^11.36.1"
+        "php": "^8.2",
+        "laravel-zero/framework": "dev-feature/laravel-12"
     },
     "require-dev": {
-        "laravel/pint": "^1.18.3",
+        "laravel/pint": "^1.21",
         "mockery/mockery": "^1.6.12",
-        "pestphp/pest": "^3.7.1"
+        "pestphp/pest": "^3.7.5"
     },
     "autoload": {
         "psr-4": {
@@ -44,7 +44,7 @@
             "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "bin": ["application"]
 }
