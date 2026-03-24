@@ -17,7 +17,8 @@
     ],
     "require": {
         "php": "^8.3",
-        "laravel-zero/framework": "^13.0"
+        "laravel-zero/foundation": "dev-feature/13.x-upgrade as 13.0",
+        "laravel-zero/framework": "dev-feature/13.x-upgrade as 13.0"
     },
     "require-dev": {
         "laravel/pint": "^1.29",
@@ -44,7 +45,7 @@
             "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "bin": ["application"]
 }
