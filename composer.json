@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "laravel-zero/framework": "^12.1.0"
+        "php": "^8.3",
+        "laravel-zero/framework": "^13.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.29.1",
+        "laravel/pint": "^1.29",
         "mockery/mockery": "^1.6.12",
-        "pestphp/pest": "^3.8.4|^4.7.0"
+        "pestphp/pest": "^4.7"
     },
     "autoload": {
         "psr-4": {
