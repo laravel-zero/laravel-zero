@@ -29,6 +29,7 @@ jobs:
         php-version: ${{ matrix.php }}
         extensions: fileinfo
         coverage: pcov
+        tools: composer:v2
 
     - name: Setup Problem Matches
       run: |
